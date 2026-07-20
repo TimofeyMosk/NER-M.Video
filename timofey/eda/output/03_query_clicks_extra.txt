@@ -1,0 +1,53 @@
+--- sku_subject_id -> category name mapping check ---
+16434: clicks=2398029  category_name=None
+17522: clicks=1602592  category_name=None
+17561: clicks=1591566  category_name=None
+16435: clicks=1271210  category_name=None
+16132: clicks=1254611  category_name=None
+16401: clicks=940145  category_name=None
+31607: clicks=913899  category_name=Наушники
+17543: clicks=719758  category_name=None
+16205: clicks=677060  category_name=None
+16400: clicks=662509  category_name=None
+16460: clicks=614707  category_name=None
+17422: clicks=595236  category_name=None
+16168: clicks=473075  category_name=None
+17536: clicks=426251  category_name=None
+16201: clicks=394528  category_name=None
+20021: clicks=358849  category_name=None
+16289: clicks=351282  category_name=None
+16296: clicks=329498  category_name=None
+16813: clicks=283474  category_name=None
+17565: clicks=280260  category_name=None
+
+matched 1/20 top subject_ids directly to category ids
+subject_id direct match to category id: 2990/4103 (72.9%)
+
+--- sku_position == 0 rows ---
+count: 7385481 23.8%
+                                query_text sku_name  sku_position
+489181               Пылесосы вертикальные                      0
+991912                    сушильная машина                      0
+5971268                        thunderobot                      0
+2659234  вертикальный беспроводной пылесос                      0
+1686524                   Airpods поводные                      0
+unique (query,sku) with pos 0: 5238863
+
+--- query text char composition (unique queries) ---
+total unique: 1789579
+contains digit: 1051324 (58.7%)
+contains latin letters: 1130336 (63.2%)
+contains cyrillic letters: 1300010 (72.6%)
+contains BOTH latin & cyrillic: 710492 (39.7%)
+latin-only (no cyrillic): 419844 (23.5%)
+
+unique queries: 1789579, unique after lowercasing: 1524565  (case-only duplicates: 265014)
+
+--- sample queries with digits (model codes etc.) ---
+['oneplus pad 2', 'BRAYER BR4020', '400782876', 'мфу canon 2010', 'rc-18', 'Радиотелефон TeXet TX-D8905 черный', 'утюг tefal 7', 'Deppa NRG Turbo V3 20000 mAh 22.5W (33669) черный', 'Это dreame h12s', 'Xiaomi Watch S4 eSIM', 'W2G2PS62A12/C', 'Телевизоры 32 smart тв toshiba', 'P50U51T2SCSM', 'Бойлер плоский на 50 л', 'lg 27gs60qc-b']
+
+--- sample queries with mixed scripts ---
+['Фотоаппарат Canon Eos', ' переходники apple ', 'пылесос вертикальный tefal', 'Айпад air м3', 'hansa посудомоечная встраиваемая 45', 'тример oasis', 'напольный вентилятор rombico', ' Микроволновая печь соло Samsung MS23K3513AS/BW', 'многофункциональное устройство epson wi-fi', 'Cmf наушники', 'саундбар txl', 'Hisense 43 телевизор', 'DARINA \u2004\u2004Комбинированная плита Darina 1F1 2312 W', 'утюг tefalв ростове на дону на лелюшенко 4', 'Карта памяти microSDXC UHS-I U3 Digma 64 ГБ']
+
+--- does query_text contain the brand of the clicked sku (literal substring, casefolded)? ---
+sample size=200000, brand literally in query: 27.0%

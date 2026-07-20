@@ -1,0 +1,348 @@
+<title>EDA: Интеллектуальный поиск М.Видео</title>
+<style>
+  .viz-root {
+    color-scheme: light;
+    --surface-1:      #fcfcfb;
+    --page:           #f9f9f7;
+    --text-primary:   #0b0b0b;
+    --text-secondary: #52514e;
+    --text-muted:     #898781;
+    --grid:           #e1e0d9;
+    --baseline:       #c3c2b7;
+    --border:         rgba(11,11,11,0.10);
+    --series-1:       #2a78d6;
+    --series-2:       #008300;
+    --series-3:       #eb6834;
+    --series-4:       #4a3aa7;
+    --good:           #0ca30c;
+    --warning:        #fab219;
+    --serious:        #ec835a;
+    --critical:       #d03b3b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:where(:not([data-theme="light"])) .viz-root {
+      color-scheme: dark;
+      --surface-1:      #1a1a19;
+      --page:           #0d0d0d;
+      --text-primary:   #ffffff;
+      --text-secondary: #c3c2b7;
+      --text-muted:     #898781;
+      --grid:           #2c2c2a;
+      --baseline:       #383835;
+      --border:         rgba(255,255,255,0.10);
+      --series-1:       #3987e5;
+      --series-2:       #008300;
+      --series-3:       #d95926;
+      --series-4:       #9085e9;
+      --good:           #0ca30c;
+      --warning:        #fab219;
+      --serious:        #ec835a;
+      --critical:       #e66767;
+    }
+  }
+  :root[data-theme="dark"] .viz-root {
+    color-scheme: dark;
+    --surface-1:      #1a1a19;
+    --page:           #0d0d0d;
+    --text-primary:   #ffffff;
+    --text-secondary: #c3c2b7;
+    --text-muted:     #898781;
+    --grid:           #2c2c2a;
+    --baseline:       #383835;
+    --border:         rgba(255,255,255,0.10);
+    --series-1:       #3987e5;
+    --series-2:       #008300;
+    --series-3:       #d95926;
+    --series-4:       #9085e9;
+    --good:           #0ca30c;
+    --warning:        #fab219;
+    --serious:        #ec835a;
+    --critical:       #e66767;
+  }
+
+  .viz-root {
+    background: var(--page);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+    line-height: 1.5;
+  }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  .subtitle { color: var(--text-secondary); font-size: 14px; margin-bottom: 28px; }
+  h2 { font-size: 19px; margin: 44px 0 4px; border-top: 1px solid var(--border); padding-top: 28px; }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  h3 { font-size: 15px; margin: 22px 0 10px; color: var(--text-primary); }
+  .section-note { color: var(--text-secondary); font-size: 14px; margin-bottom: 18px; max-width: 760px; }
+  p { font-size: 14px; color: var(--text-primary); max-width: 760px; }
+  code { background: var(--grid); padding: 1px 5px; border-radius: 4px; font-size: 12.5px; }
+
+  .card {
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+  }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 14px 0 6px; }
+  .tile { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+  .tile .num { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .tile .lbl { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+  .barchart { display: flex; flex-direction: column; gap: 9px; }
+  .bar-row { display: grid; grid-template-columns: 190px 1fr 88px; align-items: center; gap: 10px; }
+  .bar-label { font-size: 12.5px; color: var(--text-secondary); text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bar-track { background: var(--grid); border-radius: 4px; height: 16px; position: relative; overflow: hidden; }
+  .bar-fill { background: var(--series-1); height: 100%; border-radius: 4px; min-width: 3px; }
+  .bar-value { font-size: 12px; color: var(--text-primary); font-variant-numeric: tabular-nums; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+  th { text-align: left; color: var(--text-secondary); font-weight: 500; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.02em; padding: 6px 10px; border-bottom: 1px solid var(--grid); }
+  td { padding: 7px 10px; border-bottom: 1px solid var(--grid); font-variant-numeric: tabular-nums; }
+  tr:last-child td { border-bottom: none; }
+  .mono { font-family: ui-monospace, monospace; font-size: 12px; color: var(--text-secondary); }
+
+  .flag { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; padding: 3px 9px; border-radius: 6px; margin: 3px 6px 3px 0; }
+  .flag.warn { background: color-mix(in srgb, var(--warning) 18%, transparent); color: var(--text-primary); }
+  .flag.info { background: color-mix(in srgb, var(--series-1) 15%, transparent); color: var(--text-primary); }
+
+  ul { font-size: 14px; padding-left: 20px; max-width: 760px; }
+  li { margin-bottom: 6px; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .two-col { grid-template-columns: 1fr; } .bar-row { grid-template-columns: 120px 1fr 70px; } }
+
+  .quote-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .quote { background: var(--grid); border-radius: 6px; padding: 4px 9px; font-size: 12.5px; font-family: ui-monospace, monospace; }
+
+  .risk-item { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--grid); }
+  .risk-item:last-child { border-bottom: none; }
+  .risk-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+  .risk-dot.high { background: var(--critical); }
+  .risk-dot.med { background: var(--warning); }
+  .risk-title { font-size: 13.5px; font-weight: 600; }
+  .risk-body { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+</style>
+
+<div class="viz-root">
+
+<h1>EDA: данные для кейса «Интеллектуальный поиск М.Видео»</h1>
+<div class="subtitle">Подготовка к буткемпу · 3 файла в <code>cu_ws/</code> · 18.07.2026</div>
+
+<div class="card">
+<p style="margin:0">Цель кейса: по поисковому запросу пользователя (2–5 слов, часто с опечатками и латиницей вперемешку с кириллицей) за &lt;100 мс извлечь категорию, бренд и характеристики товара и вернуть их в виде JSON. Три файла образуют полный контур для этой задачи: <b>query_clicks</b> — лог поведения (что искали → что кликнули), <b>skus.pkl</b> — товарный каталог с деревом категорий и справочником характеристик, <b>sku_desc</b> — тексты описаний товаров.</p>
+</div>
+
+<h2>Обзор</h2>
+<div class="tiles">
+  <div class="tile"><div class="num">31.0 млн</div><div class="lbl">строк в query_clicks</div></div>
+  <div class="tile"><div class="num">1.79 млн</div><div class="lbl">уникальных запросов</div></div>
+  <div class="tile"><div class="num">332.8 тыс</div><div class="lbl">товаров, получивших клик</div></div>
+  <div class="tile"><div class="num">546.1 тыс</div><div class="lbl">офферов в каталоге</div></div>
+  <div class="tile"><div class="num">6 963</div><div class="lbl">категорий в дереве</div></div>
+  <div class="tile"><div class="num">10 184</div><div class="lbl">уникальных «фактов»-характеристик</div></div>
+  <div class="tile"><div class="num">7 150</div><div class="lbl">брендов в кликах</div></div>
+  <div class="tile"><div class="num">1.18 млн</div><div class="lbl">карточек с описанием</div></div>
+</div>
+
+<h2>Три датасета</h2>
+<table>
+<tr><th>Файл</th><th>Размер</th><th>Ключевые поля</th><th>Роль в кейсе</th></tr>
+<tr><td class="mono">query_clicks.parquet</td><td>31.0М строк, 4.4 GB</td><td>query_text, sku_id, sku_name, sku_brand_name, sku_subject_id, sku_position</td><td>Источник запросов + слабая разметка (клик = сигнал релевантности)</td></tr>
+<tr><td class="mono">skus.pkl</td><td>546К офферов / 7К категорий</td><td>name, vendor, categories.categoryId, param[] (характеристики)</td><td>Справочник сущностей: категории, бренды, характеристики (таксономия для NER)</td></tr>
+<tr><td class="mono">sku_desc.parquet</td><td>1.18М строк</td><td>sku_id, title, description (HTML-текст)</td><td>Доп. текст для расширения словарей / генерации синтетических запросов</td></tr>
+</table>
+
+<h3>Пересечение по sku_id</h3>
+<div class="section-note">Клики и каталог сняты не одномоментно — это важно для склейки данных.</div>
+<div class="barchart">
+  <div class="bar-row"><div class="bar-label">clicks ∩ catalog</div><div class="bar-track"><div class="bar-fill" style="width:72.6%"></div></div><div class="bar-value">72.6%</div></div>
+  <div class="bar-row"><div class="bar-label">clicks ∩ sku_desc</div><div class="bar-track"><div class="bar-fill" style="width:47.5%"></div></div><div class="bar-value">47.5%</div></div>
+  <div class="bar-row"><div class="bar-label">во всех трёх файлах</div><div class="bar-track"><div class="bar-fill" style="width:30.9%"></div></div><div class="bar-value">102 945 (30.9%)</div></div>
+</div>
+
+<h2>query_clicks: что ищут и как кликают</h2>
+
+<h3>Топ-15 запросов по числу строк-кликов</h3>
+<div class="barchart">
+  <div class="bar-row"><div class="bar-label">стиральная машинка</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-value">470 230</div></div>
+  <div class="bar-row"><div class="bar-label">холодильники</div><div class="bar-track"><div class="bar-fill" style="width:94.0%"></div></div><div class="bar-value">442 166</div></div>
+  <div class="bar-row"><div class="bar-label">аэрогриль</div><div class="bar-track"><div class="bar-fill" style="width:62.8%"></div></div><div class="bar-value">295 529</div></div>
+  <div class="bar-row"><div class="bar-label">кондиционер сплит система</div><div class="bar-track"><div class="bar-fill" style="width:42.3%"></div></div><div class="bar-value">199 087</div></div>
+  <div class="bar-row"><div class="bar-label">микроволновая печь</div><div class="bar-track"><div class="bar-fill" style="width:41.6%"></div></div><div class="bar-value">195 443</div></div>
+  <div class="bar-row"><div class="bar-label">электрические чайники</div><div class="bar-track"><div class="bar-fill" style="width:40.6%"></div></div><div class="bar-value">190 837</div></div>
+  <div class="bar-row"><div class="bar-label">телевизор</div><div class="bar-track"><div class="bar-fill" style="width:36.9%"></div></div><div class="bar-value">173 491</div></div>
+  <div class="bar-row"><div class="bar-label">холодильники двухкамерные</div><div class="bar-track"><div class="bar-fill" style="width:34.9%"></div></div><div class="bar-value">164 251</div></div>
+  <div class="bar-row"><div class="bar-label">ноутбук</div><div class="bar-track"><div class="bar-fill" style="width:34.2%"></div></div><div class="bar-value">160 816</div></div>
+  <div class="bar-row"><div class="bar-label">пылесос</div><div class="bar-track"><div class="bar-fill" style="width:31.9%"></div></div><div class="bar-value">149 976</div></div>
+  <div class="bar-row"><div class="bar-label">смартфон</div><div class="bar-track"><div class="bar-fill" style="width:30.1%"></div></div><div class="bar-value">141 412</div></div>
+  <div class="bar-row"><div class="bar-label">наушники беспроводные</div><div class="bar-track"><div class="bar-fill" style="width:25.9%"></div></div><div class="bar-value">121 993</div></div>
+  <div class="bar-row"><div class="bar-label">вентилятор напольный</div><div class="bar-track"><div class="bar-fill" style="width:25.5%"></div></div><div class="bar-value">119 847</div></div>
+  <div class="bar-row"><div class="bar-label">пылесосы вертикальные</div><div class="bar-track"><div class="bar-fill" style="width:24.5%"></div></div><div class="bar-value">115 039</div></div>
+  <div class="bar-row"><div class="bar-label">Аэрогриль</div><div class="bar-track"><div class="bar-fill" style="width:23.7%"></div></div><div class="bar-value">111 317</div></div>
+</div>
+<p style="margin-top:10px">Головные запросы почти все — <b>чистые категории без бренда</b> («холодильники», «пылесос»), и один и тот же запрос встречается в разном регистре («аэрогриль» / «Аэрогриль», «пылесос» / «Пылесос») — это разные строки в <code>value_counts()</code>. Всего из-за регистра «схлопывается» <b>265 014</b> запросов при lowercase-нормализации.</p>
+
+<h3>Топ-15 брендов по числу строк-кликов</h3>
+<div class="barchart">
+  <div class="bar-row"><div class="bar-label">(пусто — нет бренда)</div><div class="bar-track"><div class="bar-fill" style="width:100%; background:var(--text-muted)"></div></div><div class="bar-value">8 791 897</div></div>
+  <div class="bar-row"><div class="bar-label">Apple</div><div class="bar-track"><div class="bar-fill" style="width:16.1%"></div></div><div class="bar-value">1 411 349</div></div>
+  <div class="bar-row"><div class="bar-label">Samsung</div><div class="bar-track"><div class="bar-fill" style="width:14.9%"></div></div><div class="bar-value">1 305 953</div></div>
+  <div class="bar-row"><div class="bar-label">Haier</div><div class="bar-track"><div class="bar-fill" style="width:8.6%"></div></div><div class="bar-value">757 686</div></div>
+  <div class="bar-row"><div class="bar-label">Xiaomi</div><div class="bar-track"><div class="bar-fill" style="width:8.3%"></div></div><div class="bar-value">733 956</div></div>
+  <div class="bar-row"><div class="bar-label">HUAWEI</div><div class="bar-track"><div class="bar-fill" style="width:7.9%"></div></div><div class="bar-value">698 332</div></div>
+  <div class="bar-row"><div class="bar-label">Tefal</div><div class="bar-track"><div class="bar-fill" style="width:6.1%"></div></div><div class="bar-value">532 474</div></div>
+  <div class="bar-row"><div class="bar-label">Gorenje</div><div class="bar-track"><div class="bar-fill" style="width:5.2%"></div></div><div class="bar-value">455 301</div></div>
+  <div class="bar-row"><div class="bar-label">Яндекс</div><div class="bar-track"><div class="bar-fill" style="width:4.8%"></div></div><div class="bar-value">422 573</div></div>
+  <div class="bar-row"><div class="bar-label">Indesit</div><div class="bar-track"><div class="bar-fill" style="width:4.2%"></div></div><div class="bar-value">366 128</div></div>
+  <div class="bar-row"><div class="bar-label">HONOR</div><div class="bar-track"><div class="bar-fill" style="width:3.8%"></div></div><div class="bar-value">330 719</div></div>
+  <div class="bar-row"><div class="bar-label">LG</div><div class="bar-track"><div class="bar-fill" style="width:3.6%"></div></div><div class="bar-value">318 937</div></div>
+  <div class="bar-row"><div class="bar-label">Hi</div><div class="bar-track"><div class="bar-fill" style="width:3.5%"></div></div><div class="bar-value">308 823</div></div>
+  <div class="bar-row"><div class="bar-label">Hisense</div><div class="bar-track"><div class="bar-fill" style="width:3.4%"></div></div><div class="bar-value">300 033</div></div>
+  <div class="bar-row"><div class="bar-label">Sony</div><div class="bar-track"><div class="bar-fill" style="width:2.7%"></div></div><div class="bar-value">238 418</div></div>
+</div>
+<p style="margin-top:10px"><b>28.4%</b> строк вообще не имеют бренда у кликнутого товара — это нормально (общие категорийные запросы), но означает, что «бренд» не всегда присутствует как сущность в запросе или в ответе.</p>
+
+<h3>Топ-10 категорий (sku_subject_id → резолвнуто через каталог)</h3>
+<div class="section-note"><code>sku_subject_id</code> численно <b>не совпадает</b> с <code>category.@id</code> из <code>skus.pkl</code> (прямое совпадение только у 1 из 20 самых частых значений). Категория надёжно восстанавливается только джойном <code>sku_id → offer.categories.categoryId → category name</code>.</div>
+<div class="barchart">
+  <div class="bar-row"><div class="bar-label">Смартфоны</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-value">2 398 029</div></div>
+  <div class="bar-row"><div class="bar-label">Стиральные машины</div><div class="bar-track"><div class="bar-fill" style="width:66.8%"></div></div><div class="bar-value">1 602 592</div></div>
+  <div class="bar-row"><div class="bar-label">Холодильники</div><div class="bar-track"><div class="bar-fill" style="width:66.4%"></div></div><div class="bar-value">1 591 566</div></div>
+  <div class="bar-row"><div class="bar-label">iPhone</div><div class="bar-track"><div class="bar-fill" style="width:53.0%"></div></div><div class="bar-value">1 271 210</div></div>
+  <div class="bar-row"><div class="bar-label">Телевизоры</div><div class="bar-track"><div class="bar-fill" style="width:52.3%"></div></div><div class="bar-value">1 254 611</div></div>
+  <div class="bar-row"><div class="bar-label">Ноутбуки</div><div class="bar-track"><div class="bar-fill" style="width:39.2%"></div></div><div class="bar-value">940 145</div></div>
+  <div class="bar-row"><div class="bar-label">Наушники</div><div class="bar-track"><div class="bar-fill" style="width:38.1%"></div></div><div class="bar-value">913 899</div></div>
+  <div class="bar-row"><div class="bar-label">Пылесосы вертикальные</div><div class="bar-track"><div class="bar-fill" style="width:30.0%"></div></div><div class="bar-value">719 758</div></div>
+  <div class="bar-row"><div class="bar-label">Аэрогрили</div><div class="bar-track"><div class="bar-fill" style="width:28.2%"></div></div><div class="bar-value">677 060</div></div>
+  <div class="bar-row"><div class="bar-label">Планшеты</div><div class="bar-track"><div class="bar-fill" style="width:27.6%"></div></div><div class="bar-value">662 509</div></div>
+</div>
+<p style="margin-top:10px">Домен смещён к крупной бытовой технике и электронике (смартфоны, стиральные машины, холодильники, ТВ, ноутбуки) — это ядро, на которое стоит в первую очередь настраивать точность NER, даже если каталог по числу SKU шире (там доминируют матрасы и текстиль).</p>
+
+<h3>Длина запроса (в словах, по уникальным запросам)</h3>
+<div class="barchart">
+  <div class="bar-row"><div class="bar-label">1 слово</div><div class="bar-track"><div class="bar-fill" style="width:44.9%"></div></div><div class="bar-value">191 498 (10.7%)</div></div>
+  <div class="bar-row"><div class="bar-label">2 слова</div><div class="bar-track"><div class="bar-fill" style="width:92.2%"></div></div><div class="bar-value">393 142 (22.0%)</div></div>
+  <div class="bar-row"><div class="bar-label">3 слова</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-value">426 718 (23.8%)</div></div>
+  <div class="bar-row"><div class="bar-label">4 слова</div><div class="bar-track"><div class="bar-fill" style="width:76.1%"></div></div><div class="bar-value">324 701 (18.1%)</div></div>
+  <div class="bar-row"><div class="bar-label">5 слов</div><div class="bar-track"><div class="bar-fill" style="width:46.4%"></div></div><div class="bar-value">197 979 (11.1%)</div></div>
+  <div class="bar-row"><div class="bar-label">6 слов</div><div class="bar-track"><div class="bar-fill" style="width:25.4%"></div></div><div class="bar-value">108 200 (6.0%)</div></div>
+  <div class="bar-row"><div class="bar-label">7+ слов</div><div class="bar-track"><div class="bar-fill" style="width:32.4%"></div></div><div class="bar-value">147 341 (8.2%)</div></div>
+</div>
+<p style="margin-top:10px">Медиана — 3 слова (14–34 символа). Запросы короткие и телеграфные, как и ожидается для e-commerce поиска — контекста для дизамбигуации мало, что повышает ценность внешнего словаря категорий/брендов/характеристик из <code>skus.pkl</code>.</p>
+
+<h3>sku_position (позиция в выдаче на момент клика)</h3>
+<div class="barchart">
+  <div class="bar-row"><div class="bar-label">0</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-value">7 385 481 (23.8%)</div></div>
+  <div class="bar-row"><div class="bar-label">1</div><div class="bar-track"><div class="bar-fill" style="width:48.2%"></div></div><div class="bar-value">3 557 360</div></div>
+  <div class="bar-row"><div class="bar-label">2</div><div class="bar-track"><div class="bar-fill" style="width:28.8%"></div></div><div class="bar-value">2 128 923</div></div>
+  <div class="bar-row"><div class="bar-label">3</div><div class="bar-track"><div class="bar-fill" style="width:19.4%"></div></div><div class="bar-value">1 435 347</div></div>
+  <div class="bar-row"><div class="bar-label">4</div><div class="bar-track"><div class="bar-fill" style="width:17.0%"></div></div><div class="bar-value">1 253 203</div></div>
+  <div class="bar-row"><div class="bar-label">5</div><div class="bar-track"><div class="bar-fill" style="width:15.8%"></div></div><div class="bar-value">1 163 313</div></div>
+  <div class="bar-row"><div class="bar-label">10+</div><div class="bar-track"><div class="bar-fill" style="width:60.1%; background:var(--text-muted)"></div></div><div class="bar-value">~12.9M (растянуто до pos=5893)</div></div>
+</div>
+<p style="margin-top:10px">Классический positional-bias спад клика с рангом — ожидаемо и полезно как вес при построении weak-labeling (клики на позиции 0–2 надёжнее как сигнал «запрос ⇒ сущности этого товара», чем клики глубоко в хвосте).</p>
+
+<h2>Текст запроса: что усложняет NER</h2>
+<div class="tiles">
+  <div class="tile"><div class="num">58.7%</div><div class="lbl">запросов содержат цифры</div></div>
+  <div class="tile"><div class="num">39.7%</div><div class="lbl">смешение кириллицы и латиницы</div></div>
+  <div class="tile"><div class="num">23.5%</div><div class="lbl">только латиница (без кириллицы)</div></div>
+  <div class="tile"><div class="num">27.0%</div><div class="lbl">запрос буквально содержит бренд кликнутого товара</div></div>
+</div>
+
+<div class="two-col" style="margin-top:16px">
+<div>
+<h3>Примеры с цифрами / кодами моделей</h3>
+<div class="quote-list">
+  <span class="quote">oneplus pad 2</span>
+  <span class="quote">BRAYER BR4020</span>
+  <span class="quote">rc-18</span>
+  <span class="quote">lg 27gs60qc-b</span>
+  <span class="quote">P50U51T2SCSM</span>
+  <span class="quote">телевизоры 32 smart тв toshiba</span>
+</div>
+</div>
+<div>
+<h3>Примеры со смешением языков</h3>
+<div class="quote-list">
+  <span class="quote">Айпад air м3</span>
+  <span class="quote">тример oasis</span>
+  <span class="quote">пылесос вертикальный tefal</span>
+  <span class="quote">саундбар txl</span>
+  <span class="quote">Cmf наушники</span>
+  <span class="quote">многофункциональное устройство epson wi-fi</span>
+</div>
+</div>
+</div>
+<p style="margin-top:14px">Вывод: только 27% кликов дают буквальное совпадение «бренд в запросе = бренд кликнутого товара». Это верхняя граница качества для наивного <b>distant supervision</b> по бренду через substring-match — для остальных 73% либо бренда в запросе нет, либо пользователь кликнул не то, что явно спросил (переключился на другой бренд в выдаче). Разметку кликами нужно фильтровать позицией и порогом частоты пары (запрос, sku), а не брать как есть.</p>
+
+<h2>skus.pkl: справочник сущностей</h2>
+<div class="two-col">
+<div>
+<h3>Топ характеристик-«фактов» (_search-параметры)</h3>
+<div class="barchart">
+  <div class="bar-row"><div class="bar-label">Страна</div><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><div class="bar-value">545 855</div></div>
+  <div class="bar-row"><div class="bar-label">Гарантия предоставляется</div><div class="bar-track"><div class="bar-fill" style="width:94.5%"></div></div><div class="bar-value">515 693</div></div>
+  <div class="bar-row"><div class="bar-label">Гарантия</div><div class="bar-track"><div class="bar-fill" style="width:74.2%"></div></div><div class="bar-value">404 925</div></div>
+  <div class="bar-row"><div class="bar-label">Цвет</div><div class="bar-track"><div class="bar-fill" style="width:67.1%"></div></div><div class="bar-value">366 130</div></div>
+  <div class="bar-row"><div class="bar-label">Вес</div><div class="bar-track"><div class="bar-fill" style="width:63.6%"></div></div><div class="bar-value">347 185</div></div>
+  <div class="bar-row"><div class="bar-label">Ширина / Высота / Глубина</div><div class="bar-track"><div class="bar-fill" style="width:63%"></div></div><div class="bar-value">~950 000 (сумма)</div></div>
+  <div class="bar-row"><div class="bar-label">Модель</div><div class="bar-track"><div class="bar-fill" style="width:30.8%"></div></div><div class="bar-value">167 904</div></div>
+  <div class="bar-row"><div class="bar-label">Материал</div><div class="bar-track"><div class="bar-fill" style="width:29.1%"></div></div><div class="bar-value">158 777</div></div>
+</div>
+</div>
+<div>
+<h3>Параметры оффера</h3>
+<table>
+<tr><td>Категорий в дереве</td><td>6 963 (96 корневых)</td></tr>
+<tr><td>Офферов</td><td>546 069</td></tr>
+<tr><td>Уникальных вендоров</td><td>6 765</td></tr>
+<tr><td>Параметров на оффер (медиана)</td><td>27 (p25=16, p95=100)</td></tr>
+<tr><td>Уникальных «сырых» имён param</td><td>12 999</td></tr>
+<tr><td>Из них с суффиксом _search</td><td>10 184</td></tr>
+<tr><td>vendor / model / name заполнены</td><td>~100%</td></tr>
+</table>
+</div>
+</div>
+<p style="margin-top:10px">У каждого оффера — до 300 параметров, из них десятки тысяч уникальных имён характеристик, но большинство встречается в узком наборе категорий (напр. «Жёсткость стороны 1» — только у матрасов). Практический вывод: справочник характеристик нужно <b>индексировать per-category</b>, а не как один плоский список — иначе NER-схема на 10К+ типов сущностей нереалистична.</p>
+
+<h2>Риски и на что обратить внимание в первый день</h2>
+<div class="card">
+  <div class="risk-item">
+    <div class="risk-dot high"></div>
+    <div><div class="risk-title">Только 30.9% sku_id есть одновременно в кликах, каталоге и описаниях</div>
+    <div class="risk-body">Снапшоты явно сделаны в разное время (часть кликнутых товаров уже не в каталоге / без описания). Нужна стратегия для sku без карточки: fallback на sku_name из query_clicks вместо title/description.</div></div>
+  </div>
+  <div class="risk-item">
+    <div class="risk-dot high"></div>
+    <div><div class="risk-title">Кликам нельзя доверять как чистой разметке сущностей</div>
+    <div class="risk-body">Только 27% буквальных brand-match; 40% строк — полные дубликаты (повторные показы/клики). Weak labels из кликов нужно взвешивать по частоте пары (запрос,sku) и позиции, не использовать «как есть».</div></div>
+  </div>
+  <div class="risk-item">
+    <div class="risk-dot med"></div>
+    <div><div class="risk-title">sku_subject_id ≠ category.@id</div>
+    <div class="risk-body">Прямое числовое сравнение даёт совпадение лишь у части категорий (похоже на случайные коллизии ID). Категорию нужно получать через <code>sku_id → offer → categories.categoryId</code>, а не по значению subject_id напрямую.</div></div>
+  </div>
+  <div class="risk-item">
+    <div class="risk-dot med"></div>
+    <div><div class="risk-title">Регистр и код-свитчинг</div>
+    <div class="risk-body">265К запросов различаются только регистром; 40% запросов содержат латиницу, 40% — смесь кириллицы и латиницы одновременно (бренды/модели). Токенизация и NER-модель должны быть устойчивы к этому без потери сигнала имени собственного (регистр иногда полезен).</div></div>
+  </div>
+  <div class="risk-item">
+    <div class="risk-dot med"></div>
+    <div><div class="risk-title">10 184 уникальных типа характеристик</div>
+    <div class="risk-body">Схема характеристик сильно категорийно-специфична — нужно решить на день 1, ограничиваем ли MVP небольшим набором категорий (топ-10 по кликам покрывают значимую долю трафика) или строим category-aware извлечение характеристик.</div></div>
+  </div>
+</div>
+
+<h2>Рекомендации на завтра</h2>
+<ul>
+  <li><b>Сузить скоуп для MVP</b>: топ-10 категорий по кликам (смартфоны, стиральные машины, холодильники, iPhone, ТВ, ноутбуки, наушники, пылесосы, аэрогрили, планшеты) дают львиную долю трафика и представляют разумное число характеристик на категорию.</li>
+  <li><b>Построить связующий слой</b> sku_id → category (через offer.categories.categoryId) и sku_id → характеристики (через offer.param), т.к. subject_id из кликов напрямую не резолвится.</li>
+  <li><b>Слабая разметка для NER</b>: для (query, sku) пар с позицией ≤3 и частотой ≥2 — размечать бренд/категорию/характеристики из товара как псевдо-сущности в тексте запроса (regex/fuzzy match), проверяя на подвыборке вручную.</li>
+  <li><b>Нормализация текста запроса</b>: lowercase, но с сохранением фичи "оригинальный регистр" отдельно; обработка смешанных латиница/кириллица токенов (транслит-словарь брендов: iphone/айфон, xiaomi/сяоми и т.п.).</li>
+  <li><b>Baseline</b>: сначала словарный / gazetteer-based NER (список брендов из <code>vendor</code>, категорий из дерева, топ-характеристик per category) + fuzzy-matching — даст быстрый бейзлайн под 100 мс, трансформер — как улучшение точности сверху.</li>
+</ul>
+
+</div>

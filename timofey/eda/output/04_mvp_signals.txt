@@ -1,0 +1,36 @@
+--- cardinality of value sets for closed-ish facts ---
+Цвет_search: 1558 unique values; sample: ['дуб делано', 'бежевый/ красный', 'черный/ серый', 'бежевый/ серый', 'канадская сосна', 'серый/ черный/ оранжевый', 'перламутровый/ серебристый', 'кофейный/ бежевый']
+Материал_search: 675 unique values; sample: ['пластик/ алюминий', 'бамбук/ пластик/ силикон', 'экокожа/ пластик', 'полипропилен/ латунь/ хром', 'композитный материал', 'лдсп/ стекло закаленное/ металл', 'стекло/ пластик/ нержавеющая сталь', 'полиэстер/ искусственный мех']
+Материал корпуса_search: 656 unique values; sample: ['абразив/ металл/ пластик', 'пластик/ алюминий', 'композитный материал', 'резина/ ткань', 'лдсп/ стекло закаленное/ металл', 'металл/ стеклокерамика', 'стекло/ пластик/ нержавеющая сталь', 'металл/ стекло/ керамика']
+Форма_search: 85 unique values; sample: ['прямоугольная по форме стола', 'изогнутая', 'косточка', '3-х сторонняя', 'треугольная', 'п-образный', 'груша', 'квадратная']
+Страна_search: 92 unique values; sample: ['мьянма', 'финляндия', 'оаэ', 'украина', 'босния-герц.', 'чехия', 'армения', 'португалия']
+
+gazetteer (vendor-token exact match) coverage on 50000 sample queries: 28594 (57.2%)
+category-name token overlap coverage: 22466 (44.9%)
+
+--- query purity (category concentration) ---
+subject_id purity (top category share of clicks per query):
+count    20000.000000
+mean         0.975554
+std          0.097957
+min          0.085714
+25%          1.000000
+50%          1.000000
+75%          1.000000
+max          1.000000
+Name: sku_subject_id, dtype: float64
+share of queries with >=90% clicks in one category: 93.0%
+share of queries with <50% clicks in one category (ambiguous): 1.0%
+
+brand purity (top brand share of clicks per query):
+count    20000.000000
+mean         0.825383
+std          0.186181
+min          0.088235
+25%          0.714286
+50%          0.857143
+75%          1.000000
+max          1.000000
+Name: sku_brand_name, dtype: float64
+
+columns available: ['sku_id', 'sku_name', 'sku_brand_name', 'sku_price', 'sku_subject_id', 'sku_seo_id', 'query_text', 'sku_position']

@@ -1,0 +1,258 @@
+shape: (30991350, 8)
+
+--- nulls ---
+sku_id            0
+sku_name          0
+sku_brand_name    0
+sku_price         0
+sku_subject_id    0
+sku_seo_id        0
+query_text        0
+sku_position      0
+dtype: int64
+
+--- nunique ---
+sku_id: 332,753
+sku_name: 283,627
+sku_brand_name: 7,150
+sku_price: 209,431
+sku_subject_id: 4,103
+sku_seo_id: 4,101
+query_text: 1,789,579
+sku_position: 2,306
+
+--- exact duplicate rows (same query+sku+position etc) ---
+fully duplicated rows: 12394889 (40.0%)
+
+--- duplicate (query_text, sku_id) pairs -> click repeats ---
+unique (query,sku) pairs: 6502988
+pairs with >1 occurrence: 2184008 (33.6%)
+count    6.502988e+06
+mean     4.765709e+00
+std      4.661209e+01
+min      1.000000e+00
+25%      1.000000e+00
+50%      1.000000e+00
+75%      2.000000e+00
+max      2.190300e+04
+dtype: float64
+
+--- rows per query_text (clicks per query) ---
+count    1.789579e+06
+mean     1.731768e+01
+std      8.034986e+02
+min      1.000000e+00
+25%      1.000000e+00
+50%      2.000000e+00
+75%      3.000000e+00
+max      4.702300e+05
+Name: count, dtype: float64
+
+top 30 queries by click rows:
+query_text
+стиральная машинка                         470230
+холодильники                               442166
+аэрогриль                                  295529
+кондиционер сплит система                  199087
+микроволновая печь                         195443
+электрические чайники                      190837
+телевизор                                  173491
+холодильники двухкамерные                  164251
+ноутбук                                    160816
+пылесос                                    149976
+смартфон                                   141412
+наушники беспроводные                      121993
+вентилятор напольный                       119847
+пылесосы вертикальные                      115039
+Аэрогриль                                  111317
+морозильная камера                         109952
+планшет                                     98766
+Стиральная машинка                          91226
+стиральные машины                           85121
+утюг                                        84369
+стиральная машинка узкая                    84115
+Пылесос                                     81489
+Холодильник                                 81287
+робот пылесос                               75203
+встраиваемый электрический духовой шкаф     72897
+iphone 17                                   72776
+кондиционер                                 69600
+холодильник                                 69385
+игровые ноутбуки                            68901
+Холодильники                                67401
+Name: count, dtype: int64
+
+--- query length (chars/words) ---
+unique queries: 1789579
+word count describe: count    1.789579e+06
+mean     3.666045e+00
+std      2.454759e+00
+min      0.000000e+00
+25%      2.000000e+00
+50%      3.000000e+00
+75%      5.000000e+00
+max      1.450000e+02
+Name: query_text, dtype: float64
+char count describe: count    1.789579e+06
+mean     2.442703e+01
+std      1.669408e+01
+min      1.000000e+00
+25%      1.400000e+01
+50%      2.100000e+01
+75%      3.000000e+01
+max      1.333000e+03
+Name: query_text, dtype: float64
+
+word count value_counts (1-10):
+query_text
+0          1
+1     191498
+2     393142
+3     426718
+4     324701
+5     197979
+6     108200
+7      57442
+8      31408
+9      18739
+10     11544
+11      7389
+12      5060
+13      3401
+14      2466
+Name: count, dtype: int64
+
+--- sku_position distribution ---
+count    3.099135e+07
+mean     1.672538e+01
+std      4.430185e+01
+min      0.000000e+00
+25%      1.000000e+00
+50%      4.000000e+00
+75%      1.600000e+01
+max      5.893000e+03
+Name: sku_position, dtype: float64
+sku_position
+0     7385481
+1     3557360
+2     2128923
+3     1435347
+4     1253203
+5     1163313
+6     1041433
+7      837951
+8      781967
+9      659194
+10     631972
+11     531734
+12     518178
+13     449673
+14     440875
+15     407784
+16     410574
+17     283275
+18     293939
+19     263513
+Name: count, dtype: int64
+
+--- sku_price ---
+count    3.099135e+07
+mean     3.108441e+04
+std      7.305494e+04
+min      0.000000e+00
+25%      4.840000e+03
+50%      1.609100e+04
+75%      3.793400e+04
+max      1.190000e+07
+Name: sku_price, dtype: float64
+zero price rows: 116391
+
+--- top 30 brands by click rows ---
+sku_brand_name
+              8791897
+Apple         1411349
+Samsung       1305953
+Haier          757686
+Xiaomi         733956
+HUAWEI         698332
+Tefal          532474
+Gorenje        455301
+Яндекс         422573
+Indesit        366128
+HONOR          330719
+LG             318937
+Hi             308823
+Hisense        300033
+Sony           238418
+Beko           234217
+Midea          232938
+JBL            208507
+Bosch          192718
+Kitfort        182881
+Maunfeld       178695
+Centek         178327
+ASUS           168827
+Dreame         165210
+Candy          162607
+TCL            150943
+Dyson          148269
+Philips        134957
+Oasis          127687
+Electrolux     123330
+Name: count, dtype: int64
+empty brand rows: 8791897
+
+--- top 30 subject_id (category) by click rows ---
+sku_subject_id
+16434    2398029
+17522    1602592
+17561    1591566
+16435    1271210
+16132    1254611
+16401     940145
+31607     913899
+17543     719758
+16205     677060
+16400     662509
+16460     614707
+17422     595236
+16168     473075
+17536     426251
+16201     394528
+20021     358849
+16289     351282
+16296     329498
+16813     283474
+17565     280260
+57138     270757
+17538     268061
+16139     259188
+16291     253396
+16462     250790
+17375     248577
+16774     219717
+17670     215816
+16872     203608
+16464     198400
+Name: count, dtype: int64
+
+--- sample rows ---
+                              query_text                                                                           sku_name sku_brand_name  sku_price  sku_subject_id  sku_position
+16333224          подарочная карта apple                   Сертификат Apple Подарочная карта App Store и iTunes 3 USD (USA)          Apple      390.0           20701             1
+27196293                     колонка jbl                              Портативная беспроводная колонка JBL Go Essential Red            JBL     5664.0           16774            51
+15519568            вентилятор напольный                 Вентилятор напольный Comfort&Yus Вентилятор безлопастной напольный    Comfort&Yus     4804.0           16464            26
+26208429                      кофемашина                                    Кофемашина автоматическая DeLonghi ECAM320.60.W       DeLonghi    54824.0           16813           139
+1123366                  водонагреватель                             Водонагреватель накопительный Ariston PRO R 80 V PL UZ        Ariston    11302.0           16462             7
+8649176                            43p7k                                                                                                      29999.0           16132             0
+21124558               Умное кольцо сбер                                        Смарт-кольцо Sber размер 10, матовый черный           Sber    24499.0           36198             5
+11621273  внешний аккумулятор power bank  Портативный аккумулятор Xiaomi 33W Power Bank 20000mAh (Integrated Cable) Blue GL         Xiaomi     2756.0           17375           129
+18443725                     Холодильник                              Уцененный холодильник Gorenje NRK620EABXL4, как новый        Gorenje    44999.0           17561            34
+3906980                         ps5 игры                                                  PS5 игра WB Games Mortal Kombat 1       WB Games     2549.0           55924             7
+
+unique sku_id in clicks: 332753
+unique sku_id in catalog (skus.pkl): 546069
+overlap clicks & catalog: 241661 (72.6% of click skus)
+unique sku_id in sku_desc: 1177200
+overlap clicks & desc: 158158 (47.5% of click skus)
+overlap catalog & desc: 241355
+overlap all three: 102945

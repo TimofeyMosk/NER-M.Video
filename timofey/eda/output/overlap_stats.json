@@ -1,0 +1,9 @@
+{
+ "click_skus": 332753,
+ "catalog_skus": 546069,
+ "desc_skus": 1177200,
+ "click_and_catalog": 241661,
+ "click_and_desc": 158158,
+ "catalog_and_desc": 241355,
+ "all_three": 102945
+}
