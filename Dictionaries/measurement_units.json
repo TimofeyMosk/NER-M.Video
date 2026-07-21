@@ -1,0 +1,1928 @@
+{
+  "units": [
+    {
+      "canonical": "mm",
+      "dimension": "length",
+      "preferred": "мм",
+      "base_unit": "m",
+      "factor_to_base": 0.001,
+      "aliases": [
+        "мм",
+        "mm",
+        "миллиметр",
+        "миллиметра",
+        "миллиметры",
+        "миллиметров"
+      ]
+    },
+    {
+      "canonical": "cm",
+      "dimension": "length",
+      "preferred": "см",
+      "base_unit": "m",
+      "factor_to_base": 0.01,
+      "aliases": [
+        "см",
+        "cm",
+        "сантиметр",
+        "сантиметра",
+        "сантиметры",
+        "сантиметров"
+      ]
+    },
+    {
+      "canonical": "m",
+      "dimension": "length",
+      "preferred": "м",
+      "base_unit": "m",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "м",
+        "m",
+        "метр",
+        "метра",
+        "метры",
+        "метров"
+      ]
+    },
+    {
+      "canonical": "km",
+      "dimension": "length",
+      "preferred": "км",
+      "base_unit": "m",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "км",
+        "km",
+        "километр",
+        "километра",
+        "километры",
+        "километров"
+      ]
+    },
+    {
+      "canonical": "um",
+      "dimension": "length",
+      "preferred": "мкм",
+      "base_unit": "m",
+      "factor_to_base": 1e-06,
+      "aliases": [
+        "мкм",
+        "µm",
+        "um",
+        "микрометр",
+        "микрона",
+        "микрон"
+      ]
+    },
+    {
+      "canonical": "nm",
+      "dimension": "length",
+      "preferred": "нм",
+      "base_unit": "m",
+      "factor_to_base": 1e-09,
+      "aliases": [
+        "нм",
+        "nm",
+        "нанометр",
+        "нанометра",
+        "нанометров"
+      ]
+    },
+    {
+      "canonical": "inch",
+      "dimension": "length",
+      "preferred": "дюйм",
+      "base_unit": "m",
+      "factor_to_base": 0.0254,
+      "aliases": [
+        "\"",
+        "″",
+        "дюйм",
+        "дюйма",
+        "дюймы",
+        "дюймов",
+        "inch",
+        "inches",
+        "in"
+      ]
+    },
+    {
+      "canonical": "foot",
+      "dimension": "length",
+      "preferred": "фут",
+      "base_unit": "m",
+      "factor_to_base": 0.3048,
+      "aliases": [
+        "'",
+        "′",
+        "фут",
+        "фута",
+        "футов",
+        "ft"
+      ]
+    },
+    {
+      "canonical": "mg",
+      "dimension": "mass",
+      "preferred": "мг",
+      "base_unit": "kg",
+      "factor_to_base": 1e-06,
+      "aliases": [
+        "мг",
+        "mg",
+        "миллиграмм",
+        "миллиграмма",
+        "миллиграммов"
+      ]
+    },
+    {
+      "canonical": "g",
+      "dimension": "mass",
+      "preferred": "г",
+      "base_unit": "kg",
+      "factor_to_base": 0.001,
+      "aliases": [
+        "г",
+        "гр",
+        "g",
+        "грамм",
+        "грамма",
+        "граммы",
+        "граммов"
+      ]
+    },
+    {
+      "canonical": "kg",
+      "dimension": "mass",
+      "preferred": "кг",
+      "base_unit": "kg",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "кг",
+        "kg",
+        "килограмм",
+        "килограмма",
+        "килограммы",
+        "килограммов",
+        "кило"
+      ]
+    },
+    {
+      "canonical": "t",
+      "dimension": "mass",
+      "preferred": "т",
+      "base_unit": "kg",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "т",
+        "t",
+        "тонна",
+        "тонны",
+        "тонн"
+      ]
+    },
+    {
+      "canonical": "mm2",
+      "dimension": "area",
+      "preferred": "мм²",
+      "base_unit": "m2",
+      "factor_to_base": 1e-06,
+      "aliases": [
+        "мм2",
+        "мм²",
+        "mm2",
+        "mm²",
+        "кв мм",
+        "квадратный миллиметр"
+      ]
+    },
+    {
+      "canonical": "cm2",
+      "dimension": "area",
+      "preferred": "см²",
+      "base_unit": "m2",
+      "factor_to_base": 0.0001,
+      "aliases": [
+        "см2",
+        "см²",
+        "cm2",
+        "cm²",
+        "кв см",
+        "квадратный сантиметр"
+      ]
+    },
+    {
+      "canonical": "m2",
+      "dimension": "area",
+      "preferred": "м²",
+      "base_unit": "m2",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "м2",
+        "м²",
+        "m2",
+        "m²",
+        "кв м",
+        "квадратный метр",
+        "квадратных метров"
+      ]
+    },
+    {
+      "canonical": "mm3",
+      "dimension": "volume",
+      "preferred": "мм³",
+      "base_unit": "l",
+      "factor_to_base": 1e-06,
+      "aliases": [
+        "мм3",
+        "мм³",
+        "mm3",
+        "mm³"
+      ]
+    },
+    {
+      "canonical": "cm3",
+      "dimension": "volume",
+      "preferred": "см³",
+      "base_unit": "l",
+      "factor_to_base": 0.001,
+      "aliases": [
+        "см3",
+        "см³",
+        "cm3",
+        "cm³",
+        "куб см"
+      ]
+    },
+    {
+      "canonical": "m3",
+      "dimension": "volume",
+      "preferred": "м³",
+      "base_unit": "l",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "м3",
+        "м³",
+        "m3",
+        "m³",
+        "куб м"
+      ]
+    },
+    {
+      "canonical": "ml",
+      "dimension": "volume",
+      "preferred": "мл",
+      "base_unit": "l",
+      "factor_to_base": 0.001,
+      "aliases": [
+        "мл",
+        "ml",
+        "миллилитр",
+        "миллилитра",
+        "миллилитров"
+      ]
+    },
+    {
+      "canonical": "l",
+      "dimension": "volume",
+      "preferred": "л",
+      "base_unit": "l",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "л",
+        "l",
+        "литр",
+        "литра",
+        "литры",
+        "литров"
+      ]
+    },
+    {
+      "canonical": "mw",
+      "dimension": "power",
+      "preferred": "мВт",
+      "base_unit": "w",
+      "factor_to_base": 0.001,
+      "aliases": [
+        "мвт",
+        "mw",
+        "милливатт",
+        "милливатта",
+        "милливаттов"
+      ]
+    },
+    {
+      "canonical": "w",
+      "dimension": "power",
+      "preferred": "Вт",
+      "base_unit": "w",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "вт",
+        "w",
+        "ватт",
+        "ватта",
+        "ваттов"
+      ]
+    },
+    {
+      "canonical": "kw",
+      "dimension": "power",
+      "preferred": "кВт",
+      "base_unit": "w",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "квт",
+        "kw",
+        "киловатт",
+        "киловатта",
+        "киловаттов"
+      ]
+    },
+    {
+      "canonical": "hp",
+      "dimension": "power",
+      "preferred": "л.с.",
+      "base_unit": "w",
+      "factor_to_base": 735.49875,
+      "aliases": [
+        "лс",
+        "л.с",
+        "л.с.",
+        "hp",
+        "лошадиная сила",
+        "лошадиных сил"
+      ]
+    },
+    {
+      "canonical": "wh",
+      "dimension": "energy",
+      "preferred": "Вт·ч",
+      "base_unit": "wh",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "втч",
+        "вт ч",
+        "wh",
+        "w h",
+        "ватт час",
+        "ватт часов"
+      ]
+    },
+    {
+      "canonical": "kwh",
+      "dimension": "energy",
+      "preferred": "кВт·ч",
+      "base_unit": "wh",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "квтч",
+        "квт ч",
+        "kwh",
+        "киловатт час",
+        "киловатт часов"
+      ]
+    },
+    {
+      "canonical": "j",
+      "dimension": "energy",
+      "preferred": "Дж",
+      "base_unit": "j",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "дж",
+        "j",
+        "джоуль",
+        "джоуля",
+        "джоулей"
+      ]
+    },
+    {
+      "canonical": "kj",
+      "dimension": "energy",
+      "preferred": "кДж",
+      "base_unit": "j",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "кдж",
+        "kj",
+        "килоджоуль",
+        "килоджоулей"
+      ]
+    },
+    {
+      "canonical": "kcal",
+      "dimension": "energy",
+      "preferred": "ккал",
+      "base_unit": "j",
+      "factor_to_base": 4184.0,
+      "aliases": [
+        "ккал",
+        "kcal",
+        "килокалория",
+        "килокалорий"
+      ]
+    },
+    {
+      "canonical": "btu",
+      "dimension": "energy",
+      "preferred": "BTU",
+      "base_unit": "j",
+      "factor_to_base": 1055.05585262,
+      "aliases": [
+        "btu",
+        "бте"
+      ]
+    },
+    {
+      "canonical": "mv",
+      "dimension": "voltage",
+      "preferred": "мВ",
+      "base_unit": "v",
+      "factor_to_base": 0.001,
+      "aliases": [
+        "мв",
+        "mv",
+        "милливольт",
+        "милливольта"
+      ]
+    },
+    {
+      "canonical": "v",
+      "dimension": "voltage",
+      "preferred": "В",
+      "base_unit": "v",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "в",
+        "v",
+        "вольт",
+        "вольта",
+        "вольтов"
+      ]
+    },
+    {
+      "canonical": "kv",
+      "dimension": "voltage",
+      "preferred": "кВ",
+      "base_unit": "v",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "кв",
+        "kv",
+        "киловольт",
+        "киловольта"
+      ]
+    },
+    {
+      "canonical": "ma",
+      "dimension": "current",
+      "preferred": "мА",
+      "base_unit": "a",
+      "factor_to_base": 0.001,
+      "aliases": [
+        "ма",
+        "ma",
+        "миллиампер",
+        "миллиампера"
+      ]
+    },
+    {
+      "canonical": "a",
+      "dimension": "current",
+      "preferred": "А",
+      "base_unit": "a",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "а",
+        "a",
+        "ампер",
+        "ампера",
+        "амперов"
+      ]
+    },
+    {
+      "canonical": "mah",
+      "dimension": "electric_charge",
+      "preferred": "мА·ч",
+      "base_unit": "ah",
+      "factor_to_base": 0.001,
+      "aliases": [
+        "мач",
+        "ма ч",
+        "mah",
+        "миллиампер час",
+        "миллиампер часов"
+      ]
+    },
+    {
+      "canonical": "ah",
+      "dimension": "electric_charge",
+      "preferred": "А·ч",
+      "base_unit": "ah",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "ач",
+        "а ч",
+        "ah",
+        "ампер час",
+        "ампер часов"
+      ]
+    },
+    {
+      "canonical": "ohm",
+      "dimension": "resistance",
+      "preferred": "Ом",
+      "base_unit": "ohm",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "ом",
+        "ohm",
+        "ω"
+      ]
+    },
+    {
+      "canonical": "kohm",
+      "dimension": "resistance",
+      "preferred": "кОм",
+      "base_unit": "ohm",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "ком",
+        "kohm",
+        "kω"
+      ]
+    },
+    {
+      "canonical": "mohm",
+      "dimension": "resistance",
+      "preferred": "МОм",
+      "base_unit": "ohm",
+      "factor_to_base": 1000000.0,
+      "aliases": [
+        "мом",
+        "mohm",
+        "mω"
+      ]
+    },
+    {
+      "canonical": "va",
+      "dimension": "apparent_power",
+      "preferred": "ВА",
+      "base_unit": "va",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "ва",
+        "va",
+        "вольт ампер"
+      ]
+    },
+    {
+      "canonical": "hz",
+      "dimension": "frequency",
+      "preferred": "Гц",
+      "base_unit": "hz",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "гц",
+        "hz",
+        "герц"
+      ]
+    },
+    {
+      "canonical": "khz",
+      "dimension": "frequency",
+      "preferred": "кГц",
+      "base_unit": "hz",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "кгц",
+        "khz",
+        "килогерц"
+      ]
+    },
+    {
+      "canonical": "mhz",
+      "dimension": "frequency",
+      "preferred": "МГц",
+      "base_unit": "hz",
+      "factor_to_base": 1000000.0,
+      "aliases": [
+        "мгц",
+        "mhz",
+        "мегагерц"
+      ]
+    },
+    {
+      "canonical": "ghz",
+      "dimension": "frequency",
+      "preferred": "ГГц",
+      "base_unit": "hz",
+      "factor_to_base": 1000000000.0,
+      "aliases": [
+        "ггц",
+        "ghz",
+        "гигагерц"
+      ]
+    },
+    {
+      "canonical": "ms",
+      "dimension": "time",
+      "preferred": "мс",
+      "base_unit": "s",
+      "factor_to_base": 0.001,
+      "aliases": [
+        "мс",
+        "ms",
+        "миллисекунда",
+        "миллисекунды"
+      ]
+    },
+    {
+      "canonical": "s",
+      "dimension": "time",
+      "preferred": "с",
+      "base_unit": "s",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "с",
+        "сек",
+        "сек.",
+        "s",
+        "sec",
+        "секунда",
+        "секунды",
+        "секунд"
+      ]
+    },
+    {
+      "canonical": "min",
+      "dimension": "time",
+      "preferred": "мин",
+      "base_unit": "s",
+      "factor_to_base": 60.0,
+      "aliases": [
+        "мин",
+        "мин.",
+        "min",
+        "минута",
+        "минуты",
+        "минут"
+      ]
+    },
+    {
+      "canonical": "h",
+      "dimension": "time",
+      "preferred": "ч",
+      "base_unit": "s",
+      "factor_to_base": 3600.0,
+      "aliases": [
+        "ч",
+        "час",
+        "часа",
+        "часов",
+        "h",
+        "hr"
+      ]
+    },
+    {
+      "canonical": "day",
+      "dimension": "time",
+      "preferred": "сутки",
+      "base_unit": "s",
+      "factor_to_base": 86400.0,
+      "aliases": [
+        "сутки",
+        "суток",
+        "день",
+        "дня",
+        "дней"
+      ]
+    },
+    {
+      "canonical": "month",
+      "dimension": "time",
+      "preferred": "мес.",
+      "base_unit": "month",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "мес",
+        "мес.",
+        "месяц",
+        "месяца",
+        "месяцев"
+      ]
+    },
+    {
+      "canonical": "year",
+      "dimension": "time",
+      "preferred": "год",
+      "base_unit": "year",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "год",
+        "года",
+        "лет"
+      ]
+    },
+    {
+      "canonical": "rpm",
+      "dimension": "rotation_rate",
+      "preferred": "об/мин",
+      "base_unit": "rpm",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "об/мин",
+        "об мин",
+        "rpm",
+        "оборот в минуту",
+        "оборотов в минуту"
+      ]
+    },
+    {
+      "canonical": "mps",
+      "dimension": "speed",
+      "preferred": "м/с",
+      "base_unit": "mps",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "м/с",
+        "м/сек",
+        "m/s",
+        "метр в секунду",
+        "метров в секунду"
+      ]
+    },
+    {
+      "canonical": "kmh",
+      "dimension": "speed",
+      "preferred": "км/ч",
+      "base_unit": "mps",
+      "factor_to_base": 0.2777777778,
+      "aliases": [
+        "км/ч",
+        "km/h",
+        "километр в час",
+        "километров в час"
+      ]
+    },
+    {
+      "canonical": "pa",
+      "dimension": "pressure",
+      "preferred": "Па",
+      "base_unit": "pa",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "па",
+        "pa",
+        "паскаль",
+        "паскалей"
+      ]
+    },
+    {
+      "canonical": "kpa",
+      "dimension": "pressure",
+      "preferred": "кПа",
+      "base_unit": "pa",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "кпа",
+        "kpa",
+        "килопаскаль",
+        "килопаскалей"
+      ]
+    },
+    {
+      "canonical": "mpa",
+      "dimension": "pressure",
+      "preferred": "МПа",
+      "base_unit": "pa",
+      "factor_to_base": 1000000.0,
+      "aliases": [
+        "мпа",
+        "mpa",
+        "мегапаскаль",
+        "мегапаскалей"
+      ]
+    },
+    {
+      "canonical": "bar",
+      "dimension": "pressure",
+      "preferred": "бар",
+      "base_unit": "pa",
+      "factor_to_base": 100000.0,
+      "aliases": [
+        "бар",
+        "bar",
+        "бара",
+        "баров"
+      ]
+    },
+    {
+      "canonical": "atm",
+      "dimension": "pressure",
+      "preferred": "атм",
+      "base_unit": "pa",
+      "factor_to_base": 101325.0,
+      "aliases": [
+        "атм",
+        "atm",
+        "атмосфера",
+        "атмосферы"
+      ]
+    },
+    {
+      "canonical": "mmhg",
+      "dimension": "pressure",
+      "preferred": "мм рт. ст.",
+      "base_unit": "pa",
+      "factor_to_base": 133.322387415,
+      "aliases": [
+        "мм рт ст",
+        "мм рт. ст.",
+        "mmhg"
+      ]
+    },
+    {
+      "canonical": "lpm",
+      "dimension": "flow",
+      "preferred": "л/мин",
+      "base_unit": "lpm",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "л/мин",
+        "l/min",
+        "литр в минуту",
+        "литров в минуту"
+      ]
+    },
+    {
+      "canonical": "lph",
+      "dimension": "flow",
+      "preferred": "л/ч",
+      "base_unit": "lpm",
+      "factor_to_base": 0.016666666666666666,
+      "aliases": [
+        "л/ч",
+        "l/h",
+        "литр в час",
+        "литров в час"
+      ]
+    },
+    {
+      "canonical": "m3h",
+      "dimension": "flow",
+      "preferred": "м³/ч",
+      "base_unit": "lpm",
+      "factor_to_base": 16.666666666666668,
+      "aliases": [
+        "м3/ч",
+        "м³/ч",
+        "м3/час",
+        "m3/h",
+        "m³/h"
+      ]
+    },
+    {
+      "canonical": "kgday",
+      "dimension": "production_rate",
+      "preferred": "кг/сутки",
+      "base_unit": "kgday",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "кг/сутки",
+        "кг в сутки",
+        "kg/day"
+      ]
+    },
+    {
+      "canonical": "tday",
+      "dimension": "production_rate",
+      "preferred": "т/сутки",
+      "base_unit": "kgday",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "т/д",
+        "т/сутки",
+        "t/day"
+      ]
+    },
+    {
+      "canonical": "gmin",
+      "dimension": "mass_flow",
+      "preferred": "г/мин",
+      "base_unit": "kg_s",
+      "factor_to_base": 1.6666666666666667e-05,
+      "aliases": [
+        "г/мин",
+        "g/min"
+      ]
+    },
+    {
+      "canonical": "kgmin",
+      "dimension": "mass_flow",
+      "preferred": "кг/мин",
+      "base_unit": "kg_s",
+      "factor_to_base": 0.016666666666666666,
+      "aliases": [
+        "кг/мин",
+        "kg/min"
+      ]
+    },
+    {
+      "canonical": "gh",
+      "dimension": "mass_flow",
+      "preferred": "г/ч",
+      "base_unit": "kg_s",
+      "factor_to_base": 2.7777777777777776e-07,
+      "aliases": [
+        "г/ч",
+        "g/h"
+      ]
+    },
+    {
+      "canonical": "cmps",
+      "dimension": "speed",
+      "preferred": "см/с",
+      "base_unit": "mps",
+      "factor_to_base": 0.01,
+      "aliases": [
+        "см/сек",
+        "см/с",
+        "cm/s"
+      ]
+    },
+    {
+      "canonical": "mpm",
+      "dimension": "speed",
+      "preferred": "м/мин",
+      "base_unit": "mps",
+      "factor_to_base": 0.016666666666666666,
+      "aliases": [
+        "м/мин",
+        "m/min"
+      ]
+    },
+    {
+      "canonical": "lps",
+      "dimension": "flow",
+      "preferred": "л/с",
+      "base_unit": "lpm",
+      "factor_to_base": 60.0,
+      "aliases": [
+        "л/сек",
+        "л/с",
+        "l/s"
+      ]
+    },
+    {
+      "canonical": "mlday",
+      "dimension": "flow",
+      "preferred": "мл/сутки",
+      "base_unit": "lpm",
+      "factor_to_base": 6.944444444444445e-07,
+      "aliases": [
+        "мл/сутки",
+        "ml/day"
+      ]
+    },
+    {
+      "canonical": "bit",
+      "dimension": "data_size",
+      "preferred": "бит",
+      "base_unit": "byte",
+      "factor_to_base": 0.125,
+      "aliases": [
+        "бит",
+        "bit",
+        "бита",
+        "битов"
+      ]
+    },
+    {
+      "canonical": "byte",
+      "dimension": "data_size",
+      "preferred": "Б",
+      "base_unit": "byte",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "байт",
+        "byte",
+        "байта",
+        "байтов"
+      ]
+    },
+    {
+      "canonical": "kb",
+      "dimension": "data_size",
+      "preferred": "КБ",
+      "base_unit": "byte",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "кб",
+        "kb",
+        "килобайт",
+        "килобайта",
+        "килобайтов"
+      ]
+    },
+    {
+      "canonical": "mb",
+      "dimension": "data_size",
+      "preferred": "МБ",
+      "base_unit": "byte",
+      "factor_to_base": 1000000.0,
+      "aliases": [
+        "мб",
+        "mb",
+        "мегабайт",
+        "мегабайта",
+        "мегабайтов"
+      ]
+    },
+    {
+      "canonical": "gb",
+      "dimension": "data_size",
+      "preferred": "ГБ",
+      "base_unit": "byte",
+      "factor_to_base": 1000000000.0,
+      "aliases": [
+        "гб",
+        "gb",
+        "гигабайт",
+        "гигабайта",
+        "гигабайтов"
+      ]
+    },
+    {
+      "canonical": "tb",
+      "dimension": "data_size",
+      "preferred": "ТБ",
+      "base_unit": "byte",
+      "factor_to_base": 1000000000000.0,
+      "aliases": [
+        "тб",
+        "tb",
+        "терабайт",
+        "терабайта",
+        "терабайтов"
+      ]
+    },
+    {
+      "canonical": "mbps",
+      "dimension": "data_rate",
+      "preferred": "Мбит/с",
+      "base_unit": "bps",
+      "factor_to_base": 1000000.0,
+      "aliases": [
+        "мбит/с",
+        "мбит/сек",
+        "mbps",
+        "mb/s",
+        "мб/сек"
+      ]
+    },
+    {
+      "canonical": "gbps",
+      "dimension": "data_rate",
+      "preferred": "Гбит/с",
+      "base_unit": "bps",
+      "factor_to_base": 1000000000.0,
+      "aliases": [
+        "гбит/с",
+        "гбит/сек",
+        "gbps"
+      ]
+    },
+    {
+      "canonical": "pixel",
+      "dimension": "resolution",
+      "preferred": "пикс.",
+      "base_unit": "pixel",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "пикс",
+        "пикс.",
+        "pixel",
+        "px",
+        "пиксель",
+        "пикселей"
+      ]
+    },
+    {
+      "canonical": "mpixel",
+      "dimension": "resolution",
+      "preferred": "МПикс",
+      "base_unit": "pixel",
+      "factor_to_base": 1000000.0,
+      "aliases": [
+        "мпикс",
+        "мп",
+        "mp",
+        "mpix",
+        "мегапиксель",
+        "мегапикселей"
+      ]
+    },
+    {
+      "canonical": "ppi",
+      "dimension": "pixel_density",
+      "preferred": "ppi",
+      "base_unit": "ppi",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "ppi",
+        "пикс/дюйм"
+      ]
+    },
+    {
+      "canonical": "dpi",
+      "dimension": "pixel_density",
+      "preferred": "dpi",
+      "base_unit": "dpi",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "dpi",
+        "точек на дюйм"
+      ]
+    },
+    {
+      "canonical": "fps",
+      "dimension": "frame_rate",
+      "preferred": "кадр/с",
+      "base_unit": "fps",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "кадр/сек",
+        "кадров/сек",
+        "fps"
+      ]
+    },
+    {
+      "canonical": "percent",
+      "dimension": "ratio",
+      "preferred": "%",
+      "base_unit": "percent",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "%",
+        "процент",
+        "процента",
+        "процентов"
+      ]
+    },
+    {
+      "canonical": "db",
+      "dimension": "sound_level",
+      "preferred": "дБ",
+      "base_unit": "db",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "дб",
+        "db",
+        "децибел",
+        "децибела"
+      ]
+    },
+    {
+      "canonical": "celsius",
+      "dimension": "temperature",
+      "preferred": "°C",
+      "base_unit": "celsius",
+      "factor_to_base": null,
+      "aliases": [
+        "°c",
+        "°с",
+        "*c",
+        "*с",
+        "градус c",
+        "градус с",
+        "градуса",
+        "градусов",
+        "цельсий"
+      ]
+    },
+    {
+      "canonical": "kelvin",
+      "dimension": "temperature",
+      "preferred": "K",
+      "base_unit": "kelvin",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "k",
+        "к",
+        "кельвин",
+        "кельвина"
+      ]
+    },
+    {
+      "canonical": "lumen",
+      "dimension": "luminous_flux",
+      "preferred": "лм",
+      "base_unit": "lumen",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "лм",
+        "lm",
+        "lumen",
+        "люмен",
+        "люмена",
+        "люменов"
+      ]
+    },
+    {
+      "canonical": "candela_m2",
+      "dimension": "luminance",
+      "preferred": "кд/м²",
+      "base_unit": "candela_m2",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "кд/м2",
+        "кд/м²",
+        "cd/m2",
+        "cd/m²"
+      ]
+    },
+    {
+      "canonical": "candela",
+      "dimension": "luminous_intensity",
+      "preferred": "кд",
+      "base_unit": "candela",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "кд",
+        "cd",
+        "кандела"
+      ]
+    },
+    {
+      "canonical": "lumen_w",
+      "dimension": "luminous_efficacy",
+      "preferred": "лм/Вт",
+      "base_unit": "lumen_w",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "лм/вт",
+        "lm/w"
+      ]
+    },
+    {
+      "canonical": "gram_m2",
+      "dimension": "surface_density",
+      "preferred": "г/м²",
+      "base_unit": "gram_m2",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "г/м2",
+        "г/м²",
+        "g/m2",
+        "g/m²"
+      ]
+    },
+    {
+      "canonical": "kg_m3",
+      "dimension": "density",
+      "preferred": "кг/м³",
+      "base_unit": "kg_m3",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "кг/м3",
+        "кг/м³",
+        "kg/m3",
+        "kg/m³"
+      ]
+    },
+    {
+      "canonical": "nm_torque",
+      "dimension": "torque",
+      "preferred": "Н·м",
+      "base_unit": "nm_torque",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "нм момент",
+        "н.м",
+        "n.m",
+        "nm torque"
+      ]
+    },
+    {
+      "canonical": "kn",
+      "dimension": "force",
+      "preferred": "кН",
+      "base_unit": "n",
+      "factor_to_base": 1000.0,
+      "aliases": [
+        "кн",
+        "kn",
+        "килоньютон"
+      ]
+    },
+    {
+      "canonical": "mmh2o",
+      "dimension": "pressure",
+      "preferred": "мм вод. ст.",
+      "base_unit": "pa",
+      "factor_to_base": 9.80665,
+      "aliases": [
+        "мм в.ст",
+        "мм в.ст.",
+        "mmh2o"
+      ]
+    },
+    {
+      "canonical": "w_channel",
+      "dimension": "power_per_channel",
+      "preferred": "Вт/канал",
+      "base_unit": "w_channel",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "вт/канал",
+        "w/channel"
+      ]
+    },
+    {
+      "canonical": "w_m",
+      "dimension": "linear_power",
+      "preferred": "Вт/м",
+      "base_unit": "w_m",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "вт/м",
+        "w/m"
+      ]
+    },
+    {
+      "canonical": "ppm",
+      "dimension": "ratio",
+      "preferred": "ppm",
+      "base_unit": "ppm",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "ppm",
+        "частей на миллион"
+      ]
+    },
+    {
+      "canonical": "db_oct",
+      "dimension": "frequency_slope",
+      "preferred": "дБ/окт",
+      "base_unit": "db_oct",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "дб/окт",
+        "db/oct"
+      ]
+    },
+    {
+      "canonical": "page",
+      "dimension": "count",
+      "preferred": "стр.",
+      "base_unit": "page",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "стр",
+        "стр.",
+        "страница",
+        "страницы",
+        "страниц"
+      ]
+    },
+    {
+      "canonical": "page_min",
+      "dimension": "rate",
+      "preferred": "стр/мин",
+      "base_unit": "page_min",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "стр/мин",
+        "страниц в минуту",
+        "ppm pages"
+      ]
+    },
+    {
+      "canonical": "sheet",
+      "dimension": "count",
+      "preferred": "лист",
+      "base_unit": "sheet",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "лист",
+        "лист.",
+        "листов",
+        "листы"
+      ]
+    },
+    {
+      "canonical": "stitch_min",
+      "dimension": "rate",
+      "preferred": "стеж./мин",
+      "base_unit": "stitch_min",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "стеж/мин",
+        "стеж./мин",
+        "стежков в минуту"
+      ]
+    },
+    {
+      "canonical": "piece",
+      "dimension": "count",
+      "preferred": "шт.",
+      "base_unit": "piece",
+      "factor_to_base": 1.0,
+      "aliases": [
+        "шт",
+        "шт.",
+        "штука",
+        "штуки",
+        "штук",
+        "pcs"
+      ]
+    }
+  ],
+  "alias_lookup": {
+    "\"": "inch",
+    "%": "percent",
+    "'": "foot",
+    "''": "inch",
+    "*c": "celsius",
+    "*с": "celsius",
+    "a": "a",
+    "ah": "ah",
+    "atm": "atm",
+    "bar": "bar",
+    "bit": "bit",
+    "btu": "btu",
+    "byte": "byte",
+    "candela": "candela",
+    "candela_m2": "candela_m2",
+    "cd": "candela",
+    "cd/m2": "candela_m2",
+    "celsius": "celsius",
+    "cm": "cm",
+    "cm/s": "cmps",
+    "cm2": "cm2",
+    "cm3": "cm3",
+    "cmps": "cmps",
+    "day": "day",
+    "db": "db",
+    "db/oct": "db_oct",
+    "db_oct": "db_oct",
+    "dpi": "dpi",
+    "foot": "foot",
+    "fps": "fps",
+    "ft": "foot",
+    "g": "g",
+    "g/h": "gh",
+    "g/m2": "gram_m2",
+    "g/min": "gmin",
+    "gb": "gb",
+    "gbps": "gbps",
+    "gh": "gh",
+    "ghz": "ghz",
+    "gmin": "gmin",
+    "gram_m2": "gram_m2",
+    "h": "h",
+    "hp": "hp",
+    "hr": "h",
+    "hz": "hz",
+    "in": "inch",
+    "inch": "inch",
+    "inches": "inch",
+    "j": "j",
+    "k": "kelvin",
+    "kb": "kb",
+    "kcal": "kcal",
+    "kelvin": "kelvin",
+    "kg": "kg",
+    "kg/day": "kgday",
+    "kg/m3": "kg_m3",
+    "kg/min": "kgmin",
+    "kg_m3": "kg_m3",
+    "kgday": "kgday",
+    "kgmin": "kgmin",
+    "khz": "khz",
+    "kj": "kj",
+    "km": "km",
+    "km/h": "kmh",
+    "kmh": "kmh",
+    "kn": "kn",
+    "kohm": "kohm",
+    "kpa": "kpa",
+    "kv": "kv",
+    "kw": "kw",
+    "kwh": "kwh",
+    "kω": "kohm",
+    "l": "l",
+    "l/h": "lph",
+    "l/min": "lpm",
+    "l/s": "lps",
+    "lm": "lumen",
+    "lm/w": "lumen_w",
+    "lph": "lph",
+    "lpm": "lpm",
+    "lps": "lps",
+    "lumen": "lumen",
+    "lumen_w": "lumen_w",
+    "m": "m",
+    "m/min": "mpm",
+    "m/s": "mps",
+    "m2": "m2",
+    "m3": "m3",
+    "m3/h": "m3h",
+    "m3h": "m3h",
+    "ma": "ma",
+    "mah": "mah",
+    "mb": "mb",
+    "mb/s": "mbps",
+    "mbps": "mbps",
+    "mg": "mg",
+    "mhz": "mhz",
+    "min": "min",
+    "ml": "ml",
+    "ml/day": "mlday",
+    "mlday": "mlday",
+    "mm": "mm",
+    "mm2": "mm2",
+    "mm3": "mm3",
+    "mmh2o": "mmh2o",
+    "mmhg": "mmhg",
+    "mohm": "mohm",
+    "month": "month",
+    "mp": "mpixel",
+    "mpa": "mpa",
+    "mpix": "mpixel",
+    "mpixel": "mpixel",
+    "mpm": "mpm",
+    "mps": "mps",
+    "ms": "ms",
+    "mv": "mv",
+    "mw": "mw",
+    "mω": "mohm",
+    "n.m": "nm_torque",
+    "nm": "nm",
+    "nm_torque": "nm_torque",
+    "nmtorque": "nm_torque",
+    "ohm": "ohm",
+    "pa": "pa",
+    "page": "page",
+    "page_min": "page_min",
+    "pcs": "piece",
+    "percent": "percent",
+    "piece": "piece",
+    "pixel": "pixel",
+    "ppi": "ppi",
+    "ppm": "ppm",
+    "ppmpages": "page_min",
+    "px": "pixel",
+    "rpm": "rpm",
+    "s": "s",
+    "sec": "s",
+    "sheet": "sheet",
+    "stitch_min": "stitch_min",
+    "t": "t",
+    "t/day": "tday",
+    "tb": "tb",
+    "tday": "tday",
+    "um": "um",
+    "v": "v",
+    "va": "va",
+    "w": "w",
+    "w/channel": "w_channel",
+    "w/m": "w_m",
+    "w_channel": "w_channel",
+    "w_m": "w_m",
+    "wh": "wh",
+    "year": "year",
+    "°c": "celsius",
+    "°с": "celsius",
+    "μm": "um",
+    "ω": "ohm",
+    "а": "a",
+    "а.ч": "ah",
+    "ампер": "a",
+    "ампера": "a",
+    "амперов": "a",
+    "амперчас": "ah",
+    "амперчасов": "ah",
+    "атм": "atm",
+    "атмосфера": "atm",
+    "атмосферы": "atm",
+    "ач": "ah",
+    "б": "byte",
+    "байт": "byte",
+    "байта": "byte",
+    "байтов": "byte",
+    "бар": "bar",
+    "бара": "bar",
+    "баров": "bar",
+    "бит": "bit",
+    "бита": "bit",
+    "битов": "bit",
+    "бте": "btu",
+    "в": "v",
+    "ва": "va",
+    "ватт": "w",
+    "ватта": "w",
+    "ваттов": "w",
+    "ваттчас": "wh",
+    "ваттчасов": "wh",
+    "вольт": "v",
+    "вольта": "v",
+    "вольтампер": "va",
+    "вольтов": "v",
+    "вт": "w",
+    "вт.ч": "wh",
+    "вт/канал": "w_channel",
+    "вт/м": "w_m",
+    "втч": "wh",
+    "г": "g",
+    "г/м2": "gram_m2",
+    "г/мин": "gmin",
+    "г/ч": "gh",
+    "гб": "gb",
+    "гбит/с": "gbps",
+    "гбит/сек": "gbps",
+    "ггц": "ghz",
+    "герц": "hz",
+    "гигабайт": "gb",
+    "гигабайта": "gb",
+    "гигабайтов": "gb",
+    "гигагерц": "ghz",
+    "год": "year",
+    "года": "year",
+    "гр": "g",
+    "градусc": "celsius",
+    "градуса": "celsius",
+    "градусов": "celsius",
+    "градусс": "celsius",
+    "грамм": "g",
+    "грамма": "g",
+    "граммов": "g",
+    "граммы": "g",
+    "гц": "hz",
+    "дб": "db",
+    "дб/окт": "db_oct",
+    "день": "day",
+    "децибел": "db",
+    "децибела": "db",
+    "дж": "j",
+    "джоулей": "j",
+    "джоуль": "j",
+    "джоуля": "j",
+    "дней": "day",
+    "дня": "day",
+    "дюйм": "inch",
+    "дюйма": "inch",
+    "дюймов": "inch",
+    "дюймы": "inch",
+    "к": "kelvin",
+    "кадр/с": "fps",
+    "кадр/сек": "fps",
+    "кадров/сек": "fps",
+    "кандела": "candela",
+    "кб": "kb",
+    "кв": "kv",
+    "квадратныйметр": "m2",
+    "квадратныймиллиметр": "mm2",
+    "квадратныйсантиметр": "cm2",
+    "квадратныхметров": "m2",
+    "квм": "m2",
+    "квмм": "mm2",
+    "квсм": "cm2",
+    "квт": "kw",
+    "квт.ч": "kwh",
+    "квтч": "kwh",
+    "кг": "kg",
+    "кг/м3": "kg_m3",
+    "кг/мин": "kgmin",
+    "кг/сутки": "kgday",
+    "кгвсутки": "kgday",
+    "кгц": "khz",
+    "кд": "candela",
+    "кд/м2": "candela_m2",
+    "кдж": "kj",
+    "кельвин": "kelvin",
+    "кельвина": "kelvin",
+    "кило": "kg",
+    "килобайт": "kb",
+    "килобайта": "kb",
+    "килобайтов": "kb",
+    "киловатт": "kw",
+    "киловатта": "kw",
+    "киловаттов": "kw",
+    "киловаттчас": "kwh",
+    "киловаттчасов": "kwh",
+    "киловольт": "kv",
+    "киловольта": "kv",
+    "килогерц": "khz",
+    "килограмм": "kg",
+    "килограмма": "kg",
+    "килограммов": "kg",
+    "килограммы": "kg",
+    "килоджоулей": "kj",
+    "килоджоуль": "kj",
+    "килокалорий": "kcal",
+    "килокалория": "kcal",
+    "километр": "km",
+    "километра": "km",
+    "километрвчас": "kmh",
+    "километров": "km",
+    "километроввчас": "kmh",
+    "километры": "km",
+    "килоньютон": "kn",
+    "килопаскалей": "kpa",
+    "килопаскаль": "kpa",
+    "ккал": "kcal",
+    "км": "km",
+    "км/ч": "kmh",
+    "кн": "kn",
+    "ком": "kohm",
+    "кпа": "kpa",
+    "кубм": "m3",
+    "кубсм": "cm3",
+    "л": "l",
+    "л.с": "hp",
+    "л/мин": "lpm",
+    "л/с": "lps",
+    "л/сек": "lps",
+    "л/ч": "lph",
+    "лет": "year",
+    "лист": "sheet",
+    "листов": "sheet",
+    "листы": "sheet",
+    "литр": "l",
+    "литра": "l",
+    "литрвминуту": "lpm",
+    "литрвчас": "lph",
+    "литров": "l",
+    "литроввминуту": "lpm",
+    "литроввчас": "lph",
+    "литры": "l",
+    "лм": "lumen",
+    "лм/вт": "lumen_w",
+    "лошадинаясила": "hp",
+    "лошадиныхсил": "hp",
+    "лс": "hp",
+    "люмен": "lumen",
+    "люмена": "lumen",
+    "люменов": "lumen",
+    "м": "m",
+    "м/мин": "mpm",
+    "м/с": "mps",
+    "м/сек": "mps",
+    "м2": "m2",
+    "м3": "m3",
+    "м3/ч": "m3h",
+    "м3/час": "m3h",
+    "ма": "ma",
+    "ма.ч": "mah",
+    "мач": "mah",
+    "мб": "mb",
+    "мб/сек": "mbps",
+    "мбит/с": "mbps",
+    "мбит/сек": "mbps",
+    "мв": "mv",
+    "мвт": "mw",
+    "мг": "mg",
+    "мгц": "mhz",
+    "мегабайт": "mb",
+    "мегабайта": "mb",
+    "мегабайтов": "mb",
+    "мегагерц": "mhz",
+    "мегапаскалей": "mpa",
+    "мегапаскаль": "mpa",
+    "мегапикселей": "mpixel",
+    "мегапиксель": "mpixel",
+    "мес": "month",
+    "месяц": "month",
+    "месяца": "month",
+    "месяцев": "month",
+    "метр": "m",
+    "метра": "m",
+    "метрвсекунду": "mps",
+    "метров": "m",
+    "метроввсекунду": "mps",
+    "метры": "m",
+    "микрометр": "um",
+    "микрон": "um",
+    "микрона": "um",
+    "миллиампер": "ma",
+    "миллиампера": "ma",
+    "миллиамперчас": "mah",
+    "миллиамперчасов": "mah",
+    "милливатт": "mw",
+    "милливатта": "mw",
+    "милливаттов": "mw",
+    "милливольт": "mv",
+    "милливольта": "mv",
+    "миллиграмм": "mg",
+    "миллиграмма": "mg",
+    "миллиграммов": "mg",
+    "миллилитр": "ml",
+    "миллилитра": "ml",
+    "миллилитров": "ml",
+    "миллиметр": "mm",
+    "миллиметра": "mm",
+    "миллиметров": "mm",
+    "миллиметры": "mm",
+    "миллисекунда": "ms",
+    "миллисекунды": "ms",
+    "мин": "min",
+    "минут": "min",
+    "минута": "min",
+    "минуты": "min",
+    "мкм": "um",
+    "мл": "ml",
+    "мл/сутки": "mlday",
+    "мм": "mm",
+    "мм2": "mm2",
+    "мм3": "mm3",
+    "ммв.ст": "mmh2o",
+    "ммвод.ст": "mmh2o",
+    "ммрт.ст": "mmhg",
+    "ммртст": "mmhg",
+    "мом": "mohm",
+    "мп": "mpixel",
+    "мпа": "mpa",
+    "мпикс": "mpixel",
+    "мс": "ms",
+    "н.м": "nm_torque",
+    "нанометр": "nm",
+    "нанометра": "nm",
+    "нанометров": "nm",
+    "нм": "nm",
+    "нммомент": "nm_torque",
+    "об/мин": "rpm",
+    "обмин": "rpm",
+    "оборотвминуту": "rpm",
+    "оборотоввминуту": "rpm",
+    "ом": "ohm",
+    "па": "pa",
+    "паскалей": "pa",
+    "паскаль": "pa",
+    "пикс": "pixel",
+    "пикс/дюйм": "ppi",
+    "пикселей": "pixel",
+    "пиксель": "pixel",
+    "процент": "percent",
+    "процента": "percent",
+    "процентов": "percent",
+    "с": "s",
+    "сантиметр": "cm",
+    "сантиметра": "cm",
+    "сантиметров": "cm",
+    "сантиметры": "cm",
+    "сек": "s",
+    "секунд": "s",
+    "секунда": "s",
+    "секунды": "s",
+    "см": "cm",
+    "см/с": "cmps",
+    "см/сек": "cmps",
+    "см2": "cm2",
+    "см3": "cm3",
+    "стеж./мин": "stitch_min",
+    "стеж/мин": "stitch_min",
+    "стежковвминуту": "stitch_min",
+    "стр": "page",
+    "стр/мин": "page_min",
+    "страниц": "page",
+    "страница": "page",
+    "страницвминуту": "page_min",
+    "страницы": "page",
+    "сутки": "day",
+    "суток": "day",
+    "т": "t",
+    "т/д": "tday",
+    "т/сутки": "tday",
+    "тб": "tb",
+    "терабайт": "tb",
+    "терабайта": "tb",
+    "терабайтов": "tb",
+    "тонн": "t",
+    "тонна": "t",
+    "тонны": "t",
+    "точекнадюйм": "dpi",
+    "фут": "foot",
+    "фута": "foot",
+    "футов": "foot",
+    "цельсий": "celsius",
+    "ч": "h",
+    "час": "h",
+    "часа": "h",
+    "часов": "h",
+    "частейнамиллион": "ppm",
+    "шт": "piece",
+    "штук": "piece",
+    "штука": "piece",
+    "штуки": "piece"
+  },
+  "alias_collisions": {},
+  "notes": [
+    "Unit matching must run before quote removal so 55-inch notation is not lost.",
+    "Numbers are parsed with a state machine; no regular expressions are used.",
+    "factor_to_base is null when conversion is context-dependent or affine."
+  ]
+}

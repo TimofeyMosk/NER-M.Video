@@ -1,0 +1,7 @@
+﻿order,step,changed_queries,changed_share_percent
+1,unicode_nfkc,4569,0.25531144475879525
+2,yo_to_e,7189,0.4017145932087938
+3,lowercase,989505,55.292613514128185
+4,hyphens_and_quotes_to_space,176432,9.858855071500058
+5,whitespace_collapse,290671,16.24242349737005
+6,safe_lemmatization,564133,31.523224177306506

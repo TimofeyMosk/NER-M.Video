@@ -1,0 +1,277 @@
+[
+  {
+    "unit": "*",
+    "rows": 12240,
+    "normalized": "*"
+  },
+  {
+    "unit": "прог.",
+    "rows": 1443,
+    "normalized": "прог"
+  },
+  {
+    "unit": "Ra",
+    "rows": 932,
+    "normalized": "ra"
+  },
+  {
+    "unit": "стр/мес",
+    "rows": 789,
+    "normalized": "стр/мес"
+  },
+  {
+    "unit": "имп. в мин",
+    "rows": 487,
+    "normalized": "имп.вмин"
+  },
+  {
+    "unit": "млн цветов",
+    "rows": 460,
+    "normalized": "млнцветов"
+  },
+  {
+    "unit": "QВт",
+    "rows": 329,
+    "normalized": "qвт"
+  },
+  {
+    "unit": "реж.",
+    "rows": 306,
+    "normalized": "реж"
+  },
+  {
+    "unit": "уров.",
+    "rows": 236,
+    "normalized": "уров"
+  },
+  {
+    "unit": "порц.",
+    "rows": 234,
+    "normalized": "порц"
+  },
+  {
+    "unit": "мм/м",
+    "rows": 127,
+    "normalized": "мм/м"
+  },
+  {
+    "unit": "руб.",
+    "rows": 101,
+    "normalized": "руб"
+  },
+  {
+    "unit": "Гвыб/сек",
+    "rows": 89,
+    "normalized": "гвыб/сек"
+  },
+  {
+    "unit": "кол/мин",
+    "rows": 65,
+    "normalized": "кол/мин"
+  },
+  {
+    "unit": "канальное",
+    "rows": 54,
+    "normalized": "канальное"
+  },
+  {
+    "unit": "Ansi",
+    "rows": 49,
+    "normalized": "ansi"
+  },
+  {
+    "unit": "пач/рулон",
+    "rows": 45,
+    "normalized": "пач/рулон"
+  },
+  {
+    "unit": "Din",
+    "rows": 41,
+    "normalized": "din"
+  },
+  {
+    "unit": "Ом/м",
+    "rows": 38,
+    "normalized": "ом/м"
+  },
+  {
+    "unit": "м2/ч",
+    "rows": 26,
+    "normalized": "м2/ч"
+  },
+  {
+    "unit": "кг/ч",
+    "rows": 24,
+    "normalized": "кг/ч"
+  },
+  {
+    "unit": "Вт/(м-К)",
+    "rows": 23,
+    "normalized": "вт/(м-к)"
+  },
+  {
+    "unit": "MRAD",
+    "rows": 19,
+    "normalized": "mrad"
+  },
+  {
+    "unit": "ТВЛ",
+    "rows": 19,
+    "normalized": "твл"
+  },
+  {
+    "unit": "г/см3",
+    "rows": 16,
+    "normalized": "г/см3"
+  },
+  {
+    "unit": "вспышек",
+    "rows": 16,
+    "normalized": "вспышек"
+  },
+  {
+    "unit": "Люкс",
+    "rows": 14,
+    "normalized": "люкс"
+  },
+  {
+    "unit": "Дж/см2",
+    "rows": 14,
+    "normalized": "дж/см2"
+  },
+  {
+    "unit": "мК",
+    "rows": 13,
+    "normalized": "мк"
+  },
+  {
+    "unit": "мкмоль/с",
+    "rows": 11,
+    "normalized": "мкмоль/с"
+  },
+  {
+    "unit": "мкФ",
+    "rows": 10,
+    "normalized": "мкф"
+  },
+  {
+    "unit": "зон.",
+    "rows": 10,
+    "normalized": "зон"
+  },
+  {
+    "unit": "дБА",
+    "rows": 10,
+    "normalized": "дба"
+  },
+  {
+    "unit": "уд/мин",
+    "rows": 8,
+    "normalized": "уд/мин"
+  },
+  {
+    "unit": "мкГц",
+    "rows": 8,
+    "normalized": "мкгц"
+  },
+  {
+    "unit": "Вт/см-2",
+    "rows": 6,
+    "normalized": "вт/см-2"
+  },
+  {
+    "unit": "Пас",
+    "rows": 5,
+    "normalized": "пас"
+  },
+  {
+    "unit": "мПас",
+    "rows": 4,
+    "normalized": "мпас"
+  },
+  {
+    "unit": "мкГн",
+    "rows": 4,
+    "normalized": "мкгн"
+  },
+  {
+    "unit": "кГн",
+    "rows": 4,
+    "normalized": "кгн"
+  },
+  {
+    "unit": "пФ",
+    "rows": 4,
+    "normalized": "пф"
+  },
+  {
+    "unit": "HRC",
+    "rows": 3,
+    "normalized": "hrc"
+  },
+  {
+    "unit": "л/цикл",
+    "rows": 2,
+    "normalized": "л/цикл"
+  },
+  {
+    "unit": "бокал/час",
+    "rows": 2,
+    "normalized": "бокал/час"
+  },
+  {
+    "unit": "мг/ч",
+    "rows": 2,
+    "normalized": "мг/ч"
+  },
+  {
+    "unit": "Ф",
+    "rows": 2,
+    "normalized": "ф"
+  },
+  {
+    "unit": "Лк",
+    "rows": 2,
+    "normalized": "лк"
+  },
+  {
+    "unit": "мл/м3",
+    "rows": 2,
+    "normalized": "мл/м3"
+  },
+  {
+    "unit": "*/c",
+    "rows": 1,
+    "normalized": "*/c"
+  },
+  {
+    "unit": "мВт/см",
+    "rows": 1,
+    "normalized": "мвт/см"
+  },
+  {
+    "unit": "кг/см",
+    "rows": 1,
+    "normalized": "кг/см"
+  },
+  {
+    "unit": "строк/сек",
+    "rows": 1,
+    "normalized": "строк/сек"
+  },
+  {
+    "unit": "строк",
+    "rows": 1,
+    "normalized": "строк"
+  },
+  {
+    "unit": "ISO",
+    "rows": 1,
+    "normalized": "iso"
+  },
+  {
+    "unit": "dBi",
+    "rows": 1,
+    "normalized": "dbi"
+  }
+]

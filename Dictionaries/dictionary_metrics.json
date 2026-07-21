@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-07-21 20:01:58",
+  "runtime_seconds": 24.362118899996858,
+  "sources": {
+    "brands": "C:\\Users\\kozgu\\NER-M.Video\\pavel_nntp\\data\\dictionaries\\brands.json",
+    "brand_aliases": "C:\\Users\\kozgu\\NER-M.Video\\pavel_nntp\\data\\dictionaries\\brand_aliases.json",
+    "categories": "C:\\Users\\kozgu\\NER-M.Video\\pavel_nntp\\data\\dictionaries\\categories.json",
+    "category_aliases": "C:\\Users\\kozgu\\NER-M.Video\\pavel_nntp\\data\\dictionaries\\category_aliases.json",
+    "catalog_attributes": "C:\\Users\\kozgu\\NER-M.Video\\pavel_nntp\\data\\processed\\catalog_attributes.parquet"
+  },
+  "brands": {
+    "records": 6475,
+    "lookup_surfaces": 6604,
+    "alias_collisions": 0,
+    "rejected_sentinels": 4
+  },
+  "categories": {
+    "records": 6963,
+    "lookup_surfaces": 12677,
+    "ambiguous_surfaces": 753,
+    "english_alias_links_added": 64,
+    "english_aliases_without_target": 4
+  },
+  "measurements": {
+    "unit_definitions": 108,
+    "unit_aliases": 476,
+    "unit_alias_collisions": 0,
+    "catalog_raw_units": 159,
+    "recognized_raw_units": 104,
+    "unknown_raw_units": 55,
+    "unit_row_coverage": 0.9934388901697738,
+    "measurement_value_rows": 75340,
+    "values_without_numbers_skipped": 1,
+    "canonical_units_with_numbers": 98,
+    "unique_numbers_total": 32803
+  },
+  "csv_exports": {
+    "rows": {
+      "brands": 6604,
+      "categories": 13456,
+      "units": 549,
+      "measurements": 131604,
+      "combined": 152213
+    },
+    "files": {
+      "brands": "C:\\Users\\kozgu\\NER-M.Video\\search_dictionaries\\output\\brands.csv",
+      "categories": "C:\\Users\\kozgu\\NER-M.Video\\search_dictionaries\\output\\categories.csv",
+      "units": "C:\\Users\\kozgu\\NER-M.Video\\search_dictionaries\\output\\measurement_units.csv",
+      "measurements": "C:\\Users\\kozgu\\NER-M.Video\\search_dictionaries\\output\\measurement_phrases.csv",
+      "combined": "C:\\Users\\kozgu\\NER-M.Video\\search_dictionaries\\output\\dictionary.csv"
+    }
+  },
+  "typo_audit": {
+    "brand": 185,
+    "category": 12,
+    "unit": 20,
+    "total": 217
+  },
+  "normalization_contract": {
+    "version": "dictionary_consistent_v1",
+    "steps": 6
+  },
+  "parser": "state_machine_without_regular_expressions"
+}

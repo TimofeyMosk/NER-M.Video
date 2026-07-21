@@ -1,0 +1,55 @@
+{
+  "version": "dictionary_consistent_v1",
+  "steps": [
+    "unicode_nfkc",
+    "yo_to_e",
+    "lowercase",
+    "hyphens_and_quotes_to_space",
+    "whitespace_collapse",
+    "safe_lemmatization"
+  ],
+  "regular_expressions": false,
+  "lookup_representation": "lemma",
+  "case": "lowercase",
+  "yo_equals_e": true,
+  "hyphens_and_quotes": "space",
+  "observed_on_preprocessing_corpus": [
+    {
+      "order": 1,
+      "step": "unicode_nfkc",
+      "changed_queries": 4569,
+      "changed_share_percent": 0.25531144475879525
+    },
+    {
+      "order": 2,
+      "step": "yo_to_e",
+      "changed_queries": 7189,
+      "changed_share_percent": 0.4017145932087938
+    },
+    {
+      "order": 3,
+      "step": "lowercase",
+      "changed_queries": 989505,
+      "changed_share_percent": 55.292613514128185
+    },
+    {
+      "order": 4,
+      "step": "hyphens_and_quotes_to_space",
+      "changed_queries": 176432,
+      "changed_share_percent": 9.858855071500058
+    },
+    {
+      "order": 5,
+      "step": "whitespace_collapse",
+      "changed_queries": 290671,
+      "changed_share_percent": 16.24242349737005
+    },
+    {
+      "order": 6,
+      "step": "safe_lemmatization",
+      "changed_queries": 564133,
+      "changed_share_percent": 31.523224177306506
+    }
+  ],
+  "preprocessing_metrics_source": "C:\\Users\\kozgu\\NER-M.Video\\text_preprocessing\\output\\preprocessing_metrics.json"
+}
