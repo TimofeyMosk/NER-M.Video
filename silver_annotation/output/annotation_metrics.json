@@ -1,0 +1,83 @@
+{
+  "generated_at": "2026-07-21 18:29:04",
+  "seed": 42,
+  "percent_requested": 0.15,
+  "preprocessed_corpus_size": 1342697,
+  "rows": 201405,
+  "share_of_preprocessed": 15.000033514635096,
+  "shards": 5,
+  "runtime_seconds": 97.21546800003853,
+  "quality_grades": {
+    "A": 154683,
+    "B": 7618,
+    "C": 39104
+  },
+  "splits": {
+    "validation": 201405
+  },
+  "rows_with_entities": 82160,
+  "rows_without_entities": 119245,
+  "entity_total": 96443,
+  "entity_type_counts": {
+    "brand": 76997,
+    "model": 10796,
+    "color": 4729,
+    "memory_rom": 1596,
+    "display_technology": 698,
+    "processor_model": 675,
+    "processor_brand": 315,
+    "memory_ram": 210,
+    "material": 150,
+    "power": 110,
+    "refresh_rate": 85,
+    "battery_capacity": 30,
+    "os": 21,
+    "screen_diagonal": 18,
+    "os_version": 13
+  },
+  "top_categories": {
+    "смартфоны": 15867,
+    "телевизоры": 9772,
+    "стиральные машины": 9464,
+    "холодильники": 8355,
+    "ноутбуки": 7046,
+    "наушники": 5549,
+    "планшеты": 5084,
+    "пылесосы вертикальные": 4404,
+    "iphone": 3816,
+    "встраиваемый электрический духовой шкаф": 3494,
+    "сплит системы": 3415,
+    "чехлы для смартфонов": 3376,
+    "смарт часы": 3351,
+    "встраиваемые посудомоечные машины": 2916,
+    "вытяжки кухонные": 2765,
+    "аэрогрили": 2228,
+    "электрические чайники": 2089,
+    "внешние аккумуляторы": 2072,
+    "встраиваемые газовые панели": 1964,
+    "пылесосы напольные": 1964
+  },
+  "overlap_rejections": 4165,
+  "unique_queries_verified": true,
+  "non_validation_rows": 0,
+  "invalid_spans": 0,
+  "empty_queries": 0,
+  "missing_categories": 0,
+  "shard_reconciliation": true,
+  "artifacts": {
+    "combined": "C:\\Users\\kozgu\\NER-M.Video\\silver_annotation\\output\\silver_labels.parquet",
+    "shards": [
+      "C:\\Users\\kozgu\\NER-M.Video\\silver_annotation\\output\\shards\\part-000.parquet",
+      "C:\\Users\\kozgu\\NER-M.Video\\silver_annotation\\output\\shards\\part-001.parquet",
+      "C:\\Users\\kozgu\\NER-M.Video\\silver_annotation\\output\\shards\\part-002.parquet",
+      "C:\\Users\\kozgu\\NER-M.Video\\silver_annotation\\output\\shards\\part-003.parquet",
+      "C:\\Users\\kozgu\\NER-M.Video\\silver_annotation\\output\\shards\\part-004.parquet"
+    ],
+    "manual_review": "C:\\Users\\kozgu\\NER-M.Video\\silver_annotation\\output\\manual_review_sample.csv"
+  },
+  "known_blockers": [
+    "silver labels are not independent gold labels",
+    "sku_position=0 semantics remain unconfirmed",
+    "entity labels are positive-only partial annotations"
+  ]
+}
