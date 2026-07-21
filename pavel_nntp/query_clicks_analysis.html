@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Анализ query_clicks.parquet</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --text: #18202f;
+      --muted: #667085;
+      --line: #d9e0ea;
+      --accent: #0f766e;
+      --accent-soft: #ccfbf1;
+      --accent-2: #b45309;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+    header {
+      padding: 36px 40px 22px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
+    main {
+      padding: 28px 40px 48px;
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 34px;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 36px 0 14px;
+      font-size: 22px;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 10px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+    .subtitle, .muted {
+      color: var(--muted);
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .metric {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .metric-label {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .metric-value {
+      margin-top: 4px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .metric-note {
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    section {
+      margin-top: 26px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+      overflow-x: auto;
+    }
+    .insights {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .insights li {
+      margin: 8px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      color: #344054;
+      background: #f2f5f9;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+    tr:last-child td {
+      border-bottom: 0;
+    }
+    .bar-table td {
+      border-bottom: 1px solid #e7ecf3;
+    }
+    .label-cell {
+      width: 38%;
+      word-break: break-word;
+    }
+    .bar-cell {
+      width: 42%;
+      min-width: 180px;
+    }
+    .num-cell {
+      width: 20%;
+      white-space: nowrap;
+      text-align: right;
+    }
+    .bar-track {
+      height: 12px;
+      background: #eef2f6;
+      border-radius: 999px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), #22c55e);
+    }
+    code {
+      background: #eef2f6;
+      padding: 2px 5px;
+      border-radius: 5px;
+    }
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    @media (max-width: 900px) {
+      header, main { padding-left: 18px; padding-right: 18px; }
+      .grid-2 { grid-template-columns: 1fr; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Анализ датасета query_clicks.parquet</h1>
+    <div class="subtitle">Источник: <code>cu_ws/query_clicks.parquet</code>. Отчет сгенерирован: 2026-07-20 21:37. Примерная память датафрейма: 9 724,1 MB.</div>
+    <div class="metrics"><div class='metric'><div class='metric-label'>Строк</div><div class='metric-value'>30 991 350</div><div class='metric-note'>кликовые события / строки</div></div>
+<div class='metric'><div class='metric-label'>Колонок</div><div class='metric-value'>8</div></div>
+<div class='metric'><div class='metric-label'>Уникальных запросов</div><div class='metric-value'>1 789 579</div><div class='metric-note'>17,32 строк на запрос</div></div>
+<div class='metric'><div class='metric-label'>Уникальных SKU</div><div class='metric-value'>332 753</div></div>
+<div class='metric'><div class='metric-label'>Пустой бренд</div><div class='metric-value'>8 791 897</div><div class='metric-note'>28,4%</div></div>
+<div class='metric'><div class='metric-label'>Позиция 0</div><div class='metric-value'>7 385 481</div><div class='metric-note'>23,8%</div></div>
+<div class='metric'><div class='metric-label'>Цена 0</div><div class='metric-value'>116 391</div><div class='metric-note'>0,4%</div></div>
+<div class='metric'><div class='metric-label'>Дубликаты</div><div class='metric-value'>12 394 889</div><div class='metric-note'>40,0%</div></div></div>
+  </header>
+  <main>
+    <section class="panel">
+      <h2>Ключевые выводы</h2>
+      <ul class="insights">
+        <li>Датасет большой: 30 991 350 строк, 332 753 уникальных SKU и 1 789 579 уникальных поисковых запросов.</li><li>Дубликатов много: 40,0% строк полностью повторяются. Для обучения ранжирования/NER стоит заранее решить, считать ли повтор клика весом или дедуплицировать.</li><li>Почти четверть строк имеет `sku_position = 0` (23,8%); это отдельный сильный сигнал, но его семантику лучше уточнить.</li><li>Бренд пустой в 28,4% строк. При извлечении брендов лучше опираться не только на поле бренда в кликах.</li><li>В уникальных запросах много артикулов и моделей: цифры есть в 58,7%, латиница в 63,2%, смешанная кириллица/латиница в 39,7%.</li><li>После нормализации регистра количество уникальных запросов уменьшается на 368 513; простая нормализация уже заметно чистит словарь.</li><li>В выборке из 300 000 строк с непустым брендом бренд буквально содержится в запросе примерно в 27,3% случаев.</li>
+      </ul>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <h2>Схема и качество данных</h2>
+        <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Колонка</th>
+      <th>Тип</th>
+      <th>Null</th>
+      <th>Уникальных</th>
+      <th>Пустых строк</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>sku_id</td>
+      <td>uint64</td>
+      <td>0</td>
+      <td>332 753</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>sku_name</td>
+      <td>object</td>
+      <td>0</td>
+      <td>283 627</td>
+      <td>6 740 032</td>
+    </tr>
+    <tr>
+      <td>sku_brand_name</td>
+      <td>object</td>
+      <td>0</td>
+      <td>7 150</td>
+      <td>8 791 897</td>
+    </tr>
+    <tr>
+      <td>sku_price</td>
+      <td>float64</td>
+      <td>0</td>
+      <td>209 431</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>sku_subject_id</td>
+      <td>uint64</td>
+      <td>0</td>
+      <td>4 103</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>sku_seo_id</td>
+      <td>uint64</td>
+      <td>0</td>
+      <td>4 101</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>query_text</td>
+      <td>object</td>
+      <td>0</td>
+      <td>1 789 579</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>sku_position</td>
+      <td>uint64</td>
+      <td>0</td>
+      <td>2 306</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+      <div class="panel">
+        <h2>Дубликаты и повторы</h2>
+        <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Метрика</th>
+      <th>Значение</th>
+      <th>Доля</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Полные дубли строк</td>
+      <td>12 394 889</td>
+      <td>40,0%</td>
+    </tr>
+    <tr>
+      <td>Уникальные пары query_text + sku_id</td>
+      <td>6 502 988</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Повторяющиеся пары query_text + sku_id</td>
+      <td>2 184 008</td>
+      <td>33,6%</td>
+    </tr>
+    <tr>
+      <td>Максимум повторов одной пары</td>
+      <td>21 903</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Медиана повторов пары</td>
+      <td>1,00</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <h2>Топ запросов</h2>
+        <table class='bar-table'><tbody><tr><td class='label-cell'>стиральная машинка</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:100.00%'></div></div></td><td class='num-cell'>470 230 <span class='muted'>1,5%</span></td></tr>
+<tr><td class='label-cell'>холодильники</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:94.03%'></div></div></td><td class='num-cell'>442 166 <span class='muted'>1,4%</span></td></tr>
+<tr><td class='label-cell'>аэрогриль</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:62.85%'></div></div></td><td class='num-cell'>295 529 <span class='muted'>1,0%</span></td></tr>
+<tr><td class='label-cell'>кондиционер сплит система</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:42.34%'></div></div></td><td class='num-cell'>199 087 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>микроволновая печь</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:41.56%'></div></div></td><td class='num-cell'>195 443 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>электрические чайники</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:40.58%'></div></div></td><td class='num-cell'>190 837 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>телевизор</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:36.89%'></div></div></td><td class='num-cell'>173 491 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>холодильники двухкамерные</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:34.93%'></div></div></td><td class='num-cell'>164 251 <span class='muted'>0,5%</span></td></tr>
+<tr><td class='label-cell'>ноутбук</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:34.20%'></div></div></td><td class='num-cell'>160 816 <span class='muted'>0,5%</span></td></tr>
+<tr><td class='label-cell'>пылесос</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:31.89%'></div></div></td><td class='num-cell'>149 976 <span class='muted'>0,5%</span></td></tr>
+<tr><td class='label-cell'>смартфон</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:30.07%'></div></div></td><td class='num-cell'>141 412 <span class='muted'>0,5%</span></td></tr>
+<tr><td class='label-cell'>наушники беспроводные</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:25.94%'></div></div></td><td class='num-cell'>121 993 <span class='muted'>0,4%</span></td></tr>
+<tr><td class='label-cell'>вентилятор напольный</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:25.49%'></div></div></td><td class='num-cell'>119 847 <span class='muted'>0,4%</span></td></tr>
+<tr><td class='label-cell'>пылесосы вертикальные</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:24.46%'></div></div></td><td class='num-cell'>115 039 <span class='muted'>0,4%</span></td></tr>
+<tr><td class='label-cell'>Аэрогриль</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:23.67%'></div></div></td><td class='num-cell'>111 317 <span class='muted'>0,4%</span></td></tr>
+<tr><td class='label-cell'>морозильная камера</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:23.38%'></div></div></td><td class='num-cell'>109 952 <span class='muted'>0,4%</span></td></tr>
+<tr><td class='label-cell'>планшет</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:21.00%'></div></div></td><td class='num-cell'>98 766 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>Стиральная машинка</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:19.40%'></div></div></td><td class='num-cell'>91 226 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>стиральные машины</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:18.10%'></div></div></td><td class='num-cell'>85 121 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>утюг</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:17.94%'></div></div></td><td class='num-cell'>84 369 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>стиральная машинка узкая</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:17.89%'></div></div></td><td class='num-cell'>84 115 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>Пылесос</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:17.33%'></div></div></td><td class='num-cell'>81 489 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>Холодильник</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:17.29%'></div></div></td><td class='num-cell'>81 287 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>робот пылесос</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:15.99%'></div></div></td><td class='num-cell'>75 203 <span class='muted'>0,2%</span></td></tr>
+<tr><td class='label-cell'>встраиваемый электрический духовой шкаф</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:15.50%'></div></div></td><td class='num-cell'>72 897 <span class='muted'>0,2%</span></td></tr></tbody></table>
+      </div>
+      <div class="panel">
+        <h2>Топ запросов после lower/strip</h2>
+        <table class='bar-table'><tbody><tr><td class='label-cell'>стиральная машинка</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:100.00%'></div></div></td><td class='num-cell'>571 826 <span class='muted'>1,8%</span></td></tr>
+<tr><td class='label-cell'>холодильники</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:90.95%'></div></div></td><td class='num-cell'>520 058 <span class='muted'>1,7%</span></td></tr>
+<tr><td class='label-cell'>аэрогриль</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:74.05%'></div></div></td><td class='num-cell'>423 461 <span class='muted'>1,4%</span></td></tr>
+<tr><td class='label-cell'>микроволновая печь</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:43.66%'></div></div></td><td class='num-cell'>249 633 <span class='muted'>0,8%</span></td></tr>
+<tr><td class='label-cell'>пылесос</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:43.42%'></div></div></td><td class='num-cell'>248 309 <span class='muted'>0,8%</span></td></tr>
+<tr><td class='label-cell'>ноутбук</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:42.06%'></div></div></td><td class='num-cell'>240 516 <span class='muted'>0,8%</span></td></tr>
+<tr><td class='label-cell'>телевизор</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:41.82%'></div></div></td><td class='num-cell'>239 138 <span class='muted'>0,8%</span></td></tr>
+<tr><td class='label-cell'>кондиционер сплит система</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:39.85%'></div></div></td><td class='num-cell'>227 898 <span class='muted'>0,7%</span></td></tr>
+<tr><td class='label-cell'>электрические чайники</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:39.85%'></div></div></td><td class='num-cell'>227 887 <span class='muted'>0,7%</span></td></tr>
+<tr><td class='label-cell'>холодильники двухкамерные</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:34.66%'></div></div></td><td class='num-cell'>198 188 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>смартфон</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:33.17%'></div></div></td><td class='num-cell'>189 667 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>холодильник</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:32.31%'></div></div></td><td class='num-cell'>184 751 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>планшет</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:30.61%'></div></div></td><td class='num-cell'>175 046 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>наушники беспроводные</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:26.54%'></div></div></td><td class='num-cell'>151 765 <span class='muted'>0,5%</span></td></tr>
+<tr><td class='label-cell'>пылесосы вертикальные</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:25.46%'></div></div></td><td class='num-cell'>145 590 <span class='muted'>0,5%</span></td></tr>
+<tr><td class='label-cell'>утюг</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:25.41%'></div></div></td><td class='num-cell'>145 296 <span class='muted'>0,5%</span></td></tr>
+<tr><td class='label-cell'>морозильная камера</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:24.39%'></div></div></td><td class='num-cell'>139 490 <span class='muted'>0,5%</span></td></tr>
+<tr><td class='label-cell'>вентилятор напольный</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:22.07%'></div></div></td><td class='num-cell'>126 198 <span class='muted'>0,4%</span></td></tr>
+<tr><td class='label-cell'>стиральные машины</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:18.28%'></div></div></td><td class='num-cell'>104 528 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>робот пылесос</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:18.01%'></div></div></td><td class='num-cell'>102 975 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>iphone 17</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:17.96%'></div></div></td><td class='num-cell'>102 698 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>стиральная машинка узкая</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:17.68%'></div></div></td><td class='num-cell'>101 124 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>кофемашина</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:17.37%'></div></div></td><td class='num-cell'>99 331 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>кондиционер</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:17.12%'></div></div></td><td class='num-cell'>97 904 <span class='muted'>0,3%</span></td></tr>
+<tr><td class='label-cell'>смарт часы</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:16.23%'></div></div></td><td class='num-cell'>92 829 <span class='muted'>0,3%</span></td></tr></tbody></table>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <h2>Топ брендов</h2>
+        <table class='bar-table'><tbody><tr><td class='label-cell'>&lt;пустой бренд&gt;</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:100.00%'></div></div></td><td class='num-cell'>8 791 897 <span class='muted'>28,4%</span></td></tr>
+<tr><td class='label-cell'>Apple</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:16.05%'></div></div></td><td class='num-cell'>1 411 349 <span class='muted'>4,6%</span></td></tr>
+<tr><td class='label-cell'>Samsung</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:14.85%'></div></div></td><td class='num-cell'>1 305 953 <span class='muted'>4,2%</span></td></tr>
+<tr><td class='label-cell'>Haier</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:8.62%'></div></div></td><td class='num-cell'>757 686 <span class='muted'>2,4%</span></td></tr>
+<tr><td class='label-cell'>Xiaomi</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:8.35%'></div></div></td><td class='num-cell'>733 956 <span class='muted'>2,4%</span></td></tr>
+<tr><td class='label-cell'>HUAWEI</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:7.94%'></div></div></td><td class='num-cell'>698 332 <span class='muted'>2,3%</span></td></tr>
+<tr><td class='label-cell'>Tefal</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:6.06%'></div></div></td><td class='num-cell'>532 474 <span class='muted'>1,7%</span></td></tr>
+<tr><td class='label-cell'>Gorenje</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:5.18%'></div></div></td><td class='num-cell'>455 301 <span class='muted'>1,5%</span></td></tr>
+<tr><td class='label-cell'>Яндекс</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:4.81%'></div></div></td><td class='num-cell'>422 573 <span class='muted'>1,4%</span></td></tr>
+<tr><td class='label-cell'>Indesit</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:4.16%'></div></div></td><td class='num-cell'>366 128 <span class='muted'>1,2%</span></td></tr>
+<tr><td class='label-cell'>HONOR</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:3.76%'></div></div></td><td class='num-cell'>330 719 <span class='muted'>1,1%</span></td></tr>
+<tr><td class='label-cell'>LG</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:3.63%'></div></div></td><td class='num-cell'>318 937 <span class='muted'>1,0%</span></td></tr>
+<tr><td class='label-cell'>Hi</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:3.51%'></div></div></td><td class='num-cell'>308 823 <span class='muted'>1,0%</span></td></tr>
+<tr><td class='label-cell'>Hisense</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:3.41%'></div></div></td><td class='num-cell'>300 033 <span class='muted'>1,0%</span></td></tr>
+<tr><td class='label-cell'>Sony</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.71%'></div></div></td><td class='num-cell'>238 418 <span class='muted'>0,8%</span></td></tr>
+<tr><td class='label-cell'>Beko</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.66%'></div></div></td><td class='num-cell'>234 217 <span class='muted'>0,8%</span></td></tr>
+<tr><td class='label-cell'>Midea</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.65%'></div></div></td><td class='num-cell'>232 938 <span class='muted'>0,8%</span></td></tr>
+<tr><td class='label-cell'>JBL</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.37%'></div></div></td><td class='num-cell'>208 507 <span class='muted'>0,7%</span></td></tr>
+<tr><td class='label-cell'>Bosch</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.19%'></div></div></td><td class='num-cell'>192 718 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>Kitfort</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.08%'></div></div></td><td class='num-cell'>182 881 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>Maunfeld</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.03%'></div></div></td><td class='num-cell'>178 695 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>Centek</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.03%'></div></div></td><td class='num-cell'>178 327 <span class='muted'>0,6%</span></td></tr>
+<tr><td class='label-cell'>ASUS</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.00%'></div></div></td><td class='num-cell'>168 827 <span class='muted'>0,5%</span></td></tr>
+<tr><td class='label-cell'>Dreame</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.00%'></div></div></td><td class='num-cell'>165 210 <span class='muted'>0,5%</span></td></tr>
+<tr><td class='label-cell'>Candy</td><td class='bar-cell'><div class='bar-track'><div class='bar-fill' style='width:2.00%'></div></div></td><td class='num-cell'>162 607 <span class='muted'>0,5%</span></td></tr></tbody></table>
+      </div>
+      <div class="panel">
+        <h2>Топ категорий sku_subject_id</h2>
+        <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>sku_subject_id</th>
+      <th>Название категории</th>
+      <th>Строк</th>
+      <th>Доля</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>16434</td>
+      <td></td>
+      <td>2 398 029</td>
+      <td>7,7%</td>
+    </tr>
+    <tr>
+      <td>17522</td>
+      <td></td>
+      <td>1 602 592</td>
+      <td>5,2%</td>
+    </tr>
+    <tr>
+      <td>17561</td>
+      <td></td>
+      <td>1 591 566</td>
+      <td>5,1%</td>
+    </tr>
+    <tr>
+      <td>16435</td>
+      <td></td>
+      <td>1 271 210</td>
+      <td>4,1%</td>
+    </tr>
+    <tr>
+      <td>16132</td>
+      <td></td>
+      <td>1 254 611</td>
+      <td>4,0%</td>
+    </tr>
+    <tr>
+      <td>16401</td>
+      <td></td>
+      <td>940 145</td>
+      <td>3,0%</td>
+    </tr>
+    <tr>
+      <td>31607</td>
+      <td>Наушники</td>
+      <td>913 899</td>
+      <td>2,9%</td>
+    </tr>
+    <tr>
+      <td>17543</td>
+      <td></td>
+      <td>719 758</td>
+      <td>2,3%</td>
+    </tr>
+    <tr>
+      <td>16205</td>
+      <td></td>
+      <td>677 060</td>
+      <td>2,2%</td>
+    </tr>
+    <tr>
+      <td>16400</td>
+      <td></td>
+      <td>662 509</td>
+      <td>2,1%</td>
+    </tr>
+    <tr>
+      <td>16460</td>
+      <td></td>
+      <td>614 707</td>
+      <td>2,0%</td>
+    </tr>
+    <tr>
+      <td>17422</td>
+      <td></td>
+      <td>595 236</td>
+      <td>1,9%</td>
+    </tr>
+    <tr>
+      <td>16168</td>
+      <td></td>
+      <td>473 075</td>
+      <td>1,5%</td>
+    </tr>
+    <tr>
+      <td>17536</td>
+      <td></td>
+      <td>426 251</td>
+      <td>1,4%</td>
+    </tr>
+    <tr>
+      <td>16201</td>
+      <td></td>
+      <td>394 528</td>
+      <td>1,3%</td>
+    </tr>
+    <tr>
+      <td>20021</td>
+      <td></td>
+      <td>358 849</td>
+      <td>1,2%</td>
+    </tr>
+    <tr>
+      <td>16289</td>
+      <td></td>
+      <td>351 282</td>
+      <td>1,1%</td>
+    </tr>
+    <tr>
+      <td>16296</td>
+      <td></td>
+      <td>329 498</td>
+      <td>1,1%</td>
+    </tr>
+    <tr>
+      <td>16813</td>
+      <td></td>
+      <td>283 474</td>
+      <td>0,9%</td>
+    </tr>
+    <tr>
+      <td>17565</td>
+      <td></td>
+      <td>280 260</td>
+      <td>0,9%</td>
+    </tr>
+    <tr>
+      <td>57138</td>
+      <td>Игровые консоли</td>
+      <td>270 757</td>
+      <td>0,9%</td>
+    </tr>
+    <tr>
+      <td>17538</td>
+      <td></td>
+      <td>268 061</td>
+      <td>0,9%</td>
+    </tr>
+    <tr>
+      <td>16139</td>
+      <td></td>
+      <td>259 188</td>
+      <td>0,8%</td>
+    </tr>
+    <tr>
+      <td>16291</td>
+      <td></td>
+      <td>253 396</td>
+      <td>0,8%</td>
+    </tr>
+    <tr>
+      <td>16462</td>
+      <td></td>
+      <td>250 790</td>
+      <td>0,8%</td>
+    </tr>
+    <tr>
+      <td>17375</td>
+      <td></td>
+      <td>248 577</td>
+      <td>0,8%</td>
+    </tr>
+    <tr>
+      <td>16774</td>
+      <td></td>
+      <td>219 717</td>
+      <td>0,7%</td>
+    </tr>
+    <tr>
+      <td>17670</td>
+      <td></td>
+      <td>215 816</td>
+      <td>0,7%</td>
+    </tr>
+    <tr>
+      <td>16872</td>
+      <td></td>
+      <td>203 608</td>
+      <td>0,7%</td>
+    </tr>
+    <tr>
+      <td>16464</td>
+      <td></td>
+      <td>198 400</td>
+      <td>0,6%</td>
+    </tr>
+  </tbody>
+</table>
+        <div class="note">Название подтянуто из <code>timofey/eda/output/category_names.json</code>, где есть прямое совпадение ID.</div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <h2>Позиции SKU в выдаче</h2>
+        <h3>Статистика</h3>
+        <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Метрика</th>
+      <th>Значение</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>30 991 350,00</td>
+    </tr>
+    <tr>
+      <td>mean</td>
+      <td>16,73</td>
+    </tr>
+    <tr>
+      <td>std</td>
+      <td>44,30</td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>0,00</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>1,00</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>4,00</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>16,00</td>
+    </tr>
+    <tr>
+      <td>90%</td>
+      <td>42,00</td>
+    </tr>
+    <tr>
+      <td>95%</td>
+      <td>70,00</td>
+    </tr>
+    <tr>
+      <td>99%</td>
+      <td>183,00</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>5 893,00</td>
+    </tr>
+  </tbody>
+</table>
+        <h3>Бакеты</h3>
+        <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Диапазон</th>
+      <th>Строк</th>
+      <th>Доля</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>7 385 481</td>
+      <td>23,8%</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3 557 360</td>
+      <td>11,5%</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2 128 923</td>
+      <td>6,9%</td>
+    </tr>
+    <tr>
+      <td>3-4</td>
+      <td>2 688 550</td>
+      <td>8,7%</td>
+    </tr>
+    <tr>
+      <td>5-9</td>
+      <td>4 483 858</td>
+      <td>14,5%</td>
+    </tr>
+    <tr>
+      <td>10-19</td>
+      <td>4 231 517</td>
+      <td>13,7%</td>
+    </tr>
+    <tr>
+      <td>20-49</td>
+      <td>4 015 633</td>
+      <td>13,0%</td>
+    </tr>
+    <tr>
+      <td>50-99</td>
+      <td>1 582 963</td>
+      <td>5,1%</td>
+    </tr>
+    <tr>
+      <td>100-499</td>
+      <td>883 243</td>
+      <td>2,8%</td>
+    </tr>
+    <tr>
+      <td>500+</td>
+      <td>33 822</td>
+      <td>0,1%</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+      <div class="panel">
+        <h2>Цены SKU</h2>
+        <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Метрика</th>
+      <th>Значение</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>count</td>
+      <td>30 991 350,00</td>
+    </tr>
+    <tr>
+      <td>mean</td>
+      <td>31 084,41</td>
+    </tr>
+    <tr>
+      <td>std</td>
+      <td>73 054,94</td>
+    </tr>
+    <tr>
+      <td>min</td>
+      <td>0,00</td>
+    </tr>
+    <tr>
+      <td>1%</td>
+      <td>231,00</td>
+    </tr>
+    <tr>
+      <td>5%</td>
+      <td>930,00</td>
+    </tr>
+    <tr>
+      <td>10%</td>
+      <td>1 772,00</td>
+    </tr>
+    <tr>
+      <td>25%</td>
+      <td>4 840,00</td>
+    </tr>
+    <tr>
+      <td>50%</td>
+      <td>16 091,00</td>
+    </tr>
+    <tr>
+      <td>75%</td>
+      <td>37 934,00</td>
+    </tr>
+    <tr>
+      <td>90%</td>
+      <td>73 841,00</td>
+    </tr>
+    <tr>
+      <td>95%</td>
+      <td>104 999,00</td>
+    </tr>
+    <tr>
+      <td>99%</td>
+      <td>176 705,00</td>
+    </tr>
+    <tr>
+      <td>max</td>
+      <td>11 900 000,00</td>
+    </tr>
+  </tbody>
+</table>
+        <div class="note">Нулевых цен: 116 391 (0,4%). Отрицательных цен: 0.</div>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <div class="panel">
+        <h2>Текст запросов</h2>
+        <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Метрика</th>
+      <th>Значение</th>
+      <th>Комментарий</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Уникальных запросов</td>
+      <td>1 789 579</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Уникальных после lower/strip</td>
+      <td>1 421 066</td>
+      <td>-368 513 вариантов регистра</td>
+    </tr>
+    <tr>
+      <td>Содержат цифры</td>
+      <td>1 051 327</td>
+      <td>58,7%</td>
+    </tr>
+    <tr>
+      <td>Содержат латиницу</td>
+      <td>1 130 336</td>
+      <td>63,2%</td>
+    </tr>
+    <tr>
+      <td>Содержат кириллицу</td>
+      <td>1 300 010</td>
+      <td>72,6%</td>
+    </tr>
+    <tr>
+      <td>Смешивают латиницу и кириллицу</td>
+      <td>710 492</td>
+      <td>39,7%</td>
+    </tr>
+    <tr>
+      <td>Пустые после strip</td>
+      <td>1</td>
+      <td>0,0%</td>
+    </tr>
+    <tr>
+      <td>Средняя длина, символы</td>
+      <td>24,30</td>
+      <td>медиана 21,00</td>
+    </tr>
+    <tr>
+      <td>Средняя длина, слова</td>
+      <td>3,67</td>
+      <td>медиана 3,00</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+      <div class="panel">
+        <h2>Количество слов в уникальных запросах</h2>
+        <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Слов в запросе</th>
+      <th>Уникальных запросов</th>
+      <th>Доля</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>1</td>
+      <td>0,0%</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>191498</td>
+      <td>10,7%</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>393142</td>
+      <td>22,0%</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>426718</td>
+      <td>23,8%</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>324701</td>
+      <td>18,1%</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>197979</td>
+      <td>11,1%</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>108200</td>
+      <td>6,0%</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>57442</td>
+      <td>3,2%</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>31408</td>
+      <td>1,8%</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>18739</td>
+      <td>1,0%</td>
+    </tr>
+    <tr>
+      <td>10+</td>
+      <td>39751</td>
+      <td>2,2%</td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Топ SKU по числу строк</h2>
+      <table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>SKU</th>
+      <th>Название</th>
+      <th>Бренд</th>
+      <th>Строк</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>6013783</td>
+      <td>Набор подписок и сервисов Мультиподписка Яндекс Плюс на 12 месяцев</td>
+      <td>Яндекс</td>
+      <td>43 983</td>
+    </tr>
+    <tr>
+      <td>4253673</td>
+      <td>Консоль Sony PlayStation 5 Slim 1TB Blu-Ray Edition</td>
+      <td>Sony</td>
+      <td>22 092</td>
+    </tr>
+    <tr>
+      <td>20087845</td>
+      <td>Умная сплит-система HAIER HSU-07HRM203/R3/HSU-07HRM103/R3</td>
+      <td>Haier</td>
+      <td>21 897</td>
+    </tr>
+    <tr>
+      <td>20056207</td>
+      <td>Стиральная машина узкая Indesit MSC 615</td>
+      <td>Indesit</td>
+      <td>21 628</td>
+    </tr>
+    <tr>
+      <td>20092361</td>
+      <td>Холодильник Hi HCDN014447CMW</td>
+      <td>Hi</td>
+      <td>21 390</td>
+    </tr>
+    <tr>
+      <td>40079650</td>
+      <td>Игровая приставка Sony PlayStation 5 Slim 1TB Blu-Ray Edition</td>
+      <td>Sony</td>
+      <td>19 040</td>
+    </tr>
+    <tr>
+      <td>400551834</td>
+      <td>Вентилятор напольный Primera SFP-3005TX</td>
+      <td>Primera</td>
+      <td>18 859</td>
+    </tr>
+    <tr>
+      <td>400328373</td>
+      <td>Холодильник с нижней морозильной камерой Indesit ITS 5200 G</td>
+      <td>Indesit</td>
+      <td>18 668</td>
+    </tr>
+    <tr>
+      <td>20067847</td>
+      <td>Стиральная машина узкая Beko WSPE7612W</td>
+      <td>Beko</td>
+      <td>18 356</td>
+    </tr>
+    <tr>
+      <td>400264200</td>
+      <td>Аэрогриль Tefal Easy Fry &amp; Grill Digital EY505D15</td>
+      <td>Tefal</td>
+      <td>18 193</td>
+    </tr>
+    <tr>
+      <td>20092175</td>
+      <td>Стиральная машина узкая LG F2Y1NS6W</td>
+      <td>LG</td>
+      <td>17 357</td>
+    </tr>
+    <tr>
+      <td>20085365</td>
+      <td>Сплит-система Rapid RAM-07HJ/N1_23Y</td>
+      <td>Rapid</td>
+      <td>16 643</td>
+    </tr>
+    <tr>
+      <td>30087004</td>
+      <td>Смартфон Apple iPhone 17 256GB Lavender (без RuStore)</td>
+      <td>Apple</td>
+      <td>16 121</td>
+    </tr>
+    <tr>
+      <td>6026613</td>
+      <td>Набор подписок и сервисов Яндекс Мультиподписка Плюс 12 мес. (без привязки карты)</td>
+      <td>Яндекс</td>
+      <td>15 774</td>
+    </tr>
+    <tr>
+      <td>20090373</td>
+      <td>Стиральная машина узкая Hi WM615W</td>
+      <td>Hi</td>
+      <td>15 740</td>
+    </tr>
+    <tr>
+      <td>20091482</td>
+      <td>Умная сплит-система GoldStar GSAC-07HN1/ белая</td>
+      <td>GoldStar</td>
+      <td>15 588</td>
+    </tr>
+    <tr>
+      <td>400575000</td>
+      <td>Аэрогриль DEMIAND DK-2500/Белый-Wifi</td>
+      <td>DEMIAND</td>
+      <td>15 420</td>
+    </tr>
+    <tr>
+      <td>400467636</td>
+      <td>Стиральная машина HAIER HW60-BP12929ASE</td>
+      <td>Haier</td>
+      <td>15 304</td>
+    </tr>
+    <tr>
+      <td>400263852</td>
+      <td>Аэрогриль Tefal Easy Fry Compact EY145810</td>
+      <td>Tefal</td>
+      <td>15 079</td>
+    </tr>
+    <tr>
+      <td>4268494</td>
+      <td>Сплит-система Newtek NT-65CHA07</td>
+      <td>Newtek</td>
+      <td>14 873</td>
+    </tr>
+    <tr>
+      <td>400286565</td>
+      <td>Холодильник Indesit ITS 4180 G</td>
+      <td>Indesit</td>
+      <td>14 551</td>
+    </tr>
+    <tr>
+      <td>6025710</td>
+      <td>Набор подписок и сервисов СберПрайм с ОККО на 24 месяца</td>
+      <td>СберПрайм</td>
+      <td>14 475</td>
+    </tr>
+    <tr>
+      <td>20071633</td>
+      <td>Холодильник Indesit ITS 5200 W белый</td>
+      <td>Indesit</td>
+      <td>14 463</td>
+    </tr>
+    <tr>
+      <td>30087001</td>
+      <td>Смартфон Apple iPhone 17 256GB Black (без RuStore)</td>
+      <td>Apple</td>
+      <td>14 440</td>
+    </tr>
+    <tr>
+      <td>400316275</td>
+      <td>Кондиционер мобильный Evapolar EV-500W</td>
+      <td>Evapolar</td>
+      <td>14 037</td>
+    </tr>
+  </tbody>
+</table>
+    </section>
+  </main>
+</body>
+</html>
