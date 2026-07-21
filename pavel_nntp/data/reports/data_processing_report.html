@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Отчет по обработке query_clicks</title>
+  <style>
+    body { margin: 0; background: #f4f6f8; color: #20252b; font-family: Inter, system-ui, sans-serif; }
+    main { max-width: 1240px; margin: 0 auto; padding: 30px 20px 50px; }
+    h1 { margin: 0 0 8px; font-size: 30px; letter-spacing: 0; }
+    h2 { margin-top: 30px; font-size: 20px; letter-spacing: 0; }
+    p { color: #596572; line-height: 1.5; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 22px 0; }
+    .metric { background: #fff; border: 1px solid #d9dee4; border-radius: 6px; padding: 13px 15px; }
+    .metric strong { display: block; font-size: 23px; }
+    .metric span { color: #687480; font-size: 13px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 18px; }
+    .panel { background: #fff; border: 1px solid #d9dee4; border-radius: 6px; padding: 14px; overflow: auto; }
+    .data-table { width: 100%; border-collapse: collapse; }
+    .data-table th, .data-table td { padding: 8px 9px; border-bottom: 1px solid #e5e8ec; text-align: left; }
+    .data-table th { background: #eef1f4; font-size: 12px; }
+  </style>
+</head>
+<body><main>
+  <h1>Обработка query_clicks</h1>
+  <p>Полный проход по логам, объединение с каталогом, агрегация и групповое стратифицированное разбиение. Сформировано 2026-07-21 11:48.</p>
+  <div class="metrics">
+    <div class='metric'><strong>30 991 350</strong><span>Исходных строк</span></div>
+    <div class='metric'><strong>23 605 869</strong><span>Строк с кликом</span></div>
+    <div class='metric'><strong>7 385 481</strong><span>Строк без клика</span></div>
+    <div class='metric'><strong>1 789 579</strong><span>Уникальных исходных запросов</span></div>
+    <div class='metric'><strong>3 460 618</strong><span>Пар запрос–SKU</span></div>
+    <div class='metric'><strong>8 379 139</strong><span>Полных дублей схлопнуто</span></div>
+    <div class='metric'><strong>1 010 293</strong><span>Агрегированных запросов</span></div>
+    <div class='metric'><strong>786 891</strong><span>Train</span></div>
+    <div class='metric'><strong>195 870</strong><span>Valid</span></div>
+    <div class='metric'><strong>19.9%</strong><span>Доля valid</span></div>
+    <div class='metric'><strong>92.0%</strong><span>Покрытие каталога</span></div>
+    <div class='metric'><strong>0</strong><span>Пересечение train/valid</span></div>
+  </div>
+  <div class="grid">
+    <section class="panel"><h2>Качество примеров</h2><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Качество</th>
+      <th>Запросов</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>medium_confidence</td>
+      <td>674065</td>
+    </tr>
+    <tr>
+      <td>high_confidence</td>
+      <td>310919</td>
+    </tr>
+    <tr>
+      <td>low_confidence</td>
+      <td>25309</td>
+    </tr>
+  </tbody>
+</table></section>
+    <section class="panel"><h2>Причины исключения</h2><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Причина</th>
+      <th>Записей</th>
+      <th>Исходных строк</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>sku_not_found</td>
+      <td>574631</td>
+      <td>1885577.0</td>
+    </tr>
+    <tr>
+      <td>ambiguous_category</td>
+      <td>25294</td>
+      <td>1090436.0</td>
+    </tr>
+    <tr>
+      <td>outlier_query_length</td>
+      <td>2238</td>
+      <td>4830.0</td>
+    </tr>
+    <tr>
+      <td>empty_after_normalization</td>
+      <td>1</td>
+      <td>3.0</td>
+    </tr>
+  </tbody>
+</table></section>
+    <section class="panel"><h2>Топ категорий</h2><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Категория</th>
+      <th>Запросов</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>смартфоны</td>
+      <td>68842</td>
+    </tr>
+    <tr>
+      <td>телевизоры</td>
+      <td>42237</td>
+    </tr>
+    <tr>
+      <td>стиральные машины</td>
+      <td>37213</td>
+    </tr>
+    <tr>
+      <td>холодильники</td>
+      <td>34711</td>
+    </tr>
+    <tr>
+      <td>ноутбуки</td>
+      <td>32109</td>
+    </tr>
+    <tr>
+      <td>наушники</td>
+      <td>22942</td>
+    </tr>
+    <tr>
+      <td>планшеты</td>
+      <td>22544</td>
+    </tr>
+    <tr>
+      <td>пылесосы вертикальные</td>
+      <td>20503</td>
+    </tr>
+    <tr>
+      <td>сплит системы</td>
+      <td>16344</td>
+    </tr>
+    <tr>
+      <td>iphone</td>
+      <td>15896</td>
+    </tr>
+    <tr>
+      <td>встраиваемый электрический духовой шкаф</td>
+      <td>15080</td>
+    </tr>
+    <tr>
+      <td>смарт часы</td>
+      <td>14710</td>
+    </tr>
+    <tr>
+      <td>чехлы для смартфонов</td>
+      <td>14090</td>
+    </tr>
+    <tr>
+      <td>вытяжки кухонные</td>
+      <td>12971</td>
+    </tr>
+    <tr>
+      <td>встраиваемые посудомоечные машины</td>
+      <td>11299</td>
+    </tr>
+    <tr>
+      <td>пылесосы напольные</td>
+      <td>10614</td>
+    </tr>
+    <tr>
+      <td>электрические чайники</td>
+      <td>10110</td>
+    </tr>
+    <tr>
+      <td>аэрогрили</td>
+      <td>9362</td>
+    </tr>
+    <tr>
+      <td>видеоигры</td>
+      <td>9108</td>
+    </tr>
+    <tr>
+      <td>зарядные сетевые устройства</td>
+      <td>8567</td>
+    </tr>
+    <tr>
+      <td>роботы пылесосы</td>
+      <td>8529</td>
+    </tr>
+    <tr>
+      <td>встраиваемые индукционные панели</td>
+      <td>8286</td>
+    </tr>
+    <tr>
+      <td>встраиваемые газовые панели</td>
+      <td>8144</td>
+    </tr>
+    <tr>
+      <td>автоматические кофемашины</td>
+      <td>8091</td>
+    </tr>
+    <tr>
+      <td>внешние аккумуляторы</td>
+      <td>8090</td>
+    </tr>
+  </tbody>
+</table></section>
+    <section class="panel"><h2>Топ брендов</h2><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Бренд</th>
+      <th>Запросов</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>samsung</td>
+      <td>55870</td>
+    </tr>
+    <tr>
+      <td>apple</td>
+      <td>36721</td>
+    </tr>
+    <tr>
+      <td>xiaomi</td>
+      <td>36170</td>
+    </tr>
+    <tr>
+      <td>haier</td>
+      <td>29799</td>
+    </tr>
+    <tr>
+      <td>huawei</td>
+      <td>25762</td>
+    </tr>
+    <tr>
+      <td>gorenje</td>
+      <td>17586</td>
+    </tr>
+    <tr>
+      <td>tefal</td>
+      <td>17022</td>
+    </tr>
+    <tr>
+      <td>hisense</td>
+      <td>13101</td>
+    </tr>
+    <tr>
+      <td>lg</td>
+      <td>11705</td>
+    </tr>
+    <tr>
+      <td>midea</td>
+      <td>11052</td>
+    </tr>
+    <tr>
+      <td>honor</td>
+      <td>10944</td>
+    </tr>
+    <tr>
+      <td>asus</td>
+      <td>10779</td>
+    </tr>
+    <tr>
+      <td>maunfeld</td>
+      <td>10573</td>
+    </tr>
+    <tr>
+      <td>яндекс</td>
+      <td>10489</td>
+    </tr>
+    <tr>
+      <td>bosch</td>
+      <td>10050</td>
+    </tr>
+    <tr>
+      <td>krutoff</td>
+      <td>9925</td>
+    </tr>
+    <tr>
+      <td>dreame</td>
+      <td>9103</td>
+    </tr>
+    <tr>
+      <td>kitfort</td>
+      <td>8855</td>
+    </tr>
+    <tr>
+      <td>sony</td>
+      <td>8121</td>
+    </tr>
+    <tr>
+      <td>redmond</td>
+      <td>7639</td>
+    </tr>
+    <tr>
+      <td>kuppersberg</td>
+      <td>7575</td>
+    </tr>
+    <tr>
+      <td>gefest</td>
+      <td>7475</td>
+    </tr>
+    <tr>
+      <td>realme</td>
+      <td>7387</td>
+    </tr>
+    <tr>
+      <td>candy</td>
+      <td>7322</td>
+    </tr>
+    <tr>
+      <td>philips</td>
+      <td>7011</td>
+    </tr>
+  </tbody>
+</table></section>
+  </div>
+  <section class="panel"><h2>Распределение категорий в train/valid</h2><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Категория</th>
+      <th>Train</th>
+      <th>Valid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>смартфоны</td>
+      <td>54634</td>
+      <td>13653</td>
+    </tr>
+    <tr>
+      <td>телевизоры</td>
+      <td>33646</td>
+      <td>8407</td>
+    </tr>
+    <tr>
+      <td>стиральные машины</td>
+      <td>29401</td>
+      <td>7347</td>
+    </tr>
+    <tr>
+      <td>холодильники</td>
+      <td>27517</td>
+      <td>6871</td>
+    </tr>
+    <tr>
+      <td>ноутбуки</td>
+      <td>24884</td>
+      <td>6213</td>
+    </tr>
+    <tr>
+      <td>наушники</td>
+      <td>18201</td>
+      <td>4540</td>
+    </tr>
+    <tr>
+      <td>планшеты</td>
+      <td>17833</td>
+      <td>4451</td>
+    </tr>
+    <tr>
+      <td>пылесосы вертикальные</td>
+      <td>16046</td>
+      <td>4006</td>
+    </tr>
+    <tr>
+      <td>сплит системы</td>
+      <td>12982</td>
+      <td>3239</td>
+    </tr>
+    <tr>
+      <td>iphone</td>
+      <td>12574</td>
+      <td>3132</td>
+    </tr>
+    <tr>
+      <td>встраиваемый электрический духовой шкаф</td>
+      <td>11911</td>
+      <td>2973</td>
+    </tr>
+    <tr>
+      <td>смарт часы</td>
+      <td>11570</td>
+      <td>2888</td>
+    </tr>
+    <tr>
+      <td>чехлы для смартфонов</td>
+      <td>11046</td>
+      <td>2753</td>
+    </tr>
+    <tr>
+      <td>вытяжки кухонные</td>
+      <td>10318</td>
+      <td>2575</td>
+    </tr>
+    <tr>
+      <td>встраиваемые посудомоечные машины</td>
+      <td>8866</td>
+      <td>2211</td>
+    </tr>
+    <tr>
+      <td>пылесосы напольные</td>
+      <td>8150</td>
+      <td>2031</td>
+    </tr>
+    <tr>
+      <td>электрические чайники</td>
+      <td>8001</td>
+      <td>1996</td>
+    </tr>
+    <tr>
+      <td>аэрогрили</td>
+      <td>7425</td>
+      <td>1852</td>
+    </tr>
+    <tr>
+      <td>видеоигры</td>
+      <td>7171</td>
+      <td>1792</td>
+    </tr>
+    <tr>
+      <td>роботы пылесосы</td>
+      <td>6753</td>
+      <td>1683</td>
+    </tr>
+    <tr>
+      <td>зарядные сетевые устройства</td>
+      <td>6651</td>
+      <td>1652</td>
+    </tr>
+    <tr>
+      <td>встраиваемые индукционные панели</td>
+      <td>6434</td>
+      <td>1603</td>
+    </tr>
+    <tr>
+      <td>встраиваемые газовые панели</td>
+      <td>6431</td>
+      <td>1602</td>
+    </tr>
+    <tr>
+      <td>внешние аккумуляторы</td>
+      <td>6406</td>
+      <td>1598</td>
+    </tr>
+    <tr>
+      <td>автоматические кофемашины</td>
+      <td>6373</td>
+      <td>1586</td>
+    </tr>
+  </tbody>
+</table></section>
+</main></body></html>

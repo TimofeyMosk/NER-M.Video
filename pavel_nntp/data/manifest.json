@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-07-21T11:59:17",
+  "pipeline": "pavel_nntp/process_query_clicks.py",
+  "metrics": {
+    "catalog_skus": 546069,
+    "categories": 6963,
+    "brands": 6479,
+    "attribute_names": 10171,
+    "attribute_rows": 14548468,
+    "invalid_sku_ids": 0,
+    "multi_category_offers": 0,
+    "unique_queries": 1789579,
+    "empty_after_normalization": 1,
+    "raw_rows": 30991350,
+    "positive_rows": 23605869,
+    "no_click_rows": 7385481,
+    "query_sku_pairs": 3460618,
+    "exact_positive_groups": 13341150,
+    "aggregated_queries": 1010293,
+    "eligible_queries": 982761,
+    "no_click_queries": 456233,
+    "rejected_records": 602164,
+    "train_queries": 786891,
+    "valid_queries": 195870,
+    "split_overlap": 0,
+    "catalog_join_positive_rows": 21720289,
+    "valid_share": 0.19930583325956158,
+    "catalog_join_positive_share": 0.9201224068472125,
+    "exact_duplicate_rows_collapsed": 8379139
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "size_bytes": 1525,
+      "sha256": "591cc8054cd99f11901945f4a0764ef5fc94609d7cb1ad86fba81eeab685ae62"
+    },
+    {
+      "path": "config/processing_config.yaml",
+      "size_bytes": 1389,
+      "sha256": "681bd3bd3f30492f9963e772cde8421ff775733efadc1081ab53562607e403d2"
+    },
+    {
+      "path": "dictionaries/attribute_aliases.json",
+      "size_bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "dictionaries/attribute_names.json",
+      "size_bytes": 630681,
+      "sha256": "fa86eb10cd98f3abfa3e73a9004752f518aff3613550b79e6ed9ae28ef0fec87"
+    },
+    {
+      "path": "dictionaries/brand_aliases.json",
+      "size_bytes": 315,
+      "sha256": "0559d0cbb2f3fc06120f719e31c90435c70a885257e98a9c4a2a2c72fbbca9ef"
+    },
+    {
+      "path": "dictionaries/brands.json",
+      "size_bytes": 210919,
+      "sha256": "50afb3acbad220ad77cd01dcec9c23317556e2c7129a7574501b3514440cf0af"
+    },
+    {
+      "path": "dictionaries/categories.json",
+      "size_bytes": 2430612,
+      "sha256": "8b86789969c4c8e9f014b6638cacac80960707d57ef7544b08d0dc093a1a00ae"
+    },
+    {
+      "path": "dictionaries/category_aliases.json",
+      "size_bytes": 2,
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "path": "dictionaries/product_family_aliases.json",
+      "size_bytes": 219,
+      "sha256": "4dc7d90703eb774a6764ff6b78da07485de724ec58c7be26635d527a24dccff8"
+    },
+    {
+      "path": "dictionaries/product_family_to_brand.json",
+      "size_bytes": 160,
+      "sha256": "68b8e8086e562dd42ba318f0a8bce48d9d32b3f653f194839ea0d475ca7ae3b9"
+    },
+    {
+      "path": "dictionaries/selected_attribute_values.json",
+      "size_bytes": 37083,
+      "sha256": "c0b53b5f1007e79f13814ebd93d389cc1ced7b0eee78af993dbb90aa7497d009"
+    },
+    {
+      "path": "processed/catalog_attributes.parquet",
+      "size_bytes": 82175094,
+      "sha256": "5ace42cc96fda93a10e35f178f2869a8915140b6dff88487aa73d38a9a41cb3a"
+    },
+    {
+      "path": "processed/catalog_skus.parquet",
+      "size_bytes": 28835148,
+      "sha256": "72daf366fb6f2d32f59cae6ed4a014d6d86192ebeba9ab98b1f397620039b613"
+    },
+    {
+      "path": "processed/no_click_queries.parquet",
+      "size_bytes": 19931523,
+      "sha256": "218ceef24ee224989ceb70ce5aeb6fe6730e5e6bc23d51539534cb475285d341"
+    },
+    {
+      "path": "processed/query_dataset.parquet",
+      "size_bytes": 67406146,
+      "sha256": "41a740339f8cea5d84052c2948ae05ab9ebdf482b87ddd39ba7697b028070952"
+    },
+    {
+      "path": "processed/query_sku_aggregated.parquet",
+      "size_bytes": 290147656,
+      "sha256": "3d005b8d3cab79a3659ea372f5d54e94cc28f89fd1041fc8aaafd130df73525d"
+    },
+    {
+      "path": "processed/rejected_rows.parquet",
+      "size_bytes": 8212818,
+      "sha256": "85f191e28d98922c83a3766c503962064b05e6fe7d269b1248e855adcb6b134f"
+    },
+    {
+      "path": "processed/train.parquet",
+      "size_bytes": 45205460,
+      "sha256": "cdcbfb36bdf6e72872b40b06c64f07590a9dbec4cd02cedad3800e05d44773f8"
+    },
+    {
+      "path": "processed/valid.parquet",
+      "size_bytes": 12577337,
+      "sha256": "f4ce7692e995c77aee66d20db32c7fa36da9a7b0fcaa72146533dfb7eae40b7b"
+    },
+    {
+      "path": "reports/data_processing_report.html",
+      "size_bytes": 11437,
+      "sha256": "05b8efe6ce2b6c349f5028d376be4b21b1de68da171cbfc21a12413bf4c60e2f"
+    },
+    {
+      "path": "reports/query_normalization_1000.csv",
+      "size_bytes": 74776,
+      "sha256": "3542b0b9ca7044b085523143621f93857629c8bfd41f98952f3b6a1d76f13045"
+    },
+    {
+      "path": "reports/query_normalization_1000.html",
+      "size_bytes": 114228,
+      "sha256": "1de94bebdb606d6b74f49da724e730060555ea015b2f0eb36c6b783fcea47192"
+    }
+  ]
+}
