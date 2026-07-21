@@ -1,0 +1,7 @@
+*.parquet
+*.csv
+*.tmp
+*.duckdb
+*.wal
+!annotation_metrics.json
+!ANNOTATION_REPORT.md
