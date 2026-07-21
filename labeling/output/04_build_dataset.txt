@@ -1,0 +1,65 @@
+=== Промт 4/4: сборка train/val NER ===
+[in] clicks=107,879 synthetic=7,200
+[in] gazetteer rows used (clicks∪top10-cat): 157,694
+[in] attr rows (typed): 30,763
+
+=== размеры ===
+train: 96,129  (реальных 88,994 + синтетики 7,135)
+val:   15,705   (только реальные запросы)
+golden_candidates: 500
+дедуп реальных по norm_key: схлопнуто 40,831; синтетики выброшено как утечка в val: 65
+проверка утечки train↔val по norm_key: OK (пересечение = 0)
+
+=== распределение по категориям в train (ТОЛЬКО реальные, без синтетики) ===
+category
+Смартфоны                16136
+Стиральные машины         8180
+Холодильники             14581
+iPhone                    1478
+Телевизоры               11432
+Ноутбуки                  7717
+Наушники                 18661
+Пылесосы вертикальные     4345
+Аэрогрили                 1826
+Планшеты                  4638
+
+=== топ-15 брендов в train (только реальные) ===
+brand
+samsung    10069
+huawei      4396
+apple       3452
+xiaomi      3447
+haier       3416
+honor       2599
+hisense     1816
+jbl         1670
+asus        1649
+realme      1430
+lg          1239
+tcl         1117
+indesit     1088
+dreame      1008
+tecno        925
+
+=== качество мёржа (знаменатель = 167,342 реальных кандидатов: 107,879 clicks + 59,463 gazetteer_only) ===
+оставлено в реальный пул: 104,699
+% примеров с conflict=true (бренд) -> golden, не в train: 8293/167342 = 5.0%
+% выброшенных из-за неудачного alignment (нет ни одной сущности): 13519/167342 = 8.1%
+  не удалось локализовать категорию (спан категории не проставлен): 45,518
+  не удалось локализовать бренд (спан бренда не проставлен): 19,389
+low-confidence брендов -> golden (бренд снят, пример остаётся ради категории): 11,422
+синтетики выброшено (не выровнялось): 0
+
+=== 10 случайных примеров из train (tokens / tags) ===
+   centek/B-BRAND холодильник/B-CATEGORY черное/B-ATTR стекло/I-ATTR
+   холодильники/B-CATEGORY libbher/B-BRAND
+   наушники/B-CATEGORY беспроводные/O накладные/O panasonic/B-BRAND
+   холодильники/B-CATEGORY monsher/B-BRAND
+   холодильник/B-CATEGORY haier/B-BRAND 740/O
+   встраиваемые/O холодильники/B-CATEGORY без/O морозильной/O камеры/O 90/O 60/O
+   samsung/B-BRAND планшет/B-CATEGORY galaxy/O tab/O s10/O lite/O sm/O x400/O wi/B-ATTR fi/I-ATTR ростест/O eac/O 10/B-ATTR 9/B-ATTR 8/B-ATTR гб/I-ATTR 256/B-ATTR гб/I-ATTR коралловый/B-ATTR
+   холодильники/B-CATEGORY с/O нижней/O морозильной/O камерой/O o/O frost/O
+   наушники/B-CATEGORY проводные/O apple/B-BRAND usb/O c/O
+   samsung/B-BRAND galaxy/O s26/O с/O блоком/O
+
+[saved] train.jsonl, val.jsonl, golden_candidates.jsonl в labeling/output/

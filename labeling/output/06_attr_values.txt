@@ -1,0 +1,54 @@
+=== 06: типизированный ATTR из значений каталога ===
+mode: FULL
+значений в словарях per-category: {'Смартфоны': 153, 'Стиральные машины': 101, 'Холодильники': 170, 'iPhone': 100, 'Телевизоры': 156, 'Ноутбуки': 130, 'Наушники': 141, 'Пылесосы вертикальные': 128, 'Аэрогрили': 104, 'Планшеты': 110}
+числовых множеств: {'Смартфоны': {'diagonal': 8, 'memory': 11}, 'iPhone': {'diagonal': 3, 'memory': 8}, 'Телевизоры': {'diagonal': 35, 'memory': 13}, 'Планшеты': {'diagonal': 8, 'memory': 12}}
+запросов на вход: 107,879
+
+=== покрытие ===
+запросов с >=1 ATTR: 30,763 / 107,879 = 28.5%
+
+типы атрибутов (кол-во спанов):
+  memory           12,438
+  diagonal         10,447
+  color            4,713
+  cpu              2,051
+  network          2,022
+  smart            2,015
+  vacuum_type      1,615
+  panel            1,280
+  dimension        1,102
+  resolution       1,001
+  os               787
+  feature          776
+  connectivity     749
+  fridge_type      613
+  headphone_type   471
+  volume           465
+  sim              351
+  refresh          286
+  motor            243
+  country          111
+  power            86
+  battery          22
+  control_type     21
+  energy_class     13
+методы: {'gazetteer_value': 11380, 'numeric_bare': 13596, 'feature': 7452, 'numeric_unit': 11250}
+
+15 примеров:
+   [Телевизоры  ] 'телевизоры 25 smart на кухню'                   -> ['smart=smart']
+   [Планшеты    ] 'Планшет huawei 11 5 1тр'                        -> ['diagonal=11']
+   [Стиральные машины] 'стиральная машина 6 кг инверторный'             -> ['motor=инверторный']
+   [Холодильники] 'Холодильник горенье 55см ширина'                -> ['dimension=55 см']
+   [Планшеты    ] 'планшеты apple 11 2025 256'                     -> ['diagonal=11', 'memory=256']
+   [Смартфоны   ] 'Самсунг с 25 8/512'                             -> ['memory=512']
+   [Смартфоны   ] 'iqoo 15 16/512'                                 -> ['memory=512']
+   [Телевизоры  ] 'Телевизор Haier 55'                             -> ['diagonal=55']
+   [Пылесосы вертикальные] ' моющий и сухой пылесос вертикальный '          -> ['vacuum_type=моющий']
+   [Холодильники] 'Холодильник MDRB522MGE46OD, нержавеющая сталь'  -> ['color=нержавеющая сталь']
+   [Планшеты    ] 'ipad 11 2025 a16'                               -> ['diagonal=11']
+   [Телевизоры  ] 'Haier Телевизор 43 HQLED S2 Pro 43″ 4K UHD'     -> ['diagonal=43', 'diagonal=43', 'resolution=4k', 'resolution=uhd']
+   [Смартфоны   ] 'Смартфон OPPO A5 8/256GB'                       -> ['memory=256 gb']
+   [Смартфоны   ] 'Xiaomi 17 12/256GB'                             -> ['memory=256 gb']
+   [Телевизоры  ] 'телевизоры haier 65 s4'                         -> ['diagonal=65']
+
+[saved] labeling/output/weak_labels_attr.parquet  (30,763 rows)

@@ -1,0 +1,12 @@
+# Обучение rubert-tiny2 (NER, token classification). Проверено на этом стеке.
+# torch: поставьте сборку под вашу CUDA, напр.:
+#   pip install torch>=2.3 --index-url https://download.pytorch.org/whl/cu121
+# (см. https://pytorch.org/get-started/locally/ для нужной версии CUDA)
+torch>=2.3
+transformers==5.14.1
+tokenizers==0.22.2
+seqeval==1.2.2
+numpy
+scikit-learn
+tqdm
+# HF datasets / accelerate НЕ нужны — train_ner.py на «голом» PyTorch-цикле.
