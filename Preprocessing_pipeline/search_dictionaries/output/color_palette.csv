@@ -1,0 +1,31 @@
+﻿rank,color_id,canonical,label_en,version
+1,black,черный,black,catalog_palette_30_v1
+2,white,белый,white,catalog_palette_30_v1
+3,multicolor,разноцветный,multicolor,catalog_palette_30_v1
+4,transparent,прозрачный,transparent,catalog_palette_30_v1
+5,gray,серый,gray,catalog_palette_30_v1
+6,silver,серебристый,silver,catalog_palette_30_v1
+7,chrome,хром,chrome,catalog_palette_30_v1
+8,beige,бежевый,beige,catalog_palette_30_v1
+9,blue,синий,blue,catalog_palette_30_v1
+10,green,зеленый,green,catalog_palette_30_v1
+11,red,красный,red,catalog_palette_30_v1
+12,brown,коричневый,brown,catalog_palette_30_v1
+13,stainless_steel,нержавеющая сталь,stainless steel,catalog_palette_30_v1
+14,light_blue,голубой,light blue,catalog_palette_30_v1
+15,pink,розовый,pink,catalog_palette_30_v1
+16,orange,оранжевый,orange,catalog_palette_30_v1
+17,purple,фиолетовый,purple,catalog_palette_30_v1
+18,graphite,графитовый,graphite,catalog_palette_30_v1
+19,gold,золотистый,gold,catalog_palette_30_v1
+20,yellow,желтый,yellow,catalog_palette_30_v1
+21,amber,янтарный,amber,catalog_palette_30_v1
+22,bronze,бронзовый,bronze,catalog_palette_30_v1
+23,turquoise,бирюзовый,turquoise,catalog_palette_30_v1
+24,cream,кремовый,cream,catalog_palette_30_v1
+25,mint,мятный,mint,catalog_palette_30_v1
+26,sand,песочный,sand,catalog_palette_30_v1
+27,chocolate,шоколадный,chocolate,catalog_palette_30_v1
+28,lilac,сиреневый,lilac,catalog_palette_30_v1
+29,burgundy,бордовый,burgundy,catalog_palette_30_v1
+30,copper,медный,copper,catalog_palette_30_v1

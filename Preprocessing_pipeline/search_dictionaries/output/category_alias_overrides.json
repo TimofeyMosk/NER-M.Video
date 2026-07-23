@@ -1,0 +1,1143 @@
+{
+  "version": 1,
+  "description": "Curated aliases override narrower catalog labels for deterministic canonical categories.",
+  "source_files": [
+    "C:\\Users\\kozgu\\NER-M.Video\\pavel_nntp\\data\\dictionaries\\category_aliases.json",
+    "C:\\Users\\kozgu\\NER-M.Video\\pavel_nntp\\data\\dictionaries\\product_family_aliases.json"
+  ],
+  "aliases": {
+    "air conditioner": {
+      "target_ids": [
+        "106"
+      ],
+      "canonical_values": [
+        "Кондиционеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "air conditioners": {
+      "target_ids": [
+        "106"
+      ],
+      "canonical_values": [
+        "Кондиционеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "airpods": {
+      "target_ids": [
+        "31607",
+        "3967",
+        "54"
+      ],
+      "canonical_values": [
+        "Наушники"
+      ],
+      "sources": [
+        "product_family_canonical"
+      ]
+    },
+    "android phone": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "apple watch": {
+      "target_ids": [
+        "1233",
+        "400"
+      ],
+      "canonical_values": [
+        "Смарт-часы"
+      ],
+      "sources": [
+        "product_family_canonical"
+      ]
+    },
+    "camera": {
+      "target_ids": [
+        "12"
+      ],
+      "canonical_values": [
+        "Фотоаппараты"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "cameras": {
+      "target_ids": [
+        "12"
+      ],
+      "canonical_values": [
+        "Фотоаппараты"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "cell phone": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "cellphone": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "computer mouse": {
+      "target_ids": [
+        "183",
+        "453"
+      ],
+      "canonical_values": [
+        "Мыши"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "dishwasher": {
+      "target_ids": [
+        "160",
+        "662"
+      ],
+      "canonical_values": [
+        "Посудомоечные машины"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "dishwashers": {
+      "target_ids": [
+        "160",
+        "662"
+      ],
+      "canonical_values": [
+        "Посудомоечные машины"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "earphones": {
+      "target_ids": [
+        "31607",
+        "3967",
+        "54"
+      ],
+      "canonical_values": [
+        "Наушники"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "fridge": {
+      "target_ids": [
+        "666"
+      ],
+      "canonical_values": [
+        "Холодильники"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "game console": {
+      "target_ids": [
+        "57137",
+        "57138"
+      ],
+      "canonical_values": [
+        "Игровые консоли"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "game consoles": {
+      "target_ids": [
+        "57137",
+        "57138"
+      ],
+      "canonical_values": [
+        "Игровые консоли"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "headphones": {
+      "target_ids": [
+        "31607",
+        "3967",
+        "54"
+      ],
+      "canonical_values": [
+        "Наушники"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "headset": {
+      "target_ids": [
+        "31607",
+        "3967",
+        "54"
+      ],
+      "canonical_values": [
+        "Наушники"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "ipad": {
+      "target_ids": [
+        "195",
+        "930"
+      ],
+      "canonical_values": [
+        "Планшеты"
+      ],
+      "sources": [
+        "product_family_canonical"
+      ]
+    },
+    "iphone": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "product_family_canonical"
+      ]
+    },
+    "kettle": {
+      "target_ids": [
+        "482"
+      ],
+      "canonical_values": [
+        "Электрические чайники"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "keyboard": {
+      "target_ids": [
+        "1114"
+      ],
+      "canonical_values": [
+        "Клавиатуры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "keyboards": {
+      "target_ids": [
+        "1114"
+      ],
+      "canonical_values": [
+        "Клавиатуры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "laptop": {
+      "target_ids": [
+        "118",
+        "987"
+      ],
+      "canonical_values": [
+        "Ноутбуки"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "laptops": {
+      "target_ids": [
+        "118",
+        "987"
+      ],
+      "canonical_values": [
+        "Ноутбуки"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "macbook": {
+      "target_ids": [
+        "118",
+        "987"
+      ],
+      "canonical_values": [
+        "Ноутбуки"
+      ],
+      "sources": [
+        "product_family_canonical"
+      ]
+    },
+    "microwave": {
+      "target_ids": [
+        "94"
+      ],
+      "canonical_values": [
+        "Микроволновые печи"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "microwaves": {
+      "target_ids": [
+        "94"
+      ],
+      "canonical_values": [
+        "Микроволновые печи"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "mobile phone": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "monitor": {
+      "target_ids": [
+        "101",
+        "1263"
+      ],
+      "canonical_values": [
+        "Мониторы"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "monitors": {
+      "target_ids": [
+        "101",
+        "1263"
+      ],
+      "canonical_values": [
+        "Мониторы"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "mouse": {
+      "target_ids": [
+        "183",
+        "453"
+      ],
+      "canonical_values": [
+        "Мыши"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "notebook": {
+      "target_ids": [
+        "118",
+        "987"
+      ],
+      "canonical_values": [
+        "Ноутбуки"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "phone": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "playstation": {
+      "target_ids": [
+        "57137",
+        "57138"
+      ],
+      "canonical_values": [
+        "Игровые консоли"
+      ],
+      "sources": [
+        "product_family_canonical"
+      ]
+    },
+    "printer": {
+      "target_ids": [
+        "446",
+        "81"
+      ],
+      "canonical_values": [
+        "Принтеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "printers": {
+      "target_ids": [
+        "446",
+        "81"
+      ],
+      "canonical_values": [
+        "Принтеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "refrigerator": {
+      "target_ids": [
+        "666"
+      ],
+      "canonical_values": [
+        "Холодильники"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "refrigerators": {
+      "target_ids": [
+        "666"
+      ],
+      "canonical_values": [
+        "Холодильники"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "router": {
+      "target_ids": [
+        "515"
+      ],
+      "canonical_values": [
+        "Роутеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "routers": {
+      "target_ids": [
+        "515"
+      ],
+      "canonical_values": [
+        "Роутеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "smart phone": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "smart tv": {
+      "target_ids": [
+        "1682",
+        "65"
+      ],
+      "canonical_values": [
+        "Телевизоры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "smart watch": {
+      "target_ids": [
+        "1233",
+        "400"
+      ],
+      "canonical_values": [
+        "Смарт-часы"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "smartphone": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "smartphones": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "smartwatch": {
+      "target_ids": [
+        "1233",
+        "400"
+      ],
+      "canonical_values": [
+        "Смарт-часы"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "tablet": {
+      "target_ids": [
+        "195",
+        "930"
+      ],
+      "canonical_values": [
+        "Планшеты"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "tablets": {
+      "target_ids": [
+        "195",
+        "930"
+      ],
+      "canonical_values": [
+        "Планшеты"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "television": {
+      "target_ids": [
+        "1682",
+        "65"
+      ],
+      "canonical_values": [
+        "Телевизоры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "televisions": {
+      "target_ids": [
+        "1682",
+        "65"
+      ],
+      "canonical_values": [
+        "Телевизоры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "tv": {
+      "target_ids": [
+        "1682",
+        "65"
+      ],
+      "canonical_values": [
+        "Телевизоры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "vacuum cleaner": {
+      "target_ids": [
+        "2438"
+      ],
+      "canonical_values": [
+        "Пылесосы"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "vacuum cleaners": {
+      "target_ids": [
+        "2438"
+      ],
+      "canonical_values": [
+        "Пылесосы"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "washing machine": {
+      "target_ids": [
+        "2447",
+        "89"
+      ],
+      "canonical_values": [
+        "Стиральные машины"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "washing machines": {
+      "target_ids": [
+        "2447",
+        "89"
+      ],
+      "canonical_values": [
+        "Стиральные машины"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "wi fi router": {
+      "target_ids": [
+        "515"
+      ],
+      "canonical_values": [
+        "Роутеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "wifi router": {
+      "target_ids": [
+        "515"
+      ],
+      "canonical_values": [
+        "Роутеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "xbox": {
+      "target_ids": [
+        "57137",
+        "57138"
+      ],
+      "canonical_values": [
+        "Игровые консоли"
+      ],
+      "sources": [
+        "product_family_canonical"
+      ]
+    },
+    "аирподс": {
+      "target_ids": [
+        "31607",
+        "3967",
+        "54"
+      ],
+      "canonical_values": [
+        "Наушники"
+      ],
+      "sources": [
+        "product_family_alias"
+      ]
+    },
+    "айпад": {
+      "target_ids": [
+        "195",
+        "930"
+      ],
+      "canonical_values": [
+        "Планшеты"
+      ],
+      "sources": [
+        "product_family_alias"
+      ]
+    },
+    "айфон": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "product_family_alias"
+      ]
+    },
+    "гарнитура": {
+      "target_ids": [
+        "31607",
+        "3967",
+        "54"
+      ],
+      "canonical_values": [
+        "Наушники"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "игровая приставка": {
+      "target_ids": [
+        "57137",
+        "57138"
+      ],
+      "canonical_values": [
+        "Игровые консоли"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "игровой приставка": {
+      "target_ids": [
+        "57137",
+        "57138"
+      ],
+      "canonical_values": [
+        "Игровые консоли"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "игровые приставки": {
+      "target_ids": [
+        "57137",
+        "57138"
+      ],
+      "canonical_values": [
+        "Игровые консоли"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "иксбокс": {
+      "target_ids": [
+        "57137",
+        "57138"
+      ],
+      "canonical_values": [
+        "Игровые консоли"
+      ],
+      "sources": [
+        "product_family_alias"
+      ]
+    },
+    "клава": {
+      "target_ids": [
+        "1114"
+      ],
+      "canonical_values": [
+        "Клавиатуры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "кондер": {
+      "target_ids": [
+        "106"
+      ],
+      "canonical_values": [
+        "Кондиционеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "лэптоп": {
+      "target_ids": [
+        "118",
+        "987"
+      ],
+      "canonical_values": [
+        "Ноутбуки"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "макбук": {
+      "target_ids": [
+        "118",
+        "987"
+      ],
+      "canonical_values": [
+        "Ноутбуки"
+      ],
+      "sources": [
+        "product_family_alias"
+      ]
+    },
+    "маршрутизатор": {
+      "target_ids": [
+        "515"
+      ],
+      "canonical_values": [
+        "Роутеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "микроволновка": {
+      "target_ids": [
+        "94"
+      ],
+      "canonical_values": [
+        "Микроволновые печи"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "мобильник": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "мобильные телефоны": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "мобильный телефон": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "планшетник": {
+      "target_ids": [
+        "195",
+        "930"
+      ],
+      "canonical_values": [
+        "Планшеты"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "плейстейшен": {
+      "target_ids": [
+        "57137",
+        "57138"
+      ],
+      "canonical_values": [
+        "Игровые консоли"
+      ],
+      "sources": [
+        "product_family_alias"
+      ]
+    },
+    "пмм": {
+      "target_ids": [
+        "160",
+        "662"
+      ],
+      "canonical_values": [
+        "Посудомоечные машины"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "посудомойка": {
+      "target_ids": [
+        "160",
+        "662"
+      ],
+      "canonical_values": [
+        "Посудомоечные машины"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "свч печь": {
+      "target_ids": [
+        "94"
+      ],
+      "canonical_values": [
+        "Микроволновые печи"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "смарт тв": {
+      "target_ids": [
+        "1682",
+        "65"
+      ],
+      "canonical_values": [
+        "Телевизоры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "сплит система": {
+      "target_ids": [
+        "106"
+      ],
+      "canonical_values": [
+        "Кондиционеры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "стиралка": {
+      "target_ids": [
+        "2447",
+        "89"
+      ],
+      "canonical_values": [
+        "Стиральные машины"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "стиральная машинка": {
+      "target_ids": [
+        "2447",
+        "89"
+      ],
+      "canonical_values": [
+        "Стиральные машины"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "стиральный машинка": {
+      "target_ids": [
+        "2447",
+        "89"
+      ],
+      "canonical_values": [
+        "Стиральные машины"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "тв": {
+      "target_ids": [
+        "1682",
+        "65"
+      ],
+      "canonical_values": [
+        "Телевизоры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "телек": {
+      "target_ids": [
+        "1682",
+        "65"
+      ],
+      "canonical_values": [
+        "Телевизоры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "телефон": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "телефоны": {
+      "target_ids": [
+        "205",
+        "761"
+      ],
+      "canonical_values": [
+        "Смартфоны"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "телик": {
+      "target_ids": [
+        "1682",
+        "65"
+      ],
+      "canonical_values": [
+        "Телевизоры"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "умные часы": {
+      "target_ids": [
+        "1233",
+        "400"
+      ],
+      "canonical_values": [
+        "Смарт-часы"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "умный часы": {
+      "target_ids": [
+        "1233",
+        "400"
+      ],
+      "canonical_values": [
+        "Смарт-часы"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "фотик": {
+      "target_ids": [
+        "12"
+      ],
+      "canonical_values": [
+        "Фотоаппараты"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "электрочайник": {
+      "target_ids": [
+        "482"
+      ],
+      "canonical_values": [
+        "Электрические чайники"
+      ],
+      "sources": [
+        "manual_category_alias"
+      ]
+    },
+    "эпл вотч": {
+      "target_ids": [
+        "1233",
+        "400"
+      ],
+      "canonical_values": [
+        "Смарт-часы"
+      ],
+      "sources": [
+        "product_family_alias"
+      ]
+    }
+  },
+  "unresolved": []
+}

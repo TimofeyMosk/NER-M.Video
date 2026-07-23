@@ -1,0 +1,5388 @@
+{
+  "dataset": "C:\\Users\\kozgu\\NER-M.Video\\pavel_nntp\\data\\processed\\query_dataset.parquet",
+  "matching": "space-bounded exact match over all normalized query variants; no regex",
+  "note": "Counts are alias-query pairs and may overlap when one query contains several aliases.",
+  "summary": {
+    "category": {
+      "configured_aliases": 93,
+      "aliases_observed": 77,
+      "alias_query_pairs": 82962,
+      "click_evidence": 3857670
+    },
+    "brand": {
+      "configured_aliases": 47,
+      "aliases_observed": 47,
+      "alias_query_pairs": 35007,
+      "click_evidence": 1775127
+    }
+  },
+  "aliases": [
+    {
+      "kind": "brand",
+      "alias": "самсунг",
+      "target": "samsung",
+      "source": "manual_brand_alias",
+      "query_count": 11797,
+      "click_count": 659946,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "samsung",
+          "query_count": 4324,
+          "click_count": 407718,
+          "example": "Samsung s25 512 gb"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "samsung",
+          "query_count": 850,
+          "click_count": 27426,
+          "example": "Планшет samsung tab s9 ultra "
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "samsung",
+          "query_count": 693,
+          "click_count": 34370,
+          "example": "смарт телевизор Самсунг 43"
+        },
+        {
+          "dominant_category": "зарядные сетевые устройства",
+          "dominant_brand": "samsung",
+          "query_count": 499,
+          "click_count": 22036,
+          "example": "USB Power Delivery 3.0 с PPS. самсунг"
+        },
+        {
+          "dominant_category": "чехлы для смартфонов",
+          "dominant_brand": "krutoff",
+          "query_count": 484,
+          "click_count": 3476,
+          "example": "чехол на самсунг гелекси а32"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "iphone",
+      "target": "Смартфоны",
+      "source": "product_family_canonical",
+      "query_count": 10796,
+      "click_count": 763690,
+      "top_evidence": [
+        {
+          "dominant_category": "iphone",
+          "dominant_brand": "apple",
+          "query_count": 6817,
+          "click_count": 662209,
+          "example": "Iphone 17 pro с rustore"
+        },
+        {
+          "dominant_category": "чехлы для смартфонов",
+          "dominant_brand": "apple",
+          "query_count": 386,
+          "click_count": 21192,
+          "example": "Чехол apple iphone 15 clear case"
+        },
+        {
+          "dominant_category": "кабели для смартфонов телефонов",
+          "dominant_brand": "apple",
+          "query_count": 253,
+          "click_count": 8289,
+          "example": "шнур для зарядки iphone 13 онигинал"
+        },
+        {
+          "dominant_category": "зарядные сетевые устройства",
+          "dominant_brand": "wireless",
+          "query_count": 239,
+          "click_count": 3111,
+          "example": "Блок на айфон 17"
+        },
+        {
+          "dominant_category": "чехлы для смартфонов",
+          "dominant_brand": "vlp",
+          "query_count": 222,
+          "click_count": 12124,
+          "example": "Чехол на iphone 16 pro max прозрачный"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "телефон",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 9852,
+      "click_count": 237887,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "samsung",
+          "query_count": 1685,
+          "click_count": 35038,
+          "example": "телефон samsung galaxy5G"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "xiaomi",
+          "query_count": 1210,
+          "click_count": 58515,
+          "example": "телефон readme "
+        },
+        {
+          "dominant_category": "iphone",
+          "dominant_brand": "apple",
+          "query_count": 1109,
+          "click_count": 63292,
+          "example": "телефон айфон 14 про 246 "
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "huawei",
+          "query_count": 532,
+          "click_count": 10357,
+          "example": "телефон huawei pura pro"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "honor",
+          "query_count": 468,
+          "click_count": 8459,
+          "example": "Телефон honor х8а"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "стиральная машинка",
+      "target": "Стиральные машины",
+      "source": "manual_category_alias",
+      "query_count": 9190,
+      "click_count": 742256,
+      "top_evidence": [
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "haier",
+          "query_count": 1400,
+          "click_count": 35276,
+          "example": "стиральная машинка haier узкая 6кг 7"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "lg",
+          "query_count": 1127,
+          "click_count": 53169,
+          "example": "стиральная машинка LG AIDD F2V3GS6W"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "indesit",
+          "query_count": 764,
+          "click_count": 515480,
+          "example": "стиральная машинка узкая 33-35 см"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "candy",
+          "query_count": 676,
+          "click_count": 11923,
+          "example": "стиральная машинка высотой 70см"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "beko",
+          "query_count": 594,
+          "click_count": 11393,
+          "example": "Стиральная машинка 55см"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "айфон",
+      "target": "Смартфоны",
+      "source": "product_family_alias",
+      "query_count": 7771,
+      "click_count": 724159,
+      "top_evidence": [
+        {
+          "dominant_category": "iphone",
+          "dominant_brand": "apple",
+          "query_count": 5198,
+          "click_count": 641204,
+          "example": " айфон 1 тб"
+        },
+        {
+          "dominant_category": "зарядные сетевые устройства",
+          "dominant_brand": "wireless",
+          "query_count": 244,
+          "click_count": 2754,
+          "example": "блок зарядки на айфон 17"
+        },
+        {
+          "dominant_category": "кабели для смартфонов телефонов",
+          "dominant_brand": "apple",
+          "query_count": 184,
+          "click_count": 6883,
+          "example": "зарятка айфон "
+        },
+        {
+          "dominant_category": "зарядные сетевые устройства",
+          "dominant_brand": "apple",
+          "query_count": 134,
+          "click_count": 16911,
+          "example": "ЗарДка айфон"
+        },
+        {
+          "dominant_category": "чехлы для смартфонов",
+          "dominant_brand": "apple",
+          "query_count": 132,
+          "click_count": 18827,
+          "example": "Накладка на айфон 16 про"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "сплит система",
+      "target": "Кондиционеры",
+      "source": "manual_category_alias",
+      "query_count": 6205,
+      "click_count": 325908,
+      "top_evidence": [
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "haier",
+          "query_count": 1093,
+          "click_count": 253896,
+          "example": "Сплит система hier инвенторный"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "rapid",
+          "query_count": 569,
+          "click_count": 41751,
+          "example": "сплит система не шумный"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "electrolux",
+          "query_count": 336,
+          "click_count": 1533,
+          "example": "сплит система electrolux eacs 09hsm N8"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "centek",
+          "query_count": 332,
+          "click_count": 1984,
+          "example": "СENTEK СПЛИТ СИСТЕМА"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "goldstar",
+          "query_count": 293,
+          "click_count": 4271,
+          "example": "кондиционер сплит система инвектор"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "тв",
+      "target": "Телевизоры",
+      "source": "manual_category_alias",
+      "query_count": 5894,
+      "click_count": 91900,
+      "top_evidence": [
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "яндекс",
+          "query_count": 1177,
+          "click_count": 20713,
+          "example": "Телевизор ТВ Станция Бейсик LED 50\" YNDX-00075"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "samsung",
+          "query_count": 293,
+          "click_count": 1914,
+          "example": "Телевизор 43 samsung smart тв"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "haier",
+          "query_count": 267,
+          "click_count": 3357,
+          "example": "телевизор смарт тв 43 андроид"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "hisense",
+          "query_count": 246,
+          "click_count": 1070,
+          "example": "Телевизор 85 Смарт ТВ 4К 85U7S (2026)"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "tcl",
+          "query_count": 238,
+          "click_count": 1489,
+          "example": "тв Телевизор TCL 85P7L"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "tv",
+      "target": "Телевизоры",
+      "source": "manual_category_alias",
+      "query_count": 4099,
+      "click_count": 30827,
+      "top_evidence": [
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "haier",
+          "query_count": 955,
+          "click_count": 8549,
+          "example": "65\" (165 см) Телевизор Haier 65 Smart TV S7 серый"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "xiaomi",
+          "query_count": 802,
+          "click_count": 4069,
+          "example": "Xiaomi pro tv"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "tcl",
+          "query_count": 384,
+          "click_count": 1748,
+          "example": "TCL Телевизор 55\" 4K UltraHD LED Google TV Smart TV"
+        },
+        {
+          "dominant_category": "смарт тв приставки",
+          "dominant_brand": "xiaomi",
+          "query_count": 296,
+          "click_count": 5351,
+          "example": "ТВ-приставка Xiaomi TV Box S 3rd Gen 2 RU"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "samsung",
+          "query_count": 251,
+          "click_count": 854,
+          "example": "Телевизор Samsung 85` Q60B QLED 4K Smart TV 2022 QE85Q60BAUXCE"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "ipad",
+      "target": "Планшеты",
+      "source": "product_family_canonical",
+      "query_count": 3572,
+      "click_count": 85990,
+      "top_evidence": [
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "apple",
+          "query_count": 2652,
+          "click_count": 80766,
+          "example": "iPad (A16) 128 ГБ"
+        },
+        {
+          "dominant_category": "чехлы для планшетов",
+          "dominant_brand": "vlp",
+          "query_count": 205,
+          "click_count": 1808,
+          "example": "Чехолapple ipad air 11 2025"
+        },
+        {
+          "dominant_category": "клавиатуры для планшетных компьютеров",
+          "dominant_brand": "deppa",
+          "query_count": 113,
+          "click_count": 702,
+          "example": "чехол с клавиатурой для ipad m 4"
+        },
+        {
+          "dominant_category": "чехлы для планшетов",
+          "dominant_brand": "red line",
+          "query_count": 109,
+          "click_count": 936,
+          "example": "чехол ipad 6 поколения"
+        },
+        {
+          "dominant_category": "защитное стекло для планшетного компьютера",
+          "dominant_brand": "krutoff",
+          "query_count": 92,
+          "click_count": 410,
+          "example": "Стекло на iPad Air"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "macbook",
+      "target": "Ноутбуки",
+      "source": "product_family_canonical",
+      "query_count": 3038,
+      "click_count": 62851,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "apple",
+          "query_count": 2697,
+          "click_count": 61531,
+          "example": "Macbook 16 pro m4"
+        },
+        {
+          "dominant_category": "зарядные сетевые устройства",
+          "dominant_brand": "нет бренда",
+          "query_count": 65,
+          "click_count": 323,
+          "example": " macbook зарядное устройство "
+        },
+        {
+          "dominant_category": "сетевой адаптер для macbook",
+          "dominant_brand": "lyambda",
+          "query_count": 33,
+          "click_count": 89,
+          "example": "Переходник для MacBook"
+        },
+        {
+          "dominant_category": "папки для ноутбуков",
+          "dominant_brand": "deppa",
+          "query_count": 29,
+          "click_count": 120,
+          "example": "Кейс  для macBook "
+        },
+        {
+          "dominant_category": "кабели для смартфонов телефонов",
+          "dominant_brand": "apple",
+          "query_count": 27,
+          "click_count": 120,
+          "example": "кабель type apple для MacBook "
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "хуавей",
+      "target": "huawei",
+      "source": "manual_brand_alias",
+      "query_count": 2888,
+      "click_count": 274869,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "huawei",
+          "query_count": 905,
+          "click_count": 108017,
+          "example": "смартфон huawei 600"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "huawei",
+          "query_count": 455,
+          "click_count": 56294,
+          "example": "Хуавей вотч фит 15"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "huawei",
+          "query_count": 439,
+          "click_count": 36486,
+          "example": "Планшет huawei 256 ГБ"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "huawei",
+          "query_count": 217,
+          "click_count": 31165,
+          "example": "хуавей бац се 2 "
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "huawei",
+          "query_count": 183,
+          "click_count": 23966,
+          "example": "нотбук хуавей"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "хонор",
+      "target": "honor",
+      "source": "manual_brand_alias",
+      "query_count": 2623,
+      "click_count": 173398,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "honor",
+          "query_count": 1314,
+          "click_count": 130180,
+          "example": "honor х9a"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "honor",
+          "query_count": 306,
+          "click_count": 14331,
+          "example": "Планшет honor LTE"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "honor",
+          "query_count": 199,
+          "click_count": 14335,
+          "example": "экран на Хонор 20 про"
+        },
+        {
+          "dominant_category": "чехлы для смартфонов",
+          "dominant_brand": "krutoff",
+          "query_count": 161,
+          "click_count": 1695,
+          "example": "Чеход хонор x8 чехол"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "honor",
+          "query_count": 92,
+          "click_count": 5457,
+          "example": "наушники беспроводные доя хонор"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "тефаль",
+      "target": "tefal",
+      "source": "manual_brand_alias",
+      "query_count": 2234,
+      "click_count": 17582,
+      "top_evidence": [
+        {
+          "dominant_category": "пылесосы вертикальные",
+          "dominant_brand": "tefal",
+          "query_count": 348,
+          "click_count": 1609,
+          "example": "Тефаль x clean 4"
+        },
+        {
+          "dominant_category": "сковороды",
+          "dominant_brand": "tefal",
+          "query_count": 198,
+          "click_count": 1249,
+          "example": "сковорода Тефаль 24 day by day"
+        },
+        {
+          "dominant_category": "утюги",
+          "dominant_brand": "tefal",
+          "query_count": 193,
+          "click_count": 2413,
+          "example": " Утюг тефаль 5772"
+        },
+        {
+          "dominant_category": "пылесосы напольные",
+          "dominant_brand": "tefal",
+          "query_count": 121,
+          "click_count": 1438,
+          "example": "тефаль пылесос микро спайс"
+        },
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "tefal",
+          "query_count": 118,
+          "click_count": 1563,
+          "example": "Чайник белый Тефаль"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "микроволновка",
+      "target": "Микроволновые печи",
+      "source": "manual_category_alias",
+      "query_count": 2155,
+      "click_count": 71402,
+      "top_evidence": [
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "bbk",
+          "query_count": 175,
+          "click_count": 1450,
+          "example": "Микроволновка с правым открыванием"
+        },
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "gorenje",
+          "query_count": 130,
+          "click_count": 45844,
+          "example": "микроволновка gorenje МО 20А3 В"
+        },
+        {
+          "dominant_category": "микроволновые печи встраиваемые",
+          "dominant_brand": "midea",
+          "query_count": 128,
+          "click_count": 7115,
+          "example": "Встраиваемая микроволновка с открывающей дверью вправо "
+        },
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "lg",
+          "query_count": 108,
+          "click_count": 2904,
+          "example": "Микроволновка с часами белая"
+        },
+        {
+          "dominant_category": "микроволновые печи встраиваемые",
+          "dominant_brand": "gorenje",
+          "query_count": 107,
+          "click_count": 1589,
+          "example": "ВСТРОЕННАЯ МИКРОВОЛНОВКА БЕЛАЯ ГОРЕНИЕ"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "playstation",
+      "target": "Игровые консоли",
+      "source": "product_family_canonical",
+      "query_count": 1990,
+      "click_count": 89511,
+      "top_evidence": [
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "sony",
+          "query_count": 758,
+          "click_count": 76715,
+          "example": "playstation 5 pro с дисководом"
+        },
+        {
+          "dominant_category": "видеоигры",
+          "dominant_brand": "playstation",
+          "query_count": 348,
+          "click_count": 7047,
+          "example": "Игра Crysis: Remastered Trilogy (PlayStation 4"
+        },
+        {
+          "dominant_category": "геймпады",
+          "dominant_brand": "sony",
+          "query_count": 120,
+          "click_count": 1139,
+          "example": "sony playstation gamepad"
+        },
+        {
+          "dominant_category": "карты оплаты ps store",
+          "dominant_brand": "sony",
+          "query_count": 75,
+          "click_count": 798,
+          "example": "выживания  Sony PlayStation 4"
+        },
+        {
+          "dominant_category": "аксессуары для ps5",
+          "dominant_brand": "sony",
+          "query_count": 74,
+          "click_count": 537,
+          "example": "playstation ps5 slim с дисководом"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "редмонд",
+      "target": "redmond",
+      "source": "manual_brand_alias",
+      "query_count": 1932,
+      "click_count": 8923,
+      "top_evidence": [
+        {
+          "dominant_category": "мультиварки",
+          "dominant_brand": "redmond",
+          "query_count": 224,
+          "click_count": 1026,
+          "example": "Мультиварка РЕДМОНД RMC-450"
+        },
+        {
+          "dominant_category": "пылесосы вертикальные",
+          "dominant_brand": "redmond",
+          "query_count": 184,
+          "click_count": 869,
+          "example": "оспаривать редмонд ручной"
+        },
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "redmond",
+          "query_count": 178,
+          "click_count": 1198,
+          "example": "Умный чайник-светильник редмонд редмонд RK-G203S, объем 2 литра"
+        },
+        {
+          "dominant_category": "погружные блендеры",
+          "dominant_brand": "redmond",
+          "query_count": 77,
+          "click_count": 442,
+          "example": "запчасти для блендера Редмонд"
+        },
+        {
+          "dominant_category": "мультипекари",
+          "dominant_brand": "redmond",
+          "query_count": 76,
+          "click_count": 434,
+          "example": "мультипекарь редмонд с панелями"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "apple watch",
+      "target": "Смарт-часы",
+      "source": "product_family_canonical",
+      "query_count": 1836,
+      "click_count": 95285,
+      "top_evidence": [
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "apple",
+          "query_count": 1361,
+          "click_count": 87105,
+          "example": "Часы Apple Watch Ultra 3 GPS + Cellular 49mm Black Titanium Case, Ocean Band (Black)"
+        },
+        {
+          "dominant_category": "ремешки для apple watch",
+          "dominant_brand": "lyambda",
+          "query_count": 75,
+          "click_count": 5143,
+          "example": "Ремешок для apple watch 40 мм"
+        },
+        {
+          "dominant_category": "ремешки для смарт часов и фитнес браслетов",
+          "dominant_brand": "caweon",
+          "query_count": 68,
+          "click_count": 709,
+          "example": "apple watch 11 42mm ремешок"
+        },
+        {
+          "dominant_category": "ремешки для apple watch",
+          "dominant_brand": "mutural",
+          "query_count": 43,
+          "click_count": 179,
+          "example": "Браслет на apple watch"
+        },
+        {
+          "dominant_category": "ремешки для apple watch",
+          "dominant_brand": "bandrate smart",
+          "query_count": 33,
+          "click_count": 191,
+          "example": "ремешок для apple watch 45mm"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "смарт тв",
+      "target": "Телевизоры",
+      "source": "manual_category_alias",
+      "query_count": 1660,
+      "click_count": 30387,
+      "top_evidence": [
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "hisense",
+          "query_count": 169,
+          "click_count": 760,
+          "example": " Hisense 85U7S QLED, 4K Ultra HD, СМАРТ ТВ"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "haier",
+          "query_count": 160,
+          "click_count": 2686,
+          "example": "телевизоры хаер  32 смарт тв"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "tcl",
+          "query_count": 151,
+          "click_count": 698,
+          "example": "Телевизор 32 дюйма смарт тв TCL 32S5K 32\" (81 см) / Direct LED, QLED, FullHD, 60 Гц"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "samsung",
+          "query_count": 136,
+          "click_count": 680,
+          "example": " 32\" Телевизор Samsung UE32F6000FUXRU FULL HD, СМАРТ ТВ, Tizen OS, черный"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "hi",
+          "query_count": 112,
+          "click_count": 7386,
+          "example": "телевизор со смарт ТВ диагональ 50"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "smart tv",
+      "target": "Телевизоры",
+      "source": "manual_category_alias",
+      "query_count": 1616,
+      "click_count": 17661,
+      "top_evidence": [
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "haier",
+          "query_count": 752,
+          "click_count": 8013,
+          "example": "haer 32 smart tv s2"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "samsung",
+          "query_count": 172,
+          "click_count": 492,
+          "example": "Samsung Vision 43\" QLED Q8F 4K AI Smart TV"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "lg",
+          "query_count": 92,
+          "click_count": 566,
+          "example": "Телевизор LG Smart TV 32\" Dolby Digital Plus - с искусственным интеллектом и пульт аэромышь с голосовым управлением 32″ Full HD, черный матовый"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "tcl",
+          "query_count": 92,
+          "click_count": 222,
+          "example": "Характеристики Телевизор TCL 65C6K (2025) 65\" 4K UHD Mini-LED Smart TV"
+        },
+        {
+          "dominant_category": "смарт тв приставки",
+          "dominant_brand": "xiaomi",
+          "query_count": 60,
+          "click_count": 2541,
+          "example": "Smart tv приставка xiaomi tv box 3rd gen"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "посудомойка",
+      "target": "Посудомоечные машины",
+      "source": "manual_category_alias",
+      "query_count": 1285,
+      "click_count": 21551,
+      "top_evidence": [
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "bosch",
+          "query_count": 135,
+          "click_count": 1956,
+          "example": "посудомойка на 60 встраиваемая bosch SMV4ECX23E "
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "gorenje",
+          "query_count": 108,
+          "click_count": 1411,
+          "example": "встраиваемая посудомойка 45 см Hi"
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "haier",
+          "query_count": 96,
+          "click_count": 3835,
+          "example": "посудомойка на 60 встраиваемая хаер"
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "kuppersberg",
+          "query_count": 92,
+          "click_count": 588,
+          "example": "Посудомойка Kuppersberg GLM 6080"
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "midea",
+          "query_count": 76,
+          "click_count": 5041,
+          "example": "Встроеная посудомойка 45 midea"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "электрочайник",
+      "target": "Электрические чайники",
+      "source": "manual_category_alias",
+      "query_count": 1173,
+      "click_count": 13308,
+      "top_evidence": [
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "tefal",
+          "query_count": 124,
+          "click_count": 8934,
+          "example": "Электрочайник Tefal Element KI280D30 серебристый"
+        },
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "kitfort",
+          "query_count": 104,
+          "click_count": 513,
+          "example": "Электрочайник  колба сталь"
+        },
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "redmond",
+          "query_count": 84,
+          "click_count": 311,
+          "example": "Электрочайник Redmond KM-231S, белый"
+        },
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "polaris",
+          "query_count": 56,
+          "click_count": 195,
+          "example": "Электрочайник тихий с подсветкой PWK 1841CGLD WI-FI IQ Home"
+        },
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "gorenje",
+          "query_count": 47,
+          "click_count": 350,
+          "example": "Электрочайник Gorenje K15DWW"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "бош",
+      "target": "bosch",
+      "source": "manual_brand_alias",
+      "query_count": 1101,
+      "click_count": 54115,
+      "top_evidence": [
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "bosch",
+          "query_count": 148,
+          "click_count": 9538,
+          "example": "Бош машинуа стиральная"
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "bosch",
+          "query_count": 131,
+          "click_count": 11617,
+          "example": "Встраиваемые посудомоечные  машины  60 см БОШ"
+        },
+        {
+          "dominant_category": "встраиваемый электрический духовой шкаф",
+          "dominant_brand": "bosch",
+          "query_count": 75,
+          "click_count": 4964,
+          "example": "электрический жарочный шкаф бош"
+        },
+        {
+          "dominant_category": "встраиваемые электрические панели",
+          "dominant_brand": "bosch",
+          "query_count": 56,
+          "click_count": 935,
+          "example": "варочная панель электрическая индукция   бош  индукция "
+        },
+        {
+          "dominant_category": "пылесосы напольные",
+          "dominant_brand": "bosch",
+          "query_count": 49,
+          "click_count": 2524,
+          "example": "Пылесос бош 21х300"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "телефоны",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 1101,
+      "click_count": 32846,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "samsung",
+          "query_count": 178,
+          "click_count": 6375,
+          "example": "Телефоны смартфон"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "xiaomi",
+          "query_count": 90,
+          "click_count": 4507,
+          "example": "Телефоны андроиды"
+        },
+        {
+          "dominant_category": "iphone",
+          "dominant_brand": "apple",
+          "query_count": 89,
+          "click_count": 843,
+          "example": "Телефоны iphone 16"
+        },
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "bq",
+          "query_count": 75,
+          "click_count": 13207,
+          "example": "раскладные телефоны bq"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "huawei",
+          "query_count": 71,
+          "click_count": 2255,
+          "example": "телефоны huawei mate 70"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "реалми",
+      "target": "realme",
+      "source": "manual_brand_alias",
+      "query_count": 1089,
+      "click_count": 39417,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "realme",
+          "query_count": 832,
+          "click_count": 35277,
+          "example": "телефон реалми 85с про"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "realme",
+          "query_count": 96,
+          "click_count": 3119,
+          "example": "реалми наушники Аир 8"
+        },
+        {
+          "dominant_category": "чехлы для смартфонов",
+          "dominant_brand": "krutoff",
+          "query_count": 50,
+          "click_count": 202,
+          "example": "чехол книжка для смартфона реалми   c85"
+        },
+        {
+          "dominant_category": "защитные стекла",
+          "dominant_brand": "krutoff",
+          "query_count": 29,
+          "click_count": 100,
+          "example": "Стекло на реалми с 71"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "realme",
+          "query_count": 18,
+          "click_count": 462,
+          "example": "   Realme watch "
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "airpods",
+      "target": "Наушники",
+      "source": "product_family_canonical",
+      "query_count": 1027,
+      "click_count": 83596,
+      "top_evidence": [
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "apple",
+          "query_count": 920,
+          "click_count": 82964,
+          "example": "Новые Apple AirPods Pro 3 (2025)"
+        },
+        {
+          "dominant_category": "чехлы для наушников",
+          "dominant_brand": "pitaka",
+          "query_count": 11,
+          "click_count": 103,
+          "example": "чехол на наушники airpods pro 3"
+        },
+        {
+          "dominant_category": "аксессуары для наушников",
+          "dominant_brand": "lyambda",
+          "query_count": 10,
+          "click_count": 220,
+          "example": "амбушюры для наушников airpods"
+        },
+        {
+          "dominant_category": "аксессуары для наушников",
+          "dominant_brand": "interstep",
+          "query_count": 9,
+          "click_count": 71,
+          "example": "Чехол на airpods"
+        },
+        {
+          "dominant_category": "чехлы для наушников",
+          "dominant_brand": "prime line",
+          "query_count": 7,
+          "click_count": 35,
+          "example": "airpods 1/2"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "индезит",
+      "target": "indesit",
+      "source": "manual_brand_alias",
+      "query_count": 1004,
+      "click_count": 8211,
+      "top_evidence": [
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "indesit",
+          "query_count": 399,
+          "click_count": 3737,
+          "example": "Индезит 5180"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "indesit",
+          "query_count": 347,
+          "click_count": 3271,
+          "example": "стиральная машинка Индезит 5кг"
+        },
+        {
+          "dominant_category": "морозильные камеры",
+          "dominant_brand": "indesit",
+          "query_count": 85,
+          "click_count": 678,
+          "example": "морозилка камера вертикальная индезит"
+        },
+        {
+          "dominant_category": "встраиваемый электрический духовой шкаф",
+          "dominant_brand": "indesit",
+          "query_count": 25,
+          "click_count": 91,
+          "example": "индезит 757 встраиваемая "
+        },
+        {
+          "dominant_category": "сушильные машины",
+          "dominant_brand": "indesit",
+          "query_count": 20,
+          "click_count": 67,
+          "example": "Сушильная машина индезит  на 10 кг "
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "филипс",
+      "target": "philips",
+      "source": "manual_brand_alias",
+      "query_count": 1002,
+      "click_count": 33795,
+      "top_evidence": [
+        {
+          "dominant_category": "электрические бритвы",
+          "dominant_brand": "philips",
+          "query_count": 141,
+          "click_count": 7692,
+          "example": "Бритвенные ножи филипс"
+        },
+        {
+          "dominant_category": "автоматические кофемашины",
+          "dominant_brand": "philips",
+          "query_count": 84,
+          "click_count": 3544,
+          "example": "кофемашина Philips 5441"
+        },
+        {
+          "dominant_category": "пылесосы напольные",
+          "dominant_brand": "philips",
+          "query_count": 69,
+          "click_count": 1255,
+          "example": "Philips FC9573/01"
+        },
+        {
+          "dominant_category": "триммеры",
+          "dominant_brand": "philips",
+          "query_count": 59,
+          "click_count": 2502,
+          "example": "Триммер для носа philips"
+        },
+        {
+          "dominant_category": "утюги",
+          "dominant_brand": "philips",
+          "query_count": 50,
+          "click_count": 5708,
+          "example": "утюг филипс производство индонезия"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "xbox",
+      "target": "Игровые консоли",
+      "source": "product_family_canonical",
+      "query_count": 950,
+      "click_count": 17702,
+      "top_evidence": [
+        {
+          "dominant_category": "геймпады",
+          "dominant_brand": "microsoft",
+          "query_count": 215,
+          "click_count": 7368,
+          "example": "Геймпад беспроводной Microsoft Xbox Series"
+        },
+        {
+          "dominant_category": "видеоигры",
+          "dominant_brand": "xbox",
+          "query_count": 215,
+          "click_count": 1321,
+          "example": "Xbox one fc 26"
+        },
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "microsoft",
+          "query_count": 78,
+          "click_count": 6995,
+          "example": "Microsoft Xbox Series S"
+        },
+        {
+          "dominant_category": "подписка xbox live / game pass",
+          "dominant_brand": "microsoft",
+          "query_count": 47,
+          "click_count": 508,
+          "example": "подписка на xbox on"
+        },
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "asus",
+          "query_count": 44,
+          "click_count": 270,
+          "example": "Asus xbox"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "айпад",
+      "target": "Планшеты",
+      "source": "product_family_alias",
+      "query_count": 925,
+      "click_count": 66829,
+      "top_evidence": [
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "apple",
+          "query_count": 647,
+          "click_count": 63775,
+          "example": "iPad 11 256гб"
+        },
+        {
+          "dominant_category": "чехлы для планшетов",
+          "dominant_brand": "vlp",
+          "query_count": 56,
+          "click_count": 1076,
+          "example": "чехол для планшета ipad 13"
+        },
+        {
+          "dominant_category": "защитное стекло для планшетного компьютера",
+          "dominant_brand": "krutoff",
+          "query_count": 30,
+          "click_count": 228,
+          "example": "Пленка на айпад айр м3"
+        },
+        {
+          "dominant_category": "клавиатуры для планшетных компьютеров",
+          "dominant_brand": "deppa",
+          "query_count": 27,
+          "click_count": 511,
+          "example": "Клавиату для айпад"
+        },
+        {
+          "dominant_category": "чехлы для планшетов",
+          "dominant_brand": "red line",
+          "query_count": 25,
+          "click_count": 615,
+          "example": "Чехол айпад про 11"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "хайер",
+      "target": "haier",
+      "source": "manual_brand_alias",
+      "query_count": 905,
+      "click_count": 5068,
+      "top_evidence": [
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "haier",
+          "query_count": 166,
+          "click_count": 1276,
+          "example": "Холодильник хайер с охлажденкой"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "haier",
+          "query_count": 141,
+          "click_count": 969,
+          "example": "Стиральные машины хайер"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "haier",
+          "query_count": 114,
+          "click_count": 539,
+          "example": "хайер ax pro"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "haier",
+          "query_count": 59,
+          "click_count": 468,
+          "example": "кондиционер хайер AS12lD HHRA-1W"
+        },
+        {
+          "dominant_category": "встраиваемый электрический духовой шкаф",
+          "dominant_brand": "haier",
+          "query_count": 45,
+          "click_count": 308,
+          "example": "встраиваемый электрический духовой шкаф 60 Хайер "
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "сяоми",
+      "target": "xiaomi",
+      "source": "manual_brand_alias",
+      "query_count": 894,
+      "click_count": 142474,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "xiaomi",
+          "query_count": 337,
+          "click_count": 75622,
+          "example": "смартфон сяоми редми нот"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "xiaomi",
+          "query_count": 59,
+          "click_count": 11302,
+          "example": "Сяоми поко пад м1"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "xiaomi",
+          "query_count": 52,
+          "click_count": 4237,
+          "example": "сяоми 32 дюйма "
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "xiaomi",
+          "query_count": 39,
+          "click_count": 7266,
+          "example": "часы smart круглые сяоми"
+        },
+        {
+          "dominant_category": "фитнес браслеты",
+          "dominant_brand": "xiaomi",
+          "query_count": 35,
+          "click_count": 364,
+          "example": "Шагомер xiaomi"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "умные часы",
+      "target": "Смарт-часы",
+      "source": "manual_category_alias",
+      "query_count": 838,
+      "click_count": 13686,
+      "top_evidence": [
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "huawei",
+          "query_count": 270,
+          "click_count": 9032,
+          "example": "HUAWEI Смарт-часы Умные часы  WATCH GT 5"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "samsung",
+          "query_count": 107,
+          "click_count": 806,
+          "example": "Умные Часы Samsung Watch Ultra 8 47mm LTE Blue EU (2025)"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "apple",
+          "query_count": 76,
+          "click_count": 263,
+          "example": "Умные часы Apple Watch S11"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "xiaomi",
+          "query_count": 62,
+          "click_count": 421,
+          "example": "Умные часы мужские xiaomi"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "geozon",
+          "query_count": 29,
+          "click_count": 1945,
+          "example": "Умные часы  детские "
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "канди",
+      "target": "candy",
+      "source": "manual_brand_alias",
+      "query_count": 759,
+      "click_count": 6347,
+      "top_evidence": [
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "candy",
+          "query_count": 326,
+          "click_count": 3334,
+          "example": "стиральная машинка канди смарт sc044"
+        },
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "candy",
+          "query_count": 85,
+          "click_count": 1401,
+          "example": "холодильники Канди cfn6185wds"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "candy",
+          "query_count": 38,
+          "click_count": 237,
+          "example": "Канди сплит"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "candy",
+          "query_count": 38,
+          "click_count": 134,
+          "example": "Канди телевизор 55"
+        },
+        {
+          "dominant_category": "сушильные машины",
+          "dominant_brand": "candy",
+          "query_count": 28,
+          "click_count": 260,
+          "example": "сушильные машины канди конденсотная"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "макбук",
+      "target": "Ноутбуки",
+      "source": "product_family_alias",
+      "query_count": 722,
+      "click_count": 52930,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "apple",
+          "query_count": 557,
+          "click_count": 52043,
+          "example": "МакБук Эйр 15\""
+        },
+        {
+          "dominant_category": "зарядные сетевые устройства",
+          "dominant_brand": "нет бренда",
+          "query_count": 28,
+          "click_count": 255,
+          "example": "зарядка для макбук про 2015"
+        },
+        {
+          "dominant_category": "сетевой адаптер для macbook",
+          "dominant_brand": "lyambda",
+          "query_count": 17,
+          "click_count": 63,
+          "example": "переходник на евровилку для макбук"
+        },
+        {
+          "dominant_category": "мыши",
+          "dominant_brand": "apple",
+          "query_count": 13,
+          "click_count": 127,
+          "example": "Мышь macbook"
+        },
+        {
+          "dominant_category": "кабели для смартфонов телефонов",
+          "dominant_brand": "apple",
+          "query_count": 10,
+          "click_count": 57,
+          "example": "Зарядка шнур макбук 13 "
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "эпл",
+      "target": "apple",
+      "source": "manual_brand_alias",
+      "query_count": 656,
+      "click_count": 169381,
+      "top_evidence": [
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "apple",
+          "query_count": 178,
+          "click_count": 67323,
+          "example": "Эпл вотс се3"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "apple",
+          "query_count": 85,
+          "click_count": 37924,
+          "example": "Наушики эпл проводные "
+        },
+        {
+          "dominant_category": "зарядные сетевые устройства",
+          "dominant_brand": "apple",
+          "query_count": 48,
+          "click_count": 8727,
+          "example": "блок apple питания"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "apple",
+          "query_count": 48,
+          "click_count": 5797,
+          "example": "Планшет Эпл аир с есим"
+        },
+        {
+          "dominant_category": "iphone",
+          "dominant_brand": "apple",
+          "query_count": 40,
+          "click_count": 33762,
+          "example": "мобильные телефоны эпл"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "горенье",
+      "target": "gorenje",
+      "source": "manual_brand_alias",
+      "query_count": 642,
+      "click_count": 3674,
+      "top_evidence": [
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "gorenje",
+          "query_count": 82,
+          "click_count": 676,
+          "example": "горенье холодильник сборкаславения"
+        },
+        {
+          "dominant_category": "встраиваемый электрический духовой шкаф",
+          "dominant_brand": "gorenje",
+          "query_count": 75,
+          "click_count": 315,
+          "example": "горенье духовкп встраимая"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "gorenje",
+          "query_count": 43,
+          "click_count": 334,
+          "example": "Стиральная машинка горенье w1nha74sas "
+        },
+        {
+          "dominant_category": "встраиваемые газовые панели",
+          "dominant_brand": "gorenje",
+          "query_count": 36,
+          "click_count": 109,
+          "example": "встраиваемая варочная панель газовая Горенье 641 кв"
+        },
+        {
+          "dominant_category": "газовые плиты",
+          "dominant_brand": "gorenje",
+          "query_count": 33,
+          "click_count": 337,
+          "example": "газовая плита горенье 50 см"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "дайсон",
+      "target": "dyson",
+      "source": "manual_brand_alias",
+      "query_count": 610,
+      "click_count": 11626,
+      "top_evidence": [
+        {
+          "dominant_category": "пылесосы вертикальные",
+          "dominant_brand": "dyson",
+          "query_count": 218,
+          "click_count": 2554,
+          "example": "Дайсон вертикальный пылесос"
+        },
+        {
+          "dominant_category": "мультистайлеры",
+          "dominant_brand": "dyson",
+          "query_count": 165,
+          "click_count": 6506,
+          "example": "фен стайлер для волос Дайсон "
+        },
+        {
+          "dominant_category": "выпрямители волос",
+          "dominant_brand": "dyson",
+          "query_count": 51,
+          "click_count": 456,
+          "example": "Ввпрямитель дайсон"
+        },
+        {
+          "dominant_category": "фены",
+          "dominant_brand": "dyson",
+          "query_count": 50,
+          "click_count": 1736,
+          "example": "Фен дайсон с разными н адками "
+        },
+        {
+          "dominant_category": "очистители воздуха",
+          "dominant_brand": "dyson",
+          "query_count": 24,
+          "click_count": 93,
+          "example": "и очистители воздуха для комнаты дайсон"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "электролюкс",
+      "target": "electrolux",
+      "source": "manual_brand_alias",
+      "query_count": 606,
+      "click_count": 2803,
+      "top_evidence": [
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "electrolux",
+          "query_count": 74,
+          "click_count": 547,
+          "example": "инверторный кондиционер 50 Электролюкс"
+        },
+        {
+          "dominant_category": "накопительные водонагреватели",
+          "dominant_brand": "electrolux",
+          "query_count": 66,
+          "click_count": 298,
+          "example": "Болер Электролюкс 50 литра"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "electrolux",
+          "query_count": 45,
+          "click_count": 277,
+          "example": "стиральная машина с сушкой электролюкс"
+        },
+        {
+          "dominant_category": "встраиваемый электрический духовой шкаф",
+          "dominant_brand": "electrolux",
+          "query_count": 42,
+          "click_count": 258,
+          "example": "Духовой шкаф Электролюкс"
+        },
+        {
+          "dominant_category": "проточные водонагреватели",
+          "dominant_brand": "electrolux",
+          "query_count": 42,
+          "click_count": 178,
+          "example": "Газовая водная колонка электролюкс"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "китфорт",
+      "target": "kitfort",
+      "source": "manual_brand_alias",
+      "query_count": 597,
+      "click_count": 2360,
+      "top_evidence": [
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "kitfort",
+          "query_count": 45,
+          "click_count": 241,
+          "example": "светлые чайники с температурой китфорт"
+        },
+        {
+          "dominant_category": "аэрогрили",
+          "dominant_brand": "kitfort",
+          "query_count": 42,
+          "click_count": 330,
+          "example": "китфорт 8110"
+        },
+        {
+          "dominant_category": "сушки для фруктов и овощей",
+          "dominant_brand": "kitfort",
+          "query_count": 35,
+          "click_count": 124,
+          "example": "сушилка для овощей и фруктов китфорт"
+        },
+        {
+          "dominant_category": "пылесосы вертикальные",
+          "dominant_brand": "kitfort",
+          "query_count": 32,
+          "click_count": 160,
+          "example": "вертикальный беспроводной пылесос китфорт"
+        },
+        {
+          "dominant_category": "вертикальные отпариватели",
+          "dominant_brand": "kitfort",
+          "query_count": 31,
+          "click_count": 175,
+          "example": "отпариватель китфорт к 998"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "сони",
+      "target": "sony",
+      "source": "manual_brand_alias",
+      "query_count": 551,
+      "click_count": 2342,
+      "top_evidence": [
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "sony",
+          "query_count": 122,
+          "click_count": 520,
+          "example": "зарядка для сони плейстейшн 5"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "sony",
+          "query_count": 92,
+          "click_count": 767,
+          "example": "беспроводные гаушники сони"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "sony",
+          "query_count": 73,
+          "click_count": 448,
+          "example": "ТВ Сони 55 дюймов "
+        },
+        {
+          "dominant_category": "видеоигры",
+          "dominant_brand": "sony",
+          "query_count": 20,
+          "click_count": 37,
+          "example": "игра мортал комбат 11 на сони плйстейшен 5"
+        },
+        {
+          "dominant_category": "саундбары",
+          "dominant_brand": "sony",
+          "query_count": 16,
+          "click_count": 42,
+          "example": "Саунбар сони"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "гарнитура",
+      "target": "Наушники",
+      "source": "manual_category_alias",
+      "query_count": 505,
+      "click_count": 5216,
+      "top_evidence": [
+        {
+          "dominant_category": "bluetooth гарнитуры",
+          "dominant_brand": "bandrate smart",
+          "query_count": 46,
+          "click_count": 554,
+          "example": "жабра беспроводная гарнитура"
+        },
+        {
+          "dominant_category": "наушники для компьютеров",
+          "dominant_brand": "logitech",
+          "query_count": 44,
+          "click_count": 890,
+          "example": " лоджитек гарнитура headset 9060"
+        },
+        {
+          "dominant_category": "bluetooth гарнитуры",
+          "dominant_brand": "eksa",
+          "query_count": 35,
+          "click_count": 124,
+          "example": " Беспроводная гарнитура "
+        },
+        {
+          "dominant_category": "наушники для компьютеров",
+          "dominant_brand": "havit",
+          "query_count": 28,
+          "click_count": 166,
+          "example": "Гарнитура для компьютера с микрофоном"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "jbl",
+          "query_count": 25,
+          "click_count": 209,
+          "example": "наушники гарнитура с микрофоном проводные jbl"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "беко",
+      "target": "beko",
+      "source": "manual_brand_alias",
+      "query_count": 414,
+      "click_count": 3656,
+      "top_evidence": [
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "beko",
+          "query_count": 131,
+          "click_count": 1435,
+          "example": "стиральная машинка беко WSPE7H616A"
+        },
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "beko",
+          "query_count": 102,
+          "click_count": 1454,
+          "example": "холодильники  черный беко"
+        },
+        {
+          "dominant_category": "морозильные камеры",
+          "dominant_brand": "beko",
+          "query_count": 33,
+          "click_count": 237,
+          "example": "Морозилтная камера беко"
+        },
+        {
+          "dominant_category": "сушильные машины",
+          "dominant_brand": "beko",
+          "query_count": 29,
+          "click_count": 250,
+          "example": "контейнер для сушильной машины беко"
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "beko",
+          "query_count": 19,
+          "click_count": 61,
+          "example": "  посудомоечная машина беко"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "стиралка",
+      "target": "Стиральные машины",
+      "source": "manual_category_alias",
+      "query_count": 413,
+      "click_count": 3543,
+      "top_evidence": [
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "haier",
+          "query_count": 50,
+          "click_count": 474,
+          "example": "стиралка haier вертикально"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "lg",
+          "query_count": 37,
+          "click_count": 327,
+          "example": "Стиралка 7 кг"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "hisense",
+          "query_count": 25,
+          "click_count": 738,
+          "example": "стиралка hisense inverter"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "indesit",
+          "query_count": 24,
+          "click_count": 78,
+          "example": "Стиралка индезит 81082"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "beko",
+          "query_count": 22,
+          "click_count": 759,
+          "example": "BEKO СТИРАЛКА"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "vacuum cleaner",
+      "target": "Пылесосы",
+      "source": "manual_category_alias",
+      "query_count": 391,
+      "click_count": 2949,
+      "top_evidence": [
+        {
+          "dominant_category": "пылесосы вертикальные",
+          "dominant_brand": "xiaomi",
+          "query_count": 225,
+          "click_count": 2502,
+          "example": "роботы пылесосы xiaomi vacuum cleaner g20 lite eu"
+        },
+        {
+          "dominant_category": "пылесосы вертикальные",
+          "dominant_brand": "dreame",
+          "query_count": 57,
+          "click_count": 120,
+          "example": "dreame wet and dry cordless vacuum cleaner h15 proheat"
+        },
+        {
+          "dominant_category": "автомобильные пылесосы",
+          "dominant_brand": "xiaomi",
+          "query_count": 17,
+          "click_count": 49,
+          "example": "Пылесос ручной аккумуляторный Xiaomi Mi Vacuum Cleaner mini SSXCQ01XY"
+        },
+        {
+          "dominant_category": "пылесосы напольные",
+          "dominant_brand": "xiaomi",
+          "query_count": 17,
+          "click_count": 43,
+          "example": "Xiaomi Vacuum Cleaner P30 EU"
+        },
+        {
+          "dominant_category": "пылесосы вертикальные",
+          "dominant_brand": "tefal",
+          "query_count": 16,
+          "click_count": 113,
+          "example": "Проводной вертикальный пылесос Tefal VERTICAL VACUUM CLEANER TY1C15F1"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "асус",
+      "target": "asus",
+      "source": "manual_brand_alias",
+      "query_count": 385,
+      "click_count": 24566,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "asus",
+          "query_count": 258,
+          "click_count": 23091,
+          "example": "Ноутбук 8 ядер асус вивобук"
+        },
+        {
+          "dominant_category": "сетевые адаптеры для ноутбуков",
+          "dominant_brand": "asus",
+          "query_count": 28,
+          "click_count": 265,
+          "example": "сетевое зарядное устройство Асус туф гейминг 15"
+        },
+        {
+          "dominant_category": "мониторы",
+          "dominant_brand": "asus",
+          "query_count": 22,
+          "click_count": 304,
+          "example": "Игровой компьютер с монитором асус"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "asus",
+          "query_count": 10,
+          "click_count": 578,
+          "example": "РОУТЕР ASUS"
+        },
+        {
+          "dominant_category": "мыши",
+          "dominant_brand": "asus",
+          "query_count": 7,
+          "click_count": 51,
+          "example": "Мышка игровая для ноутбука асус"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "хайсенс",
+      "target": "hisense",
+      "source": "manual_brand_alias",
+      "query_count": 375,
+      "click_count": 1796,
+      "top_evidence": [
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "hisense",
+          "query_count": 153,
+          "click_count": 544,
+          "example": "Хайсенс 67 000 65 дюймов"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "hisense",
+          "query_count": 60,
+          "click_count": 445,
+          "example": "стиральная машинка хайсенс wf317027BWJ"
+        },
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "hisense",
+          "query_count": 27,
+          "click_count": 227,
+          "example": "Хайсенс холодильник"
+        },
+        {
+          "dominant_category": "сушильные машины",
+          "dominant_brand": "hisense",
+          "query_count": 17,
+          "click_count": 111,
+          "example": "хайсенс сушильная"
+        },
+        {
+          "dominant_category": "встраиваемый электрический духовой шкаф",
+          "dominant_brand": "hisense",
+          "query_count": 15,
+          "click_count": 74,
+          "example": "духовка хайсенс bo3co5i"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "игровая приставка",
+      "target": "Игровые консоли",
+      "source": "manual_category_alias",
+      "query_count": 345,
+      "click_count": 10030,
+      "top_evidence": [
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "sony",
+          "query_count": 188,
+          "click_count": 7977,
+          "example": "Игровая приставка Sony PS5 Slim Disk + 2й геймпад жемчужный + игра GTA + станция зарядки"
+        },
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "nintendo",
+          "query_count": 31,
+          "click_count": 187,
+          "example": "Игровая приставка Nintendo Switch OLED White кадришь"
+        },
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "xpx",
+          "query_count": 18,
+          "click_count": 859,
+          "example": "Игровая приставка psp"
+        },
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "microsoft",
+          "query_count": 13,
+          "click_count": 191,
+          "example": "Игровая приставка Microsoft Xbox Series X 1TБ ,черный"
+        },
+        {
+          "dominant_category": "портативные консоли",
+          "dominant_brand": "valve",
+          "query_count": 11,
+          "click_count": 30,
+          "example": "игровая приставка steam deck"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "keyboard",
+      "target": "Клавиатуры",
+      "source": "manual_category_alias",
+      "query_count": 332,
+      "click_count": 1076,
+      "top_evidence": [
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "huawei",
+          "query_count": 100,
+          "click_count": 334,
+          "example": "Планшет Huawei MatePad 11.5 8/256GB WiFi   Keyboard (TXZ-W09) Purple (RU)"
+        },
+        {
+          "dominant_category": "чехлы для планшетов",
+          "dominant_brand": "huawei",
+          "query_count": 36,
+          "click_count": 106,
+          "example": "HUAWEI Smart Magnetic Keyboard"
+        },
+        {
+          "dominant_category": "клавиатуры",
+          "dominant_brand": "apple",
+          "query_count": 32,
+          "click_count": 285,
+          "example": "Чехол apple magic keyboard "
+        },
+        {
+          "dominant_category": "чехлы для планшетов",
+          "dominant_brand": "samsung",
+          "query_count": 22,
+          "click_count": 74,
+          "example": "чехол-клавиатуру Book Cover Keyboard Slim (EF-DX720"
+        },
+        {
+          "dominant_category": "клавиатуры для планшетных компьютеров",
+          "dominant_brand": "deppa",
+          "query_count": 18,
+          "click_count": 27,
+          "example": "Чехол-клавиатура Uniq VENNO Pro Magnetic Keyboard для iPad Air 11\" (2024/25)/Air 10.9\"(20/22)/Pro 11\"(21/22), коричневый (англ.раскладка) Артикул: 161543"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "мобильный телефон",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 304,
+      "click_count": 1888,
+      "top_evidence": [
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "bq",
+          "query_count": 78,
+          "click_count": 952,
+          "example": "мобильный телефон для слабовидящих кнопочный "
+        },
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "philips",
+          "query_count": 31,
+          "click_count": 196,
+          "example": " Мобильный телефон Philips XENIUM X718"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "xiaomi",
+          "query_count": 30,
+          "click_count": 124,
+          "example": "смартфон мобильный телефон redmi"
+        },
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "xenium",
+          "query_count": 29,
+          "click_count": 91,
+          "example": "Мобильный телефон кнопочныц"
+        },
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "nokia",
+          "query_count": 26,
+          "click_count": 82,
+          "example": "мобильный телефон тщлшф"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "phone",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 287,
+      "click_count": 2203,
+      "top_evidence": [
+        {
+          "dominant_category": "iphone",
+          "dominant_brand": "apple",
+          "query_count": 91,
+          "click_count": 437,
+          "example": "I phone 17 pro"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "nothing",
+          "query_count": 80,
+          "click_count": 1512,
+          "example": "Смартфон Nothing Phone"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "cmf by nothing",
+          "query_count": 26,
+          "click_count": 71,
+          "example": " Смартфон Nothing Phone 3a"
+        },
+        {
+          "dominant_category": "защитные стекла",
+          "dominant_brand": "krutoff",
+          "query_count": 19,
+          "click_count": 49,
+          "example": "ASUS ROG Phone 9"
+        },
+        {
+          "dominant_category": "чехлы для смартфонов",
+          "dominant_brand": "vlp",
+          "query_count": 13,
+          "click_count": 23,
+          "example": "phone cases"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "monitor",
+      "target": "Мониторы",
+      "source": "manual_category_alias",
+      "query_count": 256,
+      "click_count": 903,
+      "top_evidence": [
+        {
+          "dominant_category": "мониторы",
+          "dominant_brand": "xiaomi",
+          "query_count": 98,
+          "click_count": 268,
+          "example": "Xiaomi Redmi Gaming Monitor G24"
+        },
+        {
+          "dominant_category": "игровые мониторы",
+          "dominant_brand": "xiaomi",
+          "query_count": 45,
+          "click_count": 124,
+          "example": "Xiaomi Monitor G24i 2026: 23.8\""
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "marshall",
+          "query_count": 32,
+          "click_count": 388,
+          "example": "Наушники marshall monitor 2"
+        },
+        {
+          "dominant_category": "мониторы",
+          "dominant_brand": "redmi",
+          "query_count": 14,
+          "click_count": 18,
+          "example": "redmi monitor g pro 27q"
+        },
+        {
+          "dominant_category": "мониторы",
+          "dominant_brand": "samsung",
+          "query_count": 8,
+          "click_count": 9,
+          "example": "computer monitor 32inch"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "mouse",
+      "target": "Мыши",
+      "source": "manual_category_alias",
+      "query_count": 234,
+      "click_count": 1386,
+      "top_evidence": [
+        {
+          "dominant_category": "мыши",
+          "dominant_brand": "xiaomi",
+          "query_count": 80,
+          "click_count": 211,
+          "example": " Xiaomi Dual-mode Wireless Mouse 2 ["
+        },
+        {
+          "dominant_category": "мыши",
+          "dominant_brand": "apple",
+          "query_count": 59,
+          "click_count": 989,
+          "example": "apple mouse 3"
+        },
+        {
+          "dominant_category": "мыши",
+          "dominant_brand": "logitech",
+          "query_count": 33,
+          "click_count": 72,
+          "example": "Logitech Pebble Mouse 2 M350s"
+        },
+        {
+          "dominant_category": "мыши",
+          "dominant_brand": "huawei",
+          "query_count": 13,
+          "click_count": 29,
+          "example": "mouse huawei"
+        },
+        {
+          "dominant_category": "мыши",
+          "dominant_brand": "deppa",
+          "query_count": 8,
+          "click_count": 28,
+          "example": " silent mouse"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "леново",
+      "target": "lenovo",
+      "source": "manual_brand_alias",
+      "query_count": 198,
+      "click_count": 10098,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "lenovo",
+          "query_count": 106,
+          "click_count": 9236,
+          "example": "Lenovo 5070"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "lenovo",
+          "query_count": 11,
+          "click_count": 188,
+          "example": "Планшет Lenovo"
+        },
+        {
+          "dominant_category": "моноблоки",
+          "dominant_brand": "lenovo",
+          "query_count": 9,
+          "click_count": 434,
+          "example": "компьютер lenovo"
+        },
+        {
+          "dominant_category": "сетевые адаптеры для ноутбуков",
+          "dominant_brand": "dell",
+          "query_count": 6,
+          "click_count": 67,
+          "example": "Зарядка для Lenovo "
+        },
+        {
+          "dominant_category": "сетевые адаптеры для ноутбуков",
+          "dominant_brand": "oem",
+          "query_count": 5,
+          "click_count": 16,
+          "example": "сетевой переходник через юсби для леново идеал пад"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "панасоник",
+      "target": "panasonic",
+      "source": "manual_brand_alias",
+      "query_count": 196,
+      "click_count": 841,
+      "top_evidence": [
+        {
+          "dominant_category": "радиотелефоны dect",
+          "dominant_brand": "panasonic",
+          "query_count": 28,
+          "click_count": 133,
+          "example": "Радиотелефон Панасоник в наличии"
+        },
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "panasonic",
+          "query_count": 25,
+          "click_count": 190,
+          "example": "микроволновка панасоник NN-MX27MF биокерамика"
+        },
+        {
+          "dominant_category": "электрические бритвы",
+          "dominant_brand": "panasonic",
+          "query_count": 14,
+          "click_count": 90,
+          "example": "Бритаа Панасоник "
+        },
+        {
+          "dominant_category": "беспроводная акустика",
+          "dominant_brand": "panasonic",
+          "query_count": 9,
+          "click_count": 17,
+          "example": "беспроводная колонка панасоник"
+        },
+        {
+          "dominant_category": "машинки для стрижки",
+          "dominant_brand": "panasonic",
+          "query_count": 8,
+          "click_count": 14,
+          "example": "машинки для стрижки волос Панасоник ер 131"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "camera",
+      "target": "Фотоаппараты",
+      "source": "manual_category_alias",
+      "query_count": 195,
+      "click_count": 590,
+      "top_evidence": [
+        {
+          "dominant_category": "ip видеокамеры",
+          "dominant_brand": "xiaomi",
+          "query_count": 91,
+          "click_count": 345,
+          "example": "IP-камера Xiaomi Smart Camera C500 Pro"
+        },
+        {
+          "dominant_category": "камеры наблюдения",
+          "dominant_brand": "xiaomi",
+          "query_count": 24,
+          "click_count": 63,
+          "example": "камера xiaomi outdoor camera cw500 dual eu"
+        },
+        {
+          "dominant_category": "ip видеокамеры",
+          "dominant_brand": "baseus",
+          "query_count": 12,
+          "click_count": 30,
+          "example": "outdoor camera"
+        },
+        {
+          "dominant_category": "ip видеокамеры",
+          "dominant_brand": "ezviz",
+          "query_count": 5,
+          "click_count": 16,
+          "example": "Ip 4G pt camera"
+        },
+        {
+          "dominant_category": "экшн камера",
+          "dominant_brand": "dji",
+          "query_count": 4,
+          "click_count": 12,
+          "example": "Camera dji"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "маршал",
+      "target": "marshall",
+      "source": "manual_brand_alias",
+      "query_count": 190,
+      "click_count": 8304,
+      "top_evidence": [
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "marshall",
+          "query_count": 135,
+          "click_count": 7505,
+          "example": "Наушники маршал монитор я3"
+        },
+        {
+          "dominant_category": "беспроводная акустика",
+          "dominant_brand": "marshall",
+          "query_count": 37,
+          "click_count": 749,
+          "example": "портативная  акустика маршал"
+        },
+        {
+          "dominant_category": "hi fi акустика",
+          "dominant_brand": "marshall",
+          "query_count": 7,
+          "click_count": 18,
+          "example": "активная колонки маршал"
+        },
+        {
+          "dominant_category": "bluetooth гарнитуры",
+          "dominant_brand": "marshall",
+          "query_count": 3,
+          "click_count": 13,
+          "example": "Маршал monitor 3"
+        },
+        {
+          "dominant_category": "беспроводная акустика",
+          "dominant_brand": "jbl",
+          "query_count": 1,
+          "click_count": 11,
+          "example": "портативная колонка jbl маршал"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "kettle",
+      "target": "Электрические чайники",
+      "source": "manual_category_alias",
+      "query_count": 186,
+      "click_count": 509,
+      "top_evidence": [
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "xiaomi",
+          "query_count": 106,
+          "click_count": 304,
+          "example": "чайник xiaomi kettle "
+        },
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "tefal",
+          "query_count": 36,
+          "click_count": 141,
+          "example": "Чайник электрический Glass Kettle KI772138"
+        },
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "moulinex",
+          "query_count": 17,
+          "click_count": 20,
+          "example": "чайник  glass kettle by"
+        },
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "mijia",
+          "query_count": 8,
+          "click_count": 12,
+          "example": "MIJIA Kettle 1A"
+        },
+        {
+          "dominant_category": "электрические чайники",
+          "dominant_brand": "redmond",
+          "query_count": 4,
+          "click_count": 4,
+          "example": "Sky kettle чайник"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "ксиаоми",
+      "target": "xiaomi",
+      "source": "manual_brand_alias",
+      "query_count": 185,
+      "click_count": 101612,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "xiaomi",
+          "query_count": 83,
+          "click_count": 62281,
+          "example": "Ксиаоми редми ноут 15 про с поддержкой 5g"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "xiaomi",
+          "query_count": 17,
+          "click_count": 2243,
+          "example": " Телевизор Xiaomi "
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "xiaomi",
+          "query_count": 11,
+          "click_count": 6524,
+          "example": "Смарт часы Сяоми редми"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "xiaomi",
+          "query_count": 9,
+          "click_count": 10407,
+          "example": "чехол с клавиатурой для планшета Ксиаоми Pad 8 8/128Gb"
+        },
+        {
+          "dominant_category": "фитнес браслеты",
+          "dominant_brand": "xiaomi",
+          "query_count": 7,
+          "click_count": 23,
+          "example": "смарт часы ксиаоми ми Бенд 10"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "оппо",
+      "target": "oppo",
+      "source": "manual_brand_alias",
+      "query_count": 185,
+      "click_count": 1348,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "oppo",
+          "query_count": 159,
+          "click_count": 1287,
+          "example": "смартфон оппо рино 12ф"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "xiaomi",
+          "query_count": 5,
+          "click_count": 6,
+          "example": "Оппо файт х 9 ультра"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "oppo",
+          "query_count": 4,
+          "click_count": 12,
+          "example": "Беспроводные наушники оппо"
+        },
+        {
+          "dominant_category": "чехлы для смартфонов",
+          "dominant_brand": "krutoff",
+          "query_count": 3,
+          "click_count": 11,
+          "example": "чехол книжка для смартфона оппо Рено 14 про 5 джи"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "poco",
+          "query_count": 3,
+          "click_count": 4,
+          "example": "Оппо x8 ultra"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "router",
+      "target": "Роутеры",
+      "source": "manual_category_alias",
+      "query_count": 173,
+      "click_count": 730,
+      "top_evidence": [
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "xiaomi",
+          "query_count": 117,
+          "click_count": 549,
+          "example": "Роутер Xiaomi Mi Router 4A, Wi-Fi 5, AC1200, 2.4/5ГГц, 2 LAN, белый "
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "huawei",
+          "query_count": 17,
+          "click_count": 61,
+          "example": "WiFi router"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "tp link",
+          "query_count": 10,
+          "click_count": 21,
+          "example": "wifi router tp link"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "cudy",
+          "query_count": 6,
+          "click_count": 47,
+          "example": "Wifi router cudy"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "триколор",
+          "query_count": 5,
+          "click_count": 20,
+          "example": "Роутер Wi-Fi Триколор TR-router-05, двухдиапазонный, скорость до 1 Гбита, с 4 антеннами"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "пмм",
+      "target": "Посудомоечные машины",
+      "source": "manual_category_alias",
+      "query_count": 169,
+      "click_count": 2261,
+      "top_evidence": [
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "bosch",
+          "query_count": 16,
+          "click_count": 781,
+          "example": "Пмм 45 встраиваемая bosch"
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "midea",
+          "query_count": 13,
+          "click_count": 84,
+          "example": "пмм midea 45"
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "gorenje",
+          "query_count": 12,
+          "click_count": 58,
+          "example": "ПММ gorenje gv663c61"
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "electrolux",
+          "query_count": 10,
+          "click_count": 619,
+          "example": "Electrolux ПММ EEA 13100L код 4000 666 58"
+        },
+        {
+          "dominant_category": "посудомоечные машины",
+          "dominant_brand": "midea",
+          "query_count": 9,
+          "click_count": 309,
+          "example": "Пмм 45 отдельностоящая"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "лджи",
+      "target": "lg",
+      "source": "manual_brand_alias",
+      "query_count": 157,
+      "click_count": 710,
+      "top_evidence": [
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "lg",
+          "query_count": 32,
+          "click_count": 189,
+          "example": "стиральная машинка лджи 8кг"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "lg",
+          "query_count": 18,
+          "click_count": 85,
+          "example": "Олед лджи"
+        },
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "lg",
+          "query_count": 6,
+          "click_count": 90,
+          "example": "Холодильник лджи беж 2метра"
+        },
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "lg",
+          "query_count": 6,
+          "click_count": 37,
+          "example": "Купить  микроволновку лджи черную "
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "смарт тв",
+          "query_count": 6,
+          "click_count": 13,
+          "example": "смарт тв лджи"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "laptop",
+      "target": "Ноутбуки",
+      "source": "manual_category_alias",
+      "query_count": 151,
+      "click_count": 431,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "hp",
+          "query_count": 34,
+          "click_count": 132,
+          "example": "hP pavillon laptop 15-eg3xxx"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "asus",
+          "query_count": 25,
+          "click_count": 72,
+          "example": "rage 16\" gaming laptop 77745HX 1024 gb"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "lenovo",
+          "query_count": 21,
+          "click_count": 79,
+          "example": "Lenovo V15 Laptop: Powerful Ryzen 5, 16GB RAM, 512GB SSD"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "honor",
+          "query_count": 10,
+          "click_count": 20,
+          "example": "honor laptop x16"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "acer",
+          "query_count": 8,
+          "click_count": 10,
+          "example": "Laptop Acer Nitro ProPanel"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "плейстейшен",
+      "target": "Игровые консоли",
+      "source": "product_family_alias",
+      "query_count": 134,
+      "click_count": 7863,
+      "top_evidence": [
+        {
+          "dominant_category": "видеоигры",
+          "dominant_brand": "playstation",
+          "query_count": 36,
+          "click_count": 1581,
+          "example": " playstation 5 игры"
+        },
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "sony",
+          "query_count": 33,
+          "click_count": 5884,
+          "example": "Сони плейстейшен 5 про"
+        },
+        {
+          "dominant_category": "видеоигры",
+          "dominant_brand": "sony",
+          "query_count": 8,
+          "click_count": 9,
+          "example": "диски на сони плейстейшен 5 "
+        },
+        {
+          "dominant_category": "аксессуары для ps5",
+          "dominant_brand": "gamespot",
+          "query_count": 6,
+          "click_count": 15,
+          "example": "Охлаждающая станция для плейстейшен 5"
+        },
+        {
+          "dominant_category": "геймпады",
+          "dominant_brand": "sony",
+          "query_count": 5,
+          "click_count": 50,
+          "example": "Геймпад PlayStation 5"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "маршрутизатор",
+      "target": "Роутеры",
+      "source": "manual_category_alias",
+      "query_count": 133,
+      "click_count": 1051,
+      "top_evidence": [
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "tp link",
+          "query_count": 26,
+          "click_count": 89,
+          "example": "wi fi роутер маршрутизатор tp link"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "cudy",
+          "query_count": 18,
+          "click_count": 558,
+          "example": "Маршрутизатор CUDY LT300"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "huawei",
+          "query_count": 16,
+          "click_count": 197,
+          "example": "маршрутизатор huaway"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "netcraze",
+          "query_count": 16,
+          "click_count": 20,
+          "example": "Маршрутизатор Speedster (NC-3013)"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "asus",
+          "query_count": 14,
+          "click_count": 33,
+          "example": "Маршрутизатор RT-BE88U"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "виво",
+      "target": "vivo",
+      "source": "manual_brand_alias",
+      "query_count": 132,
+      "click_count": 788,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "vivo",
+          "query_count": 101,
+          "click_count": 721,
+          "example": "Смартфон виво v50"
+        },
+        {
+          "dominant_category": "защитные стекла",
+          "dominant_brand": "krutoff",
+          "query_count": 9,
+          "click_count": 17,
+          "example": "стекло на виво в70"
+        },
+        {
+          "dominant_category": "чехлы для смартфонов",
+          "dominant_brand": "krutoff",
+          "query_count": 5,
+          "click_count": 6,
+          "example": "Виво х300 ультро"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "iqoo",
+          "query_count": 4,
+          "click_count": 10,
+          "example": "Виво з10х"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "asus",
+          "query_count": 3,
+          "click_count": 19,
+          "example": "Асус виво бук m1603Q"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "эпл вотч",
+      "target": "Смарт-часы",
+      "source": "product_family_alias",
+      "query_count": 117,
+      "click_count": 66850,
+      "top_evidence": [
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "apple",
+          "query_count": 74,
+          "click_count": 63074,
+          "example": "Apple Watch часы"
+        },
+        {
+          "dominant_category": "ремешки для apple watch",
+          "dominant_brand": "lyambda",
+          "query_count": 10,
+          "click_count": 3047,
+          "example": "Браслет на эпл вотч ультра"
+        },
+        {
+          "dominant_category": "беспроводные зарядные устройства",
+          "dominant_brand": "deppa",
+          "query_count": 5,
+          "click_count": 508,
+          "example": "Зарядка Apple Watch "
+        },
+        {
+          "dominant_category": "ремешки для apple watch",
+          "dominant_brand": "bandrate smart",
+          "query_count": 3,
+          "click_count": 10,
+          "example": "Боаслет на эпл вотч "
+        },
+        {
+          "dominant_category": "защитные стекла для смарт часов и фитнес браслетов",
+          "dominant_brand": "krutoff",
+          "query_count": 3,
+          "click_count": 7,
+          "example": "Чехол для Apple Watch 11 и Apple Watch 10 46mm / Бампер на Эпл Вотч 11 и 10 46мм силиконовый"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "нокиа",
+      "target": "nokia",
+      "source": "manual_brand_alias",
+      "query_count": 114,
+      "click_count": 740,
+      "top_evidence": [
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "nokia",
+          "query_count": 97,
+          "click_count": 711,
+          "example": "телефон нокиа 150"
+        },
+        {
+          "dominant_category": "чехлы для смартфонов",
+          "dominant_brand": "nokia",
+          "query_count": 3,
+          "click_count": 5,
+          "example": "Чехол Нокиа 3.2"
+        },
+        {
+          "dominant_category": "защитные стекла",
+          "dominant_brand": "krutoff",
+          "query_count": 3,
+          "click_count": 3,
+          "example": "смартфон нокиа"
+        },
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "xenium",
+          "query_count": 2,
+          "click_count": 3,
+          "example": "кнопочн телефон Нокиа 150 музик"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "nokia",
+          "query_count": 2,
+          "click_count": 3,
+          "example": "наушники нокиа"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "дексп",
+      "target": "dexp",
+      "source": "manual_brand_alias",
+      "query_count": 90,
+      "click_count": 228,
+      "top_evidence": [
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "indesit",
+          "query_count": 4,
+          "click_count": 33,
+          "example": "Дексп холодилтник"
+        },
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "haier",
+          "query_count": 3,
+          "click_count": 7,
+          "example": "холодильники двухкамерный дексп"
+        },
+        {
+          "dominant_category": "пульты ду для тв",
+          "dominant_brand": "huayu",
+          "query_count": 3,
+          "click_count": 4,
+          "example": "Пульт дексп"
+        },
+        {
+          "dominant_category": "аэрогрили",
+          "dominant_brand": "нет бренда",
+          "query_count": 2,
+          "click_count": 12,
+          "example": "дексп фэмили флай даф 2208д аэрогриль"
+        },
+        {
+          "dominant_category": "морозильные камеры",
+          "dominant_brand": "centek",
+          "query_count": 2,
+          "click_count": 8,
+          "example": "морозильный ларь дексп"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "аирподс",
+      "target": "Наушники",
+      "source": "product_family_alias",
+      "query_count": 89,
+      "click_count": 56794,
+      "top_evidence": [
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "apple",
+          "query_count": 79,
+          "click_count": 56721,
+          "example": "airpods 4 с шумоподавление"
+        },
+        {
+          "dominant_category": "аксессуары для наушников",
+          "dominant_brand": "interstep",
+          "query_count": 2,
+          "click_count": 55,
+          "example": "Чехол на airpods"
+        },
+        {
+          "dominant_category": "аксессуары для наушников",
+          "dominant_brand": "lyambda",
+          "query_count": 1,
+          "click_count": 5,
+          "example": "Чехол на аирподс про"
+        },
+        {
+          "dominant_category": "чехлы для наушников",
+          "dominant_brand": "elfy",
+          "query_count": 1,
+          "click_count": 4,
+          "example": "Чехол airpods 3"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "xiaomi",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "Airpods проводные type-c"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "мобильные телефоны",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 89,
+      "click_count": 7822,
+      "top_evidence": [
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "bq",
+          "query_count": 22,
+          "click_count": 6918,
+          "example": "Смартфоны, планшеты, мобильные телефоны BQ 2820 Step XL+ White+Red"
+        },
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "nokia",
+          "query_count": 13,
+          "click_count": 367,
+          "example": "Мобильные телефоны кнопочные для слабовидящих"
+        },
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "xenium",
+          "query_count": 11,
+          "click_count": 27,
+          "example": "мобильные телефоны кнопочные с кнопкой SOS"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "samsung",
+          "query_count": 6,
+          "click_count": 57,
+          "example": "Мобильные телефоны самсунг"
+        },
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "inoi",
+          "query_count": 6,
+          "click_count": 41,
+          "example": "мобильные телефоны кнопочные 4 G"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "асер",
+      "target": "acer",
+      "source": "manual_brand_alias",
+      "query_count": 82,
+      "click_count": 262,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "acer",
+          "query_count": 26,
+          "click_count": 135,
+          "example": "елутбук асер"
+        },
+        {
+          "dominant_category": "мониторы",
+          "dominant_brand": "acer",
+          "query_count": 12,
+          "click_count": 20,
+          "example": "асер монитор"
+        },
+        {
+          "dominant_category": "мыши",
+          "dominant_brand": "acer",
+          "query_count": 9,
+          "click_count": 21,
+          "example": "Асер мышки "
+        },
+        {
+          "dominant_category": "сетевые адаптеры для ноутбуков",
+          "dominant_brand": "acer",
+          "query_count": 5,
+          "click_count": 8,
+          "example": "Зарядное устройство на ноутбук асер"
+        },
+        {
+          "dominant_category": "игровые мониторы",
+          "dominant_brand": "acer",
+          "query_count": 5,
+          "click_count": 6,
+          "example": "монитор Асер ек1 27"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "headphones",
+      "target": "Наушники",
+      "source": "manual_category_alias",
+      "query_count": 82,
+      "click_count": 324,
+      "top_evidence": [
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "honor choice",
+          "query_count": 38,
+          "click_count": 211,
+          "example": "наушники большие Headphones "
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "honor",
+          "query_count": 9,
+          "click_count": 29,
+          "example": "overhead headphones "
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "bose",
+          "query_count": 8,
+          "click_count": 25,
+          "example": "Беспроводные наушники Bose QuietComfort Ultra Headphones 2nd Gen"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "nothing",
+          "query_count": 5,
+          "click_count": 25,
+          "example": "Беспроводные наушники Sennheiser Momentum Headphones Wireless 4, Denim"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "sony",
+          "query_count": 4,
+          "click_count": 9,
+          "example": "SONY WH-1000XM6 Wireless Noise Cancelling Headphones with AI Intelligent Noise Cancellation, Black"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "notebook",
+      "target": "Ноутбуки",
+      "source": "manual_category_alias",
+      "query_count": 72,
+      "click_count": 197,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "huawei",
+          "query_count": 28,
+          "click_count": 112,
+          "example": "notebook gt 14"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "treidcomputers",
+          "query_count": 8,
+          "click_count": 26,
+          "example": "Treidcomputers NoteBook "
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "xiaomi",
+          "query_count": 6,
+          "click_count": 14,
+          "example": "Xiaomi Mi Notebook Pro X"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "asus",
+          "query_count": 6,
+          "click_count": 7,
+          "example": "i5 notebook"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "honor",
+          "query_count": 4,
+          "click_count": 7,
+          "example": "Xonor NoteBook GDG X ноутбук"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "свч печь",
+      "target": "Микроволновые печи",
+      "source": "manual_category_alias",
+      "query_count": 72,
+      "click_count": 477,
+      "top_evidence": [
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "samsung",
+          "query_count": 7,
+          "click_count": 12,
+          "example": "СВЧ-печь Samsung MS23DG4504AGBW"
+        },
+        {
+          "dominant_category": "микроволновые печи встраиваемые",
+          "dominant_brand": "midea",
+          "query_count": 6,
+          "click_count": 19,
+          "example": "Встраиваемая СВЧ печь Midea MI102500GBI"
+        },
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "midea",
+          "query_count": 6,
+          "click_count": 10,
+          "example": "Микроволновая СВЧ печь MIDEA AM720C2MV-S"
+        },
+        {
+          "dominant_category": "микроволновые печи встраиваемые",
+          "dominant_brand": "samsung",
+          "query_count": 5,
+          "click_count": 40,
+          "example": "Встраиваемая свч печь samsung"
+        },
+        {
+          "dominant_category": "микроволновые печи встраиваемые",
+          "dominant_brand": "gorenje",
+          "query_count": 5,
+          "click_count": 9,
+          "example": "встраиваемая свч печь 20 черная"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "smart watch",
+      "target": "Смарт-часы",
+      "source": "manual_category_alias",
+      "query_count": 69,
+      "click_count": 218,
+      "top_evidence": [
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "huawei",
+          "query_count": 14,
+          "click_count": 23,
+          "example": "Умные смарт часы SMART WATCH"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "xiaomi",
+          "query_count": 13,
+          "click_count": 101,
+          "example": "xiaomi smart watch 2"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "samsung",
+          "query_count": 10,
+          "click_count": 47,
+          "example": "samsung smart watch 7"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "apple",
+          "query_count": 6,
+          "click_count": 9,
+          "example": "Smart Watch New Смарт-часы, 43mm, Розовые"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "realme",
+          "query_count": 4,
+          "click_count": 8,
+          "example": "realme smart watch"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "джибиэль",
+      "target": "jbl",
+      "source": "manual_brand_alias",
+      "query_count": 66,
+      "click_count": 801,
+      "top_evidence": [
+        {
+          "dominant_category": "беспроводная акустика",
+          "dominant_brand": "jbl",
+          "query_count": 40,
+          "click_count": 598,
+          "example": "Музыкальная колонка джибиэль"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "jbl",
+          "query_count": 14,
+          "click_count": 162,
+          "example": "наушники джибиэль проводные наклвднык"
+        },
+        {
+          "dominant_category": "музыкальные системы midi",
+          "dominant_brand": "jbl",
+          "query_count": 3,
+          "click_count": 6,
+          "example": "джибиэль партибокс ультимат"
+        },
+        {
+          "dominant_category": "активные колонки",
+          "dominant_brand": "jbl",
+          "query_count": 2,
+          "click_count": 20,
+          "example": "колонка джибиэль 720"
+        },
+        {
+          "dominant_category": "подвесы для музыкальных центров",
+          "dominant_brand": "jbl",
+          "query_count": 2,
+          "click_count": 7,
+          "example": "Акамулятор джибиэль"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "клава",
+      "target": "Клавиатуры",
+      "source": "manual_category_alias",
+      "query_count": 58,
+      "click_count": 229,
+      "top_evidence": [
+        {
+          "dominant_category": "клавиатуры",
+          "dominant_brand": "cyberlynx",
+          "query_count": 8,
+          "click_count": 67,
+          "example": "клава механическая"
+        },
+        {
+          "dominant_category": "клавиатуры",
+          "dominant_brand": "logitech",
+          "query_count": 5,
+          "click_count": 12,
+          "example": "l.ogitech g pro x клава"
+        },
+        {
+          "dominant_category": "клавиатуры",
+          "dominant_brand": "redragon",
+          "query_count": 4,
+          "click_count": 12,
+          "example": "клава механическая игровая 80% с ригулировкой беспроводная"
+        },
+        {
+          "dominant_category": "клавиатуры",
+          "dominant_brand": "aula",
+          "query_count": 4,
+          "click_count": 7,
+          "example": "игравая клава"
+        },
+        {
+          "dominant_category": "клавиатуры",
+          "dominant_brand": "defender",
+          "query_count": 3,
+          "click_count": 73,
+          "example": "Игровая клава"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "аппл",
+      "target": "apple",
+      "source": "manual_brand_alias",
+      "query_count": 55,
+      "click_count": 208,
+      "top_evidence": [
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "apple",
+          "query_count": 14,
+          "click_count": 66,
+          "example": "Смарт часы  аппл"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "apple",
+          "query_count": 7,
+          "click_count": 25,
+          "example": "ноутбук  аппл"
+        },
+        {
+          "dominant_category": "iphone",
+          "dominant_brand": "apple",
+          "query_count": 6,
+          "click_count": 23,
+          "example": "Аппл айфон 17"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "apple",
+          "query_count": 4,
+          "click_count": 16,
+          "example": "Наушник аппл"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "apple",
+          "query_count": 3,
+          "click_count": 13,
+          "example": "Планшетв аппл"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "printer",
+      "target": "Принтеры",
+      "source": "manual_category_alias",
+      "query_count": 55,
+      "click_count": 126,
+      "top_evidence": [
+        {
+          "dominant_category": "компактные фотопринтеры",
+          "dominant_brand": "xiaomi",
+          "query_count": 17,
+          "click_count": 31,
+          "example": "Компактный фотопринтер Xiaomi Portable Photo Printer 1S"
+        },
+        {
+          "dominant_category": "принтеры",
+          "dominant_brand": "xiaomi",
+          "query_count": 16,
+          "click_count": 39,
+          "example": "Xiaomi Mi Portable Photo Printer"
+        },
+        {
+          "dominant_category": "мфу",
+          "dominant_brand": "canon",
+          "query_count": 3,
+          "click_count": 18,
+          "example": "Inkjet printer Canon PIXMA G1420"
+        },
+        {
+          "dominant_category": "3d принтеры",
+          "dominant_brand": "bambu lab",
+          "query_count": 3,
+          "click_count": 5,
+          "example": "3d printer bambu"
+        },
+        {
+          "dominant_category": "картриджи для струйных принтеров",
+          "dominant_brand": "t2",
+          "query_count": 2,
+          "click_count": 12,
+          "example": "картридж для 2516 All-in-One Printer"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "рилми",
+      "target": "realme",
+      "source": "manual_brand_alias",
+      "query_count": 49,
+      "click_count": 171,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "realme",
+          "query_count": 38,
+          "click_count": 144,
+          "example": "Смартфон рилми"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "realme",
+          "query_count": 5,
+          "click_count": 17,
+          "example": "наушники рилми 6 про"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "realme",
+          "query_count": 2,
+          "click_count": 4,
+          "example": "рилми вотч 5"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "realme",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "планшет рилми"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "honor",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "смартфон рилми 16 про плюс"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "headset",
+      "target": "Наушники",
+      "source": "manual_category_alias",
+      "query_count": 49,
+      "click_count": 133,
+      "top_evidence": [
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "xbox",
+          "query_count": 9,
+          "click_count": 42,
+          "example": "Microsoft Xbox Wireless Gaming Headset"
+        },
+        {
+          "dominant_category": "наушники игровые",
+          "dominant_brand": "logitech",
+          "query_count": 9,
+          "click_count": 23,
+          "example": "Logitech G332 Gaming Headset:"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "logitech",
+          "query_count": 8,
+          "click_count": 20,
+          "example": "Гарнитура Logitech PC Headset 960 USB"
+        },
+        {
+          "dominant_category": "аксессуары для ps5",
+          "dominant_brand": "sony",
+          "query_count": 6,
+          "click_count": 11,
+          "example": "Беспроводные наушники Sony PS5 PULSE Elite Wireless Headset, черный"
+        },
+        {
+          "dominant_category": "наушники игровые",
+          "dominant_brand": "sony",
+          "query_count": 6,
+          "click_count": 10,
+          "example": "Гарнитура беспроводная PULSE 3D Wireless Headset (PS5)"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "вирпул",
+      "target": "whirlpool",
+      "source": "manual_brand_alias",
+      "query_count": 43,
+      "click_count": 137,
+      "top_evidence": [
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "whirlpool",
+          "query_count": 13,
+          "click_count": 58,
+          "example": "вертикальная стиральная машина вирпул"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "whirlpool",
+          "query_count": 8,
+          "click_count": 14,
+          "example": "кондиционер сплит система вирпул"
+        },
+        {
+          "dominant_category": "встраиваемые холодильники",
+          "dominant_brand": "whirlpool",
+          "query_count": 4,
+          "click_count": 18,
+          "example": "холодильники двухкамерные Вирпул f8620"
+        },
+        {
+          "dominant_category": "встраиваемый электрический духовой шкаф",
+          "dominant_brand": "whirlpool",
+          "query_count": 3,
+          "click_count": 5,
+          "example": "Духовка вирпул"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "toshiba",
+          "query_count": 2,
+          "click_count": 5,
+          "example": "Вирпул  100 барабан"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "миле",
+      "target": "miele",
+      "source": "manual_brand_alias",
+      "query_count": 39,
+      "click_count": 328,
+      "top_evidence": [
+        {
+          "dominant_category": "пылесосы напольные",
+          "dominant_brand": "miele",
+          "query_count": 11,
+          "click_count": 206,
+          "example": "Пылесос миле с мешками"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "miele",
+          "query_count": 10,
+          "click_count": 73,
+          "example": "Стиральная машина миле"
+        },
+        {
+          "dominant_category": "наборы аксессуаров для пылесосов",
+          "dominant_brand": "miele",
+          "query_count": 4,
+          "click_count": 13,
+          "example": "Мешки для пылесоса миле"
+        },
+        {
+          "dominant_category": "пылесборники",
+          "dominant_brand": "miele",
+          "query_count": 2,
+          "click_count": 7,
+          "example": "Мусорный мешок миле пылисос"
+        },
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "miele",
+          "query_count": 2,
+          "click_count": 3,
+          "example": "холодильник двухкамерный  миле "
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "элджи",
+      "target": "lg",
+      "source": "manual_brand_alias",
+      "query_count": 38,
+      "click_count": 157,
+      "top_evidence": [
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "jacky s",
+          "query_count": 4,
+          "click_count": 34,
+          "example": "Стиралтная машинка элджи"
+        },
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "lg",
+          "query_count": 3,
+          "click_count": 6,
+          "example": "микроволновая печь элджи  соло 1000мощность"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "lg",
+          "query_count": 3,
+          "click_count": 5,
+          "example": "Машина стиральная элджи"
+        },
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "lg",
+          "query_count": 2,
+          "click_count": 23,
+          "example": "элджи"
+        },
+        {
+          "dominant_category": "пылесосы напольные",
+          "dominant_brand": "samsung",
+          "query_count": 2,
+          "click_count": 10,
+          "example": "пылесос  элджи"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "tablet",
+      "target": "Планшеты",
+      "source": "manual_category_alias",
+      "query_count": 37,
+      "click_count": 74,
+      "top_evidence": [
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "samsung",
+          "query_count": 9,
+          "click_count": 17,
+          "example": "Планшет 10.1' Pad 26 Ultra 16GB + 1TB Android 15.0 Tablet 16MP / 32MP 5G"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "huawei",
+          "query_count": 5,
+          "click_count": 18,
+          "example": "Huwai tablet"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "xiaomi",
+          "query_count": 5,
+          "click_count": 8,
+          "example": "Xiaomi Планшет Xiaomi Pad 7 Глобальная версия Mi Tablet поддерживает русский язык, 11.2\" 12 ГБ/256 ГБ, темно-серый"
+        },
+        {
+          "dominant_category": "защитное стекло для планшетного компьютера",
+          "dominant_brand": "krutoff",
+          "query_count": 3,
+          "click_count": 5,
+          "example": "Tablet"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "honor",
+          "query_count": 3,
+          "click_count": 3,
+          "example": "Tablet Honor Pad x9"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "лоджитек",
+      "target": "logitech",
+      "source": "manual_brand_alias",
+      "query_count": 32,
+      "click_count": 101,
+      "top_evidence": [
+        {
+          "dominant_category": "мыши",
+          "dominant_brand": "logitech",
+          "query_count": 10,
+          "click_count": 44,
+          "example": "Лоджитек г про"
+        },
+        {
+          "dominant_category": "наушники игровые",
+          "dominant_brand": "logitech",
+          "query_count": 7,
+          "click_count": 31,
+          "example": "лоджитек наушники"
+        },
+        {
+          "dominant_category": "клавиатуры",
+          "dominant_brand": "logitech",
+          "query_count": 6,
+          "click_count": 15,
+          "example": "Лоджитек g515"
+        },
+        {
+          "dominant_category": "наушники для компьютеров",
+          "dominant_brand": "logitech",
+          "query_count": 3,
+          "click_count": 4,
+          "example": "наушники без проводные лоджитек"
+        },
+        {
+          "dominant_category": "игровые рули",
+          "dominant_brand": "logitech",
+          "query_count": 2,
+          "click_count": 2,
+          "example": "Коробка передач для руля лоджитек"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "иксбокс",
+      "target": "Игровые консоли",
+      "source": "product_family_alias",
+      "query_count": 30,
+      "click_count": 8742,
+      "top_evidence": [
+        {
+          "dominant_category": "геймпады",
+          "dominant_brand": "microsoft",
+          "query_count": 6,
+          "click_count": 5572,
+          "example": "Геймрад xbox"
+        },
+        {
+          "dominant_category": "видеоигры",
+          "dominant_brand": "xbox",
+          "query_count": 6,
+          "click_count": 54,
+          "example": "Игры для Xbox"
+        },
+        {
+          "dominant_category": "подписка xbox live / game pass",
+          "dominant_brand": "microsoft",
+          "query_count": 5,
+          "click_count": 95,
+          "example": "Подписка  Xbox "
+        },
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "microsoft",
+          "query_count": 3,
+          "click_count": 2960,
+          "example": "  xbox"
+        },
+        {
+          "dominant_category": "геймпады",
+          "dominant_brand": "wireless controller",
+          "query_count": 2,
+          "click_count": 47,
+          "example": " XBOX 360"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "телек",
+      "target": "Телевизоры",
+      "source": "manual_category_alias",
+      "query_count": 29,
+      "click_count": 79,
+      "top_evidence": [
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "samsung",
+          "query_count": 4,
+          "click_count": 11,
+          "example": "Купить телек самсунг"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "sber",
+          "query_count": 3,
+          "click_count": 21,
+          "example": "Телек"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "haier",
+          "query_count": 3,
+          "click_count": 7,
+          "example": "телек смарт"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "hisense",
+          "query_count": 2,
+          "click_count": 10,
+          "example": "хисенсе телек 100"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "яндекс",
+          "query_count": 2,
+          "click_count": 7,
+          "example": "Телек с алисой"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "майкрософт",
+      "target": "microsoft",
+      "source": "manual_brand_alias",
+      "query_count": 24,
+      "click_count": 107,
+      "top_evidence": [
+        {
+          "dominant_category": "office и windows",
+          "dominant_brand": "microsoft",
+          "query_count": 9,
+          "click_count": 87,
+          "example": " Майкрософт офис"
+        },
+        {
+          "dominant_category": "office и windows",
+          "dominant_brand": "mobioffice",
+          "query_count": 2,
+          "click_count": 7,
+          "example": "Майкрософт офис на макбук os"
+        },
+        {
+          "dominant_category": "программное обеспечение",
+          "dominant_brand": "microsoft",
+          "query_count": 2,
+          "click_count": 2,
+          "example": "Офис майкрософт 2019"
+        },
+        {
+          "dominant_category": "office и windows",
+          "dominant_brand": "мвм",
+          "query_count": 2,
+          "click_count": 2,
+          "example": "майкрософт ворд"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "horizont",
+          "query_count": 2,
+          "click_count": 2,
+          "example": "Планшет с майкрософт офис"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "рейзер",
+      "target": "razer",
+      "source": "manual_brand_alias",
+      "query_count": 24,
+      "click_count": 47,
+      "top_evidence": [
+        {
+          "dominant_category": "наушники игровые",
+          "dominant_brand": "razer",
+          "query_count": 9,
+          "click_count": 25,
+          "example": "Рейзер баракуда "
+        },
+        {
+          "dominant_category": "клавиатуры",
+          "dominant_brand": "razer",
+          "query_count": 6,
+          "click_count": 7,
+          "example": "рейзер клавиатура"
+        },
+        {
+          "dominant_category": "мыши",
+          "dominant_brand": "razer",
+          "query_count": 5,
+          "click_count": 11,
+          "example": "беспроводная мышь рейзер"
+        },
+        {
+          "dominant_category": "клавиатуры",
+          "dominant_brand": "genesis",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "рейзер  нага"
+        },
+        {
+          "dominant_category": "саундбары",
+          "dominant_brand": "sven",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "саундбарс рейзер"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "wi fi router",
+      "target": "Роутеры",
+      "source": "manual_category_alias",
+      "query_count": 21,
+      "click_count": 109,
+      "top_evidence": [
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "xiaomi",
+          "query_count": 12,
+          "click_count": 78,
+          "example": " Xiaomi Wi-Fi Router BE5000"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "huawei",
+          "query_count": 4,
+          "click_count": 9,
+          "example": "wi-fi-router-huawei-mesh-33-package-nvwa-ax30-23-white-400563211;"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "триколор",
+          "query_count": 1,
+          "click_count": 12,
+          "example": "Wi fi router оптоволокно"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "d link",
+          "query_count": 1,
+          "click_count": 6,
+          "example": "wi fi router 7"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "tp link",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "wi-fi-router-tp-link-archer-c80"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "моторола",
+      "target": "motorola",
+      "source": "manual_brand_alias",
+      "query_count": 20,
+      "click_count": 54,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "motorola",
+          "query_count": 13,
+          "click_count": 45,
+          "example": "Телефон  моторола"
+        },
+        {
+          "dominant_category": "радиотелефоны dect",
+          "dominant_brand": "motorola",
+          "query_count": 3,
+          "click_count": 4,
+          "example": "радиотелефон моторола"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "honor",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "Моторола G75"
+        },
+        {
+          "dominant_category": "радиостанции",
+          "dominant_brand": "decross",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Рация моторола"
+        },
+        {
+          "dominant_category": "радиостанции",
+          "dominant_brand": "motorola",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "рации Моторола "
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "wifi router",
+      "target": "Роутеры",
+      "source": "manual_category_alias",
+      "query_count": 19,
+      "click_count": 45,
+      "top_evidence": [
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "xiaomi",
+          "query_count": 10,
+          "click_count": 14,
+          "example": "Wi-Fi роутер Xiaomi Mi WiFi Router 4A DVB4218CN"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "tp link",
+          "query_count": 4,
+          "click_count": 5,
+          "example": "wifi router tp link vr2100"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "huawei",
+          "query_count": 3,
+          "click_count": 24,
+          "example": "huawei wifi router"
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "cudy",
+          "query_count": 2,
+          "click_count": 2,
+          "example": "Wifi router cudy"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "earphones",
+      "target": "Наушники",
+      "source": "manual_category_alias",
+      "query_count": 16,
+      "click_count": 39,
+      "top_evidence": [
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "xiaomi",
+          "query_count": 8,
+          "click_count": 17,
+          "example": "Проводные наушники Xiaomi Type-C Earphones  белый 2024"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "samsung",
+          "query_count": 5,
+          "click_count": 18,
+          "example": "Samsung AKG Type-C Earphones (EO-IC100)."
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "realme",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "Беспроводные наушники QCY T13 True Wireless Bluetooth Earphones, цвет White"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "baseus",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Наушники True Wireless Baseus Bowie M2s Ultra Earphones Cosmic White"
+        },
+        {
+          "dominant_category": "наушники",
+          "dominant_brand": "soundcore",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "earphones soundcore"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "air conditioner",
+      "target": "Кондиционеры",
+      "source": "manual_category_alias",
+      "query_count": 15,
+      "click_count": 31,
+      "top_evidence": [
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "haier",
+          "query_count": 5,
+          "click_count": 10,
+          "example": "Air Conditioner HSU-07HPL203/R3(IN)"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "viomi",
+          "query_count": 2,
+          "click_count": 3,
+          "example": "Сплит система инверторная, кондиционер Mijia Smart Air Conditioner, 35 м2"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "electrolux",
+          "query_count": 1,
+          "click_count": 8,
+          "example": "Air conditioner "
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "ballu",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "9000 BTU Mini Split Air Conditioner (Wi‑Fi)"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "tcl",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "TCL Low Ambient 1-Zone 9,000 BTU 23 SEER2 Ductless Mini Split Heat Pump Air Conditioner Syste"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "smartwatch",
+      "target": "Смарт-часы",
+      "source": "manual_category_alias",
+      "query_count": 15,
+      "click_count": 20,
+      "top_evidence": [
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "huawei",
+          "query_count": 2,
+          "click_count": 4,
+          "example": "HUAWEI FIT 2 Active Edition Midnight Black (YDA-BO9S) Smartwatch"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "redmi",
+          "query_count": 2,
+          "click_count": 4,
+          "example": "Redmi Kids Smartwatch"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "xiaomi",
+          "query_count": 2,
+          "click_count": 3,
+          "example": "Xaiomi S4 ultra amoled gps smartwatch"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "apple",
+          "query_count": 2,
+          "click_count": 2,
+          "example": "Watch  Smartwatch"
+        },
+        {
+          "dominant_category": "смарт часы",
+          "dominant_brand": "samsung",
+          "query_count": 2,
+          "click_count": 2,
+          "example": "smartwatch samsung"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "телик",
+      "target": "Телевизоры",
+      "source": "manual_category_alias",
+      "query_count": 13,
+      "click_count": 22,
+      "top_evidence": [
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "sber",
+          "query_count": 2,
+          "click_count": 5,
+          "example": "телик сбер"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "haier",
+          "query_count": 2,
+          "click_count": 3,
+          "example": "Телик haer"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "lg",
+          "query_count": 2,
+          "click_count": 2,
+          "example": "Телик lg43"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "яндекс",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "телик яндекс тв бейсик"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "samsung",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "телик Самсунг крутящий ношка"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "smartphone",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 12,
+      "click_count": 17,
+      "top_evidence": [
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "samsung",
+          "query_count": 7,
+          "click_count": 11,
+          "example": "the smartphone Samsung galaxy S2 edge ultra smartphone Samsung galaxy Xbox 360 ultra"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "xiaomi",
+          "query_count": 2,
+          "click_count": 3,
+          "example": "Xiaomi 13t Pro Smartphone Global Version 5G Global 12/512 ГБ,"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "samsung",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "smartphone Samsung galaxy"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "huawei",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "huawei smartphone"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "honor",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Smartphone Honor 400 Lite 5G 12 Go/256 Go"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "washing machine",
+      "target": "Стиральные машины",
+      "source": "manual_category_alias",
+      "query_count": 12,
+      "click_count": 24,
+      "top_evidence": [
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "midea",
+          "query_count": 2,
+          "click_count": 5,
+          "example": "Mijia Washing Machine Wash-Dry 12Kg"
+        },
+        {
+          "dominant_category": "сушильные машины",
+          "dominant_brand": "vestel",
+          "query_count": 1,
+          "click_count": 4,
+          "example": "Washing machine"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "hisense",
+          "query_count": 1,
+          "click_count": 4,
+          "example": "hisense washing machine"
+        },
+        {
+          "dominant_category": "сушильные машины",
+          "dominant_brand": "bosch",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "Bosch washing machine"
+        },
+        {
+          "dominant_category": "стиральные машины",
+          "dominant_brand": "bosch",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "Bosch WGG24400GB Series 6 9kg Washing Machine"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "кондер",
+      "target": "Кондиционеры",
+      "source": "manual_category_alias",
+      "query_count": 12,
+      "click_count": 90,
+      "top_evidence": [
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "haier",
+          "query_count": 2,
+          "click_count": 59,
+          "example": "пульт хаер  кондер"
+        },
+        {
+          "dominant_category": "напольные мобильные кондиционеры",
+          "dominant_brand": "ballu",
+          "query_count": 1,
+          "click_count": 9,
+          "example": "Кондер напольный"
+        },
+        {
+          "dominant_category": "напольные мобильные кондиционеры",
+          "dominant_brand": "electrolux",
+          "query_count": 1,
+          "click_count": 7,
+          "example": "Напольный кондер"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "goldstar",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "мульспит система кондер"
+        },
+        {
+          "dominant_category": "сплит системы",
+          "dominant_brand": "beko",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "кондер карерра"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "игровые приставки",
+      "target": "Игровые консоли",
+      "source": "manual_category_alias",
+      "query_count": 11,
+      "click_count": 238,
+      "top_evidence": [
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "xpx",
+          "query_count": 4,
+          "click_count": 9,
+          "example": "Игровые приставки авки"
+        },
+        {
+          "dominant_category": "игровые консоли",
+          "dominant_brand": "sony",
+          "query_count": 2,
+          "click_count": 214,
+          "example": "игровые приставки с диском "
+        },
+        {
+          "dominant_category": "ретро консоли",
+          "dominant_brand": "dendy",
+          "query_count": 1,
+          "click_count": 6,
+          "example": "ретро игровые приставки"
+        },
+        {
+          "dominant_category": "ретро консоли",
+          "dominant_brand": "dvtech",
+          "query_count": 1,
+          "click_count": 4,
+          "example": "игровые приставки для телевизора ретро с проводными гейм падами"
+        },
+        {
+          "dominant_category": "ретро консоли",
+          "dominant_brand": "mega drive",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "игровые приставки для телевизора ретро"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "television",
+      "target": "Телевизоры",
+      "source": "manual_category_alias",
+      "query_count": 10,
+      "click_count": 42,
+      "top_evidence": [
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "haier",
+          "query_count": 2,
+          "click_count": 7,
+          "example": "hair television "
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "samsung",
+          "query_count": 2,
+          "click_count": 5,
+          "example": "Television Samsung"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "hisense",
+          "query_count": 1,
+          "click_count": 20,
+          "example": "Television 100"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "carrera",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "Carrera television 50"
+        },
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "toshiba",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "Television"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "хп",
+      "target": "hp",
+      "source": "manual_brand_alias",
+      "query_count": 9,
+      "click_count": 23,
+      "top_evidence": [
+        {
+          "dominant_category": "мфу",
+          "dominant_brand": "hp",
+          "query_count": 3,
+          "click_count": 10,
+          "example": "МФУ хп"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "hp",
+          "query_count": 3,
+          "click_count": 6,
+          "example": "хп виктус"
+        },
+        {
+          "dominant_category": "чернила для принтеров",
+          "dominant_brand": "hp",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "Чернила хп"
+        },
+        {
+          "dominant_category": "картриджи для лазерных принтеров",
+          "dominant_brand": "t2",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "HP (ХП) LaserJet M111, M141 катридж"
+        },
+        {
+          "dominant_category": "картриджи для струйных принтеров",
+          "dominant_brand": "hp",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "картридж для принтера хп 653 "
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "фотик",
+      "target": "Фотоаппараты",
+      "source": "manual_category_alias",
+      "query_count": 9,
+      "click_count": 28,
+      "top_evidence": [
+        {
+          "dominant_category": "фотоаппараты моментальной печати",
+          "dominant_brand": "fujifilm instax",
+          "query_count": 4,
+          "click_count": 4,
+          "example": "фотик старый"
+        },
+        {
+          "dominant_category": "цифровые компактные фотоаппараты",
+          "dominant_brand": "fujifilm",
+          "query_count": 1,
+          "click_count": 17,
+          "example": "Фотик"
+        },
+        {
+          "dominant_category": "цифровые зеркальные фотоаппараты",
+          "dominant_brand": "canon",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "Зеркальный фотик"
+        },
+        {
+          "dominant_category": "системные фотоаппараты",
+          "dominant_brand": "canon",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "фотик r 8"
+        },
+        {
+          "dominant_category": "microsdhc / microsdxc",
+          "dominant_brand": "lexar",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "Карта памяти на фотик SDXC на фотоаппарат"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "microwave",
+      "target": "Микроволновые печи",
+      "source": "manual_category_alias",
+      "query_count": 8,
+      "click_count": 26,
+      "top_evidence": [
+        {
+          "dominant_category": "встраиваемый электрический духовой шкаф",
+          "dominant_brand": "meferi",
+          "query_count": 3,
+          "click_count": 4,
+          "example": "MEFERI MEO607BK MICROWAVE"
+        },
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "maunfeld",
+          "query_count": 1,
+          "click_count": 9,
+          "example": "MICROWAVE OVEN"
+        },
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "lg",
+          "query_count": 1,
+          "click_count": 8,
+          "example": "Lg NeoChef Countertop Microwave with Smart"
+        },
+        {
+          "dominant_category": "микроволновые печи с грилем",
+          "dominant_brand": "toshiba",
+          "query_count": 1,
+          "click_count": 3,
+          "example": "microwave oven wih grill"
+        },
+        {
+          "dominant_category": "микроволновые печи соло",
+          "dominant_brand": "centek",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Microwave Oven CENTEK CT-1550 White"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "шаоми",
+      "target": "xiaomi",
+      "source": "manual_brand_alias",
+      "query_count": 5,
+      "click_count": 14,
+      "top_evidence": [
+        {
+          "dominant_category": "щетки для робота пылесоса",
+          "dominant_brand": "red line",
+          "query_count": 4,
+          "click_count": 6,
+          "example": "боковые щетки для робота пылесоса Шаоми Ваккум ен"
+        },
+        {
+          "dominant_category": "аксессуары для робот пылесосов",
+          "dominant_brand": "xiaomi",
+          "query_count": 1,
+          "click_count": 8,
+          "example": "щёточки для робота пылесоса Шаоми Ваккум вакум"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "эйсер",
+      "target": "acer",
+      "source": "manual_brand_alias",
+      "query_count": 5,
+      "click_count": 1694,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "acer",
+          "query_count": 3,
+          "click_count": 1488,
+          "example": " ноутбуки acer"
+        },
+        {
+          "dominant_category": "мониторы",
+          "dominant_brand": "acer",
+          "query_count": 2,
+          "click_count": 206,
+          "example": "Монитор Acer"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "dishwasher",
+      "target": "Посудомоечные машины",
+      "source": "manual_category_alias",
+      "query_count": 5,
+      "click_count": 9,
+      "top_evidence": [
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "zigmund shtain",
+          "query_count": 2,
+          "click_count": 5,
+          "example": "Машина  посудомоечная настольная  Viomi Smart Dishwasher белый"
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "bosch",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "Bosch Built-in dishwasher посудомойка"
+        },
+        {
+          "dominant_category": "пылесосы вертикальные",
+          "dominant_brand": "xiaomi",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Viomi Smart Dishwasher белый"
+        },
+        {
+          "dominant_category": "встраиваемые посудомоечные машины",
+          "dominant_brand": "haier",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Dishwasher HDWE16-595RU"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "лэптоп",
+      "target": "Ноутбуки",
+      "source": "manual_category_alias",
+      "query_count": 5,
+      "click_count": 15,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "asus",
+          "query_count": 2,
+          "click_count": 8,
+          "example": "Лэптоп"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "huawei",
+          "query_count": 2,
+          "click_count": 3,
+          "example": "лэптоп хуавей"
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "tecno",
+          "query_count": 1,
+          "click_count": 4,
+          "example": "лэптоп восстановленный"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "refrigerator",
+      "target": "Холодильники",
+      "source": "manual_category_alias",
+      "query_count": 4,
+      "click_count": 6,
+      "top_evidence": [
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "haier",
+          "query_count": 2,
+          "click_count": 3,
+          "example": "LG 650 L Side-by-Side Refrigerator with Hygiene Fresh+"
+        },
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "meferi",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "холодильники French Door Smart Refrigerator"
+        },
+        {
+          "dominant_category": "холодильники",
+          "dominant_brand": "xiaomi",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "refrigerator"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "мобильник",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 4,
+      "click_count": 5,
+      "top_evidence": [
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "bq",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "мобильник"
+        },
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "xenium",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "кнопочный мобильник раскладушка"
+        },
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "olmio",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "мобильник с кнопкой сос недорогой"
+        },
+        {
+          "dominant_category": "смартфоны",
+          "dominant_brand": "huawei",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "хоавей мобильник"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "планшетник",
+      "target": "Планшеты",
+      "source": "manual_category_alias",
+      "query_count": 4,
+      "click_count": 19,
+      "top_evidence": [
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "huawei",
+          "query_count": 3,
+          "click_count": 17,
+          "example": "Планшетник"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "apple",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "планшетник айпад"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "smartphones",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 3,
+      "click_count": 4,
+      "top_evidence": [
+        {
+          "dominant_category": "телефоны мобильные",
+          "dominant_brand": "xenium",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "Smartphones"
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "xiaomi",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Smartphones android  6gb 128gb 5 GB 2 nano sims "
+        },
+        {
+          "dominant_category": "планшеты",
+          "dominant_brand": "samsung",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Smartphones android "
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "tablets",
+      "target": "Планшеты",
+      "source": "manual_category_alias",
+      "query_count": 3,
+      "click_count": 3,
+      "top_evidence": [
+        {
+          "dominant_category": "чистящие средства для кофемашин",
+          "dominant_brand": "melitta",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "cleaning tablets для кофемашин"
+        },
+        {
+          "dominant_category": "huawei care",
+          "dominant_brand": "huawei",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "tablets huawei"
+        },
+        {
+          "dominant_category": "средства для очистки от накипи",
+          "dominant_brand": "bosch",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Bosch descalling tablets"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "тисиэль",
+      "target": "tcl",
+      "source": "manual_brand_alias",
+      "query_count": 2,
+      "click_count": 2,
+      "top_evidence": [
+        {
+          "dominant_category": "телевизоры",
+          "dominant_brand": "tcl",
+          "query_count": 2,
+          "click_count": 2,
+          "example": "тисиэль"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "эйчпи",
+      "target": "hp",
+      "source": "manual_brand_alias",
+      "query_count": 2,
+      "click_count": 2,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "thunderobot",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Игровой ноутбук  эйчпи "
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "redmi",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "ноутбук эйчпи"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "fridge",
+      "target": "Холодильники",
+      "source": "manual_category_alias",
+      "query_count": 2,
+      "click_count": 2,
+      "top_evidence": [
+        {
+          "dominant_category": "встраиваемые холодильники",
+          "dominant_brand": "haier",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Htw5620cnmp Combi Fridge"
+        },
+        {
+          "dominant_category": "видеоигры",
+          "dominant_brand": "xbox",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Xbox Mini Fridge"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "laptops",
+      "target": "Ноутбуки",
+      "source": "manual_category_alias",
+      "query_count": 2,
+      "click_count": 2,
+      "top_evidence": [
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "hp",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "hp laptops 13 inches "
+        },
+        {
+          "dominant_category": "ноутбуки",
+          "dominant_brand": "gigabyte",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "gaming laptops"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "monitors",
+      "target": "Мониторы",
+      "source": "manual_category_alias",
+      "query_count": 2,
+      "click_count": 7,
+      "top_evidence": [
+        {
+          "dominant_category": "мониторы",
+          "dominant_brand": "thunderobot",
+          "query_count": 1,
+          "click_count": 5,
+          "example": "monitors"
+        },
+        {
+          "dominant_category": "игровые мониторы",
+          "dominant_brand": "carrera",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "carrera monitors"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "routers",
+      "target": "Роутеры",
+      "source": "manual_category_alias",
+      "query_count": 2,
+      "click_count": 5,
+      "top_evidence": [
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "xiaomi",
+          "query_count": 1,
+          "click_count": 4,
+          "example": "Wi fi routers "
+        },
+        {
+          "dominant_category": "роутеры",
+          "dominant_brand": "cudy",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "Routers"
+        }
+      ]
+    },
+    {
+      "kind": "brand",
+      "alias": "хайперикс",
+      "target": "hyperx",
+      "source": "manual_brand_alias",
+      "query_count": 1,
+      "click_count": 1,
+      "top_evidence": [
+        {
+          "dominant_category": "наушники игровые",
+          "dominant_brand": "hyperx",
+          "query_count": 1,
+          "click_count": 1,
+          "example": "хайперикс"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "air conditioners",
+      "target": "Кондиционеры",
+      "source": "manual_category_alias",
+      "query_count": 1,
+      "click_count": 2,
+      "top_evidence": [
+        {
+          "dominant_category": "напольные мобильные кондиционеры",
+          "dominant_brand": "midea",
+          "query_count": 1,
+          "click_count": 2,
+          "example": "mobile air conditioners"
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "vacuum cleaners",
+      "target": "Пылесосы",
+      "source": "manual_category_alias",
+      "query_count": 1,
+      "click_count": 4,
+      "top_evidence": [
+        {
+          "dominant_category": "пылесосы вертикальные",
+          "dominant_brand": "xiaomi",
+          "query_count": 1,
+          "click_count": 4,
+          "example": "xiaomi mijia handheld vacuum cleaners 2 B205 "
+        }
+      ]
+    },
+    {
+      "kind": "category",
+      "alias": "android phone",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "cameras",
+      "target": "Фотоаппараты",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "cell phone",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "cellphone",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "computer mouse",
+      "target": "Мыши",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "dishwashers",
+      "target": "Посудомоечные машины",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "game console",
+      "target": "Игровые консоли",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "game consoles",
+      "target": "Игровые консоли",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "keyboards",
+      "target": "Клавиатуры",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "microwaves",
+      "target": "Микроволновые печи",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "mobile phone",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "printers",
+      "target": "Принтеры",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "refrigerators",
+      "target": "Холодильники",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "smart phone",
+      "target": "Смартфоны",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "televisions",
+      "target": "Телевизоры",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    },
+    {
+      "kind": "category",
+      "alias": "washing machines",
+      "target": "Стиральные машины",
+      "source": "manual_category_alias",
+      "query_count": 0,
+      "click_count": 0,
+      "top_evidence": []
+    }
+  ]
+}
