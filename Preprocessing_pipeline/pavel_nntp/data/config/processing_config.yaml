@@ -1,0 +1,51 @@
+version: 1
+seed: 42
+paths:
+  query_clicks: cu_ws/query_clicks.parquet
+  catalog: cu_ws/skus.pkl
+  sku_desc: cu_ws/sku_desc.parquet
+  output: pavel_nntp/data
+normalization:
+  unicode_form: NFKC
+  lowercase: true
+  replace_yo_with_e: true
+  replace_dashes_with_space: true
+  preserve_symbols: ['+', '.', '/']
+  fuzzy_mapping: false
+aliases:
+    'аирподс': 'airpods'
+    'айпад': 'ipad'
+    'айфон': 'iphone'
+    'асус': 'asus'
+    'бош': 'bosch'
+    'иксбокс': 'xbox'
+    'ксиаоми': 'xiaomi'
+    'леново': 'lenovo'
+    'макбук': 'macbook'
+    'плейстейшен': 'playstation'
+    'реалми': 'realme'
+    'самсунг': 'samsung'
+    'сяоми': 'xiaomi'
+    'филипс': 'philips'
+    'хонор': 'honor'
+    'хуавей': 'huawei'
+    'эйсер': 'acer'
+    'эпл': 'apple'
+    'эпл вотч': 'apple watch'
+clicks:
+  no_click_position: 0
+  positive_position_min: 1
+  position_cap: 100
+  evidence_formula: exact_row_count / log2(min(position, position_cap) + 2)
+quality:
+  high_confidence_threshold: 0.8
+  high_confidence_min_clicks: 3
+  medium_confidence_threshold: 0.6
+  max_query_words: 20
+  max_query_chars: 200
+split:
+  train_fraction: 0.8
+  valid_fraction: 0.2
+  group: query_canonical
+  min_stratum_size: 5
+  stratification: [dominant_category, frequency_bucket, length_bucket, entity_bucket, quality]
