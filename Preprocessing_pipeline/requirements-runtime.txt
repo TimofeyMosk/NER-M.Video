@@ -1,0 +1,4 @@
+# Minimal dependencies for unified_query_annotator.py.
+# duckdb/pandas/pyarrow/torch/transformers are not needed by online inference.
+pymorphy3==2.0.6
+pymorphy3-dicts-ru==2.4.417150.4580142

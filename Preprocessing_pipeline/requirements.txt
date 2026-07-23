@@ -1,0 +1,9 @@
+# Full development environment: production runtime, offline dictionary/data
+# builders, silver validation and RuBERT evaluation.
+-r requirements-runtime.txt
+duckdb==1.5.4
+pandas
+pyarrow
+psutil
+torch
+transformers

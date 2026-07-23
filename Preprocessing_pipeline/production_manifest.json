@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "runtime_version": "unified_query_annotation_v1",
+  "entrypoint": "unified_query_annotator.py",
+  "python": "3.12 tested",
+  "required_files": [
+    {
+      "path": "unified_query_annotator.py",
+      "role": "Public Python API, CLI and orchestration of all preprocessing/fact parsers"
+    },
+    {
+      "path": "requirements-runtime.txt",
+      "role": "Minimal online inference dependencies"
+    },
+    {
+      "path": "text_preprocessing/__init__.py",
+      "role": "Python package marker"
+    },
+    {
+      "path": "text_preprocessing/preprocess_queries.py",
+      "role": "NFKC, yo-to-e, lowercase, separators, spaces and safe lemmatization"
+    },
+    {
+      "path": "text_preprocessing/stopwords.ru.json",
+      "role": "Reviewed stopwords, protected words and intent tokens"
+    },
+    {
+      "path": "search_dictionaries/__init__.py",
+      "role": "Python package marker"
+    },
+    {
+      "path": "search_dictionaries/color_normalizer.py",
+      "role": "Longest-match color parser and canonicalization to 30 colors"
+    },
+    {
+      "path": "search_dictionaries/color_palette.py",
+      "role": "Stable 30-color taxonomy"
+    },
+    {
+      "path": "search_dictionaries/measurement_parser.py",
+      "role": "Number-plus-unit parser and preliminary measurement BIO facts"
+    },
+    {
+      "path": "search_dictionaries/units.py",
+      "role": "Russian and English unit definitions"
+    },
+    {
+      "path": "search_dictionaries/output/brands.json",
+      "role": "Compiled canonical brand dictionary and aliases"
+    },
+    {
+      "path": "search_dictionaries/output/categories.json",
+      "role": "Compiled catalog category dictionary and aliases"
+    },
+    {
+      "path": "search_dictionaries/output/category_alias_overrides.json",
+      "role": "Priority mapping of synonyms/product families to broad canonical categories"
+    },
+    {
+      "path": "search_dictionaries/output/color_aliases.csv",
+      "role": "Compiled active color surfaces"
+    }
+  ],
+  "quality_files": [
+    ".github/workflows/production-check.yml",
+    "production_manifest.json",
+    "verify_production_runtime.py",
+    "test_unified_query_annotator.py",
+    "search_dictionaries/output/alias_coverage_metrics.json",
+    "search_dictionaries/output/color_metrics.json",
+    "search_dictionaries/output/dictionary_metrics.json",
+    "search_dictionaries/output/normalization_contract.json"
+  ],
+  "not_required_online": [
+    "query_clicks.parquet",
+    "sku_desc.parquet",
+    "skus.pkl",
+    "pavel_nntp/data/processed",
+    "silver_annotation/output",
+    "rubert_evaluation/output"
+  ]
+}
