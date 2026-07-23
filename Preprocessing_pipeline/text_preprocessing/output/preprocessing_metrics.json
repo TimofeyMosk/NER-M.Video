@@ -1,0 +1,931 @@
+{
+  "generated_at": "2026-07-22 11:31:09",
+  "normalization_contract": {
+    "version": "dictionary_consistent_v1",
+    "steps": [
+      "unicode_nfkc",
+      "yo_to_e",
+      "lowercase",
+      "hyphens_and_quotes_to_space",
+      "whitespace_collapse",
+      "safe_lemmatization"
+    ],
+    "regular_expressions": false,
+    "lookup_representation": "lemma",
+    "case": "lowercase",
+    "yo_equals_e": true,
+    "hyphens_and_quotes": "space"
+  },
+  "source": "C:\\Users\\kozgu\\NER-M.Video\\timofey\\eda\\output\\unique_queries.parquet",
+  "source_column": "query_text",
+  "limit": null,
+  "runtime_seconds": 383.80843010003446,
+  "counts": {
+    "raw_rows": 1789579,
+    "raw_unique": 1789579,
+    "nfkc_unique": 1789124,
+    "yo_unique": 1787706,
+    "lower_unique": 1522669,
+    "separator_unique": 1511843,
+    "space_unique": 1382964,
+    "lemma_unique": 1342697,
+    "empty_final": 1
+  },
+  "changes": {
+    "nfkc": 4569,
+    "yo": 7189,
+    "lower": 989505,
+    "separators": 176432,
+    "spaces": 290671,
+    "lemma": 564133
+  },
+  "lemmatization": {
+    "token_total": 6869115,
+    "token_changed": 873437,
+    "protected_brand": 48894,
+    "protected_latin": 2116718,
+    "protected_digit": 1530255,
+    "unknown": 440403,
+    "cache": "CacheInfo(hits=6514127, misses=354988, maxsize=500000, currsize=354988)",
+    "top_transformations": [
+      {
+        "from": "стиральная",
+        "to": "стиральный",
+        "count": 40224
+      },
+      {
+        "from": "наушники",
+        "to": "наушник",
+        "count": 28497
+      },
+      {
+        "from": "варочная",
+        "to": "варочный",
+        "count": 17508
+      },
+      {
+        "from": "встраиваемая",
+        "to": "встраиваемый",
+        "count": 17378
+      },
+      {
+        "from": "газовая",
+        "to": "газовый",
+        "count": 16857
+      },
+      {
+        "from": "холодильники",
+        "to": "холодильник",
+        "count": 15716
+      },
+      {
+        "from": "электрическая",
+        "to": "электрический",
+        "count": 14151
+      },
+      {
+        "from": "машины",
+        "to": "машина",
+        "count": 10220
+      },
+      {
+        "from": "смартфоны",
+        "to": "смартфон",
+        "count": 9828
+      },
+      {
+        "from": "микроволновая",
+        "to": "микроволновый",
+        "count": 9623
+      },
+      {
+        "from": "беспроводные",
+        "to": "беспроводный",
+        "count": 8772
+      },
+      {
+        "from": "телевизоры",
+        "to": "телевизор",
+        "count": 8598
+      },
+      {
+        "from": "зарядное",
+        "to": "зарядный",
+        "count": 7776
+      },
+      {
+        "from": "посудомоечная",
+        "to": "посудомоечный",
+        "count": 7713
+      },
+      {
+        "from": "индукционная",
+        "to": "индукционный",
+        "count": 7525
+      },
+      {
+        "from": "узкая",
+        "to": "узкий",
+        "count": 7093
+      },
+      {
+        "from": "беспроводная",
+        "to": "беспроводный",
+        "count": 6318
+      },
+      {
+        "from": "сушильная",
+        "to": "сушильный",
+        "count": 6286
+      },
+      {
+        "from": "пылесосы",
+        "to": "пылесос",
+        "count": 5610
+      },
+      {
+        "from": "беспроводной",
+        "to": "беспроводный",
+        "count": 5500
+      },
+      {
+        "from": "алисой",
+        "to": "алиса",
+        "count": 5141
+      },
+      {
+        "from": "встраиваемые",
+        "to": "встраиваемый",
+        "count": 5027
+      },
+      {
+        "from": "питания",
+        "to": "питание",
+        "count": 4861
+      },
+      {
+        "from": "защитное",
+        "to": "защитный",
+        "count": 4572
+      },
+      {
+        "from": "посудомоечные",
+        "to": "посудомоечный",
+        "count": 4562
+      },
+      {
+        "from": "вытяжки",
+        "to": "вытяжка",
+        "count": 4520
+      },
+      {
+        "from": "умная",
+        "to": "умный",
+        "count": 4484
+      },
+      {
+        "from": "игровые",
+        "to": "игровой",
+        "count": 4472
+      },
+      {
+        "from": "телевизора",
+        "to": "телевизор",
+        "count": 4196
+      },
+      {
+        "from": "электрические",
+        "to": "электрический",
+        "count": 4085
+      },
+      {
+        "from": "духовкой",
+        "to": "духовка",
+        "count": 4052
+      },
+      {
+        "from": "воздуха",
+        "to": "воздух",
+        "count": 3940
+      },
+      {
+        "from": "морозильная",
+        "to": "морозильный",
+        "count": 3926
+      },
+      {
+        "from": "сушкой",
+        "to": "сушка",
+        "count": 3903
+      },
+      {
+        "from": "игровая",
+        "to": "игровой",
+        "count": 3881
+      },
+      {
+        "from": "ноутбуки",
+        "to": "ноутбук",
+        "count": 3845
+      },
+      {
+        "from": "белая",
+        "to": "белый",
+        "count": 3732
+      },
+      {
+        "from": "кухонные",
+        "to": "кухонный",
+        "count": 3712
+      },
+      {
+        "from": "воды",
+        "to": "вода",
+        "count": 3616
+      },
+      {
+        "from": "стиральные",
+        "to": "стиральный",
+        "count": 3499
+      },
+      {
+        "from": "двухкамерные",
+        "to": "двухкамерный",
+        "count": 3332
+      },
+      {
+        "from": "ноутбука",
+        "to": "ноутбук",
+        "count": 3283
+      },
+      {
+        "from": "телефона",
+        "to": "телефон",
+        "count": 3277
+      },
+      {
+        "from": "зарядки",
+        "to": "зарядка",
+        "count": 3172
+      },
+      {
+        "from": "принтера",
+        "to": "принтер",
+        "count": 3160
+      },
+      {
+        "from": "дюймов",
+        "to": "дюйм",
+        "count": 3148
+      },
+      {
+        "from": "плиты",
+        "to": "плита",
+        "count": 3128
+      },
+      {
+        "from": "настольная",
+        "to": "настольный",
+        "count": 3110
+      },
+      {
+        "from": "памяти",
+        "to": "память",
+        "count": 3061
+      },
+      {
+        "from": "компьютера",
+        "to": "компьютер",
+        "count": 3045
+      }
+    ]
+  },
+  "deduplication": {
+    "collision_groups": 221461,
+    "collapsed_unique_variants": 446882,
+    "collision_examples": [
+      {
+        "final": "стиральный машина",
+        "variants": 69,
+        "examples": [
+          " Стиральная машина",
+          " Стиральная машина ",
+          " Стиральные машины",
+          " стиральная машина",
+          " стиральная машина "
+        ]
+      },
+      {
+        "final": "морозильный камера",
+        "variants": 68,
+        "examples": [
+          "  морозильная камера",
+          " Морозильная камера",
+          " морозильная камера",
+          " морозильная камера ",
+          " морозильная камерой"
+        ]
+      },
+      {
+        "final": "робот пылесос",
+        "variants": 54,
+        "examples": [
+          "  робот-пылесос",
+          " Робот пылесос",
+          " Робот пылесос ",
+          " Робот-пылесос ",
+          " робот пылесос"
+        ]
+      },
+      {
+        "final": "стиральный машина lg",
+        "variants": 51,
+        "examples": [
+          " Стиральная машина LG ",
+          " Стиральная машина lg",
+          " стиральная машина LG ",
+          " стиральные машины lg",
+          "СТИРАЛЬНАЯ МАШИНА LG"
+        ]
+      },
+      {
+        "final": "сушильный машина",
+        "variants": 50,
+        "examples": [
+          "  сушильная машина",
+          " Сушильная машина",
+          " сушильная машина",
+          " сушильная машина ",
+          " сушильная машины"
+        ]
+      },
+      {
+        "final": "холодильник lg",
+        "variants": 50,
+        "examples": [
+          " Холодильник    lg",
+          " Холодильники lg",
+          " холодильник LG",
+          " холодильник lg",
+          " холодильники LG"
+        ]
+      },
+      {
+        "final": "холодильник горение",
+        "variants": 49,
+        "examples": [
+          " холодильник горение",
+          "ХОЛОДИЛЬНИК ГОРЕНИЯ",
+          "ХОЛОДИЛЬНИК ГОРЕНЬЕ",
+          "Холодильник Горение",
+          "Холодильник Горения"
+        ]
+      },
+      {
+        "final": "фен щетка",
+        "variants": 47,
+        "examples": [
+          "  фен щетка",
+          " Фен-щетка ",
+          " фен щетка",
+          " фен щетка  ",
+          " фен-щетка"
+        ]
+      },
+      {
+        "final": "сплит система",
+        "variants": 46,
+        "examples": [
+          " СПлит система",
+          " Сплит система",
+          " Сплит система ",
+          " Сплит-система ",
+          " сплит система"
+        ]
+      },
+      {
+        "final": "стиральный машина haier",
+        "variants": 45,
+        "examples": [
+          " Стиральная машина Haier",
+          " стиральная машина Haier ",
+          " стиральные машины haier",
+          "СТИРАЛЬНАЯ МАШИНА HAIER",
+          "СТИРАЛЬНАЯ МАШИНА HAIER "
+        ]
+      },
+      {
+        "final": "стиральный машина узкий",
+        "variants": 45,
+        "examples": [
+          " стиральные машины узкая",
+          "СТИРАЛЬНАЯ МАШИНА УЗКАЯ",
+          "СТИРАЛЬНЫЕ МАШИНЫ УЗКИЕ",
+          "Стиральна машина узкая",
+          "Стиральная  машина узкая"
+        ]
+      },
+      {
+        "final": "газовый плита",
+        "variants": 43,
+        "examples": [
+          " Газовая плита",
+          " газовая плита",
+          " газовая плита ",
+          "ГАЗОВАЯ ПЛИТА",
+          "ГАЗОВАЯ ПЛИТА "
+        ]
+      },
+      {
+        "final": "стиральный машинка",
+        "variants": 42,
+        "examples": [
+          " Стиральная машинка",
+          " стиральная машинка",
+          " стиральная машинка ",
+          " стиральная машинка  ",
+          "СТИРАЛЬНАЯ МАШИНКА"
+        ]
+      },
+      {
+        "final": "посудомоечный машина",
+        "variants": 41,
+        "examples": [
+          " Посудомоечная машина",
+          " Посудомоечная машина ",
+          " посудомоечная машина",
+          " посудомоечная машина ",
+          " посудомоечные машины"
+        ]
+      },
+      {
+        "final": "стиральный машина с сушка",
+        "variants": 41,
+        "examples": [
+          " Стиральная машина с сушкой",
+          " стиральная машина с сушкой",
+          " стиральная машина с сушкой ",
+          " стиральные машины с сушкой",
+          "СТИРАЛЬНАЯ МАШИНА С СУШКОЙ"
+        ]
+      },
+      {
+        "final": "стиральный сушильный машина",
+        "variants": 41,
+        "examples": [
+          " Стирально-сушильная машина",
+          " стирально-сушильная машина ",
+          "СТИРАЛЬНАЯ СУШИЛЬНАЯ МАШИНА",
+          "СТИРАЛЬНО СУШИЛЬНАЯ МАШИНА",
+          "СТИРАЛЬНО-СУШИЛЬНЫЕ МАШИНЫ"
+        ]
+      },
+      {
+        "final": "встраиваемый холодильник",
+        "variants": 40,
+        "examples": [
+          "  Встраиваемые холодильники",
+          " Встраиваемый холодильник ",
+          " встраиваемый холодильник",
+          "ВСТРАИВАЕМЫЙ ХОЛОДИЛЬНИК",
+          "ВСТРАИВАЕМЫЙ ХОЛОДИЛЬНИК "
+        ]
+      },
+      {
+        "final": "смартфон",
+        "variants": 40,
+        "examples": [
+          "  Смартфоны",
+          "  смартфон",
+          " Смартфон",
+          " Смартфон ",
+          " Смартфоны"
+        ]
+      },
+      {
+        "final": "iphone 17 pro max",
+        "variants": 39,
+        "examples": [
+          " Iphone 17 pro max",
+          " iPhone 17 Pro Max",
+          " iPhone 17 Pro Max ",
+          " iPhone 17 pro max ",
+          " iphone 17 pro max"
+        ]
+      },
+      {
+        "final": "realme 16 pro",
+        "variants": 39,
+        "examples": [
+          "\t Realme 16 Pro",
+          "   realme 16 pro",
+          " REALME 16 Pro",
+          " Realme 16 Pro",
+          " Realme 16 Pro "
+        ]
+      },
+      {
+        "final": "samsung galaxy s26 ultra",
+        "variants": 39,
+        "examples": [
+          " Samsung Galaxy S26 Ultra",
+          " Samsung Galaxy S26 Ultra ",
+          " Samsung galaxy s26 ultra ",
+          " samsung galaxy s26 ultra",
+          "SAMSUNG Galaxy S26 Ultra"
+        ]
+      },
+      {
+        "final": "планшет samsung",
+        "variants": 38,
+        "examples": [
+          "  планшет samsung",
+          " планшет samsung",
+          " планшета  samsung",
+          " планшета samsung",
+          " планшета samsung "
+        ]
+      },
+      {
+        "final": "холодильник",
+        "variants": 38,
+        "examples": [
+          "  Холодильник",
+          "  холодильник",
+          "  холодильник ",
+          " ХОЛОДИЛЬНИК",
+          " Холодильник"
+        ]
+      },
+      {
+        "final": "холодильник haier",
+        "variants": 38,
+        "examples": [
+          " холодильник haier",
+          " холодильники haier",
+          "ХОЛОДИЛЬНИК HAIER",
+          "ХОЛОДИЛЬНИК HAIER ",
+          "Холодильник  Haier"
+        ]
+      },
+      {
+        "final": "айфон",
+        "variants": 37,
+        "examples": [
+          "  Айфон",
+          " Айфон",
+          " Айфон ",
+          " айфон",
+          " айфон "
+        ]
+      },
+      {
+        "final": "huawei watch gt 6 pro",
+        "variants": 36,
+        "examples": [
+          " HUAWEI WATCH GT 6 Pro",
+          " Huawei Watch GT 6 Pro",
+          " Huawei Watch GT 6 Pro ",
+          " Huawei watch gt 6 pro",
+          " huawei watch gt 6 pro"
+        ]
+      },
+      {
+        "final": "samsung galaxy s25 fe",
+        "variants": 36,
+        "examples": [
+          " Samsung Galaxy S25 FE",
+          " Samsung Galaxy S25 FE ",
+          " samsung galaxy s25 fe",
+          "SAMSUNG Galaxy S25 FE",
+          "Samsung Galaxy S25  FE"
+        ]
+      },
+      {
+        "final": "смартфон huawei",
+        "variants": 36,
+        "examples": [
+          "  смартфон huawei",
+          " смартфон huawei",
+          "СМАРТФОНЫ HUAWEI",
+          "Смартфон  huawei",
+          "Смартфон HUAWEI"
+        ]
+      },
+      {
+        "final": "телевизор",
+        "variants": 36,
+        "examples": [
+          "  телевизор",
+          "  телевизоры",
+          " ТЕЛЕВИЗОР",
+          " Телевизор",
+          " Телевизор "
+        ]
+      },
+      {
+        "final": "телевизор lg",
+        "variants": 36,
+        "examples": [
+          " телевизор LG",
+          " телевизор lg",
+          "ТЕЛЕВИЗОР lg",
+          "ТЕЛЕВИЗОР lg ",
+          "Телевизор  LG"
+        ]
+      }
+    ]
+  },
+  "examples": {
+    "stage_changes": [
+      {
+        "stage": "nfkc",
+        "before": "\t Hi Телевизор HS-43U01FB 43″ 4K UHD",
+        "after": "\t Hi Телевизор HS-43U01FB 43′′ 4K UHD"
+      },
+      {
+        "stage": "nfkc",
+        "before": "\t Телевизор Carrera №504 ",
+        "after": "\t Телевизор Carrera No504 "
+      },
+      {
+        "stage": "nfkc",
+        "before": "\t Умный телевизор Sber SDX-32F2137 с GigaChat на ОС Салют ТВ...  -10%",
+        "after": "\t Умный телевизор Sber SDX-32F2137 с GigaChat на ОС Салют ТВ...  -10%"
+      },
+      {
+        "stage": "nfkc",
+        "before": "\t Фен Carrera №522",
+        "after": "\t Фен Carrera No522"
+      },
+      {
+        "stage": "nfkc",
+        "before": "\tМонитор Carrera №241 (23,8\"/1920x1080/100Гц/черный)",
+        "after": "\tМонитор Carrera No241 (23,8\"/1920x1080/100Гц/черный)"
+      },
+      {
+        "stage": "nfkc",
+        "before": "\n\nJBL Live Beam 3 ➩",
+        "after": "\n\nJBL Live Beam 3 ➩"
+      },
+      {
+        "stage": "nfkc",
+        "before": "\n\nOnePlus Nord Buds 3 ➩",
+        "after": "\n\nOnePlus Nord Buds 3 ➩"
+      },
+      {
+        "stage": "yo",
+        "before": "\t HAUSKRAFTER плёнка для вакууматора, рулон 30х500 см, набор 5 шт",
+        "after": "\t HAUSKRAFTER пленка для вакууматора, рулон 30х500 см, набор 5 шт"
+      },
+      {
+        "stage": "yo",
+        "before": "\tВстраиваемый духовой шкаф HAIER HOX-FT5AMTB, электрический, чёрный\t",
+        "after": "\tВстраиваемый духовой шкаф HAIER HOX-FT5AMTB, электрический, черный\t"
+      },
+      {
+        "stage": "yo",
+        "before": "\tЩётка вертикального отпаривателя Philips GC552",
+        "after": "\tЩетка вертикального отпаривателя Philips GC552"
+      },
+      {
+        "stage": "yo",
+        "before": "\n\n\nBosch  духовой шкаф Духовой шкаф HBA 534EB3, Serie 4, объём XXL 71 литр",
+        "after": "\n\n\nBosch  духовой шкаф Духовой шкаф HBA 534EB3, Serie 4, объем XXL 71 литр"
+      },
+      {
+        "stage": "yo",
+        "before": "  настолл7яяж6жа́чч электробритва дешёвые",
+        "after": "  настолл7яяж6жа́чч электробритва дешевые"
+      },
+      {
+        "stage": "yo",
+        "before": "  прицеп для колёс",
+        "after": "  прицеп для колес"
+      },
+      {
+        "stage": "yo",
+        "before": "  универсальная щётка для пылесоса Samsung. рояль",
+        "after": "  универсальная щетка для пылесоса Samsung. рояль"
+      },
+      {
+        "stage": "lower",
+        "before": "\t\t Встраиваемая варочная панель газовая Simfer H60Q40",
+        "after": "\t\t встраиваемая варочная панель газовая simfer h60q40"
+      },
+      {
+        "stage": "lower",
+        "before": "\t\t Стиральная машина Hisense WF5S1043BW",
+        "after": "\t\t стиральная машина hisense wf5s1043bw"
+      },
+      {
+        "stage": "lower",
+        "before": "\t\tRT-AX1800U",
+        "after": "\t\trt-ax1800u"
+      },
+      {
+        "stage": "lower",
+        "before": "\t\nLG F2J6HS3W",
+        "after": "\t\nlg f2j6hs3w"
+      },
+      {
+        "stage": "lower",
+        "before": "\t \tApple iPad 11\" (2025) 128GB Wifi синий",
+        "after": "\t \tapple ipad 11\" (2025) 128gb wifi синий"
+      },
+      {
+        "stage": "lower",
+        "before": "\t (МП)PDA POCO X8 Pro Max 12/512GB, Черный",
+        "after": "\t (мп)pda poco x8 pro max 12/512gb, черный"
+      },
+      {
+        "stage": "lower",
+        "before": "\t (МП)Кастрюля Rondell RDS-1310 2л. d 18см",
+        "after": "\t (мп)кастрюля rondell rds-1310 2л. d 18см"
+      },
+      {
+        "stage": "separators",
+        "before": "\t\trt-ax1800u",
+        "after": "\t\trt ax1800u"
+      },
+      {
+        "stage": "separators",
+        "before": "\t \tapple ipad 11\" (2025) 128gb wifi синий",
+        "after": "\t \tapple ipad 11  (2025) 128gb wifi синий"
+      },
+      {
+        "stage": "separators",
+        "before": "\t (мп)кастрюля rondell rds-1310 2л. d 18см",
+        "after": "\t (мп)кастрюля rondell rds 1310 2л. d 18см"
+      },
+      {
+        "stage": "separators",
+        "before": "\t 400458282 кронштейн для тв наклонный stork tvm-3t",
+        "after": "\t 400458282 кронштейн для тв наклонный stork tvm 3t"
+      },
+      {
+        "stage": "separators",
+        "before": "\t a2243sp-9pb",
+        "after": "\t a2243sp 9pb"
+      },
+      {
+        "stage": "separators",
+        "before": "\t al-0121",
+        "after": "\t al 0121"
+      },
+      {
+        "stage": "separators",
+        "before": "\t cf6220f0 фен-щетка rowenta express air brush cf6220",
+        "after": "\t cf6220f0 фен щетка rowenta express air brush cf6220"
+      },
+      {
+        "stage": "spaces",
+        "before": "\t\t 400286565",
+        "after": "400286565"
+      },
+      {
+        "stage": "spaces",
+        "before": "\t\t встраиваемая варочная панель газовая simfer h60q40",
+        "after": "встраиваемая варочная панель газовая simfer h60q40"
+      },
+      {
+        "stage": "spaces",
+        "before": "\t\t стиральная машина hisense wf5s1043bw",
+        "after": "стиральная машина hisense wf5s1043bw"
+      },
+      {
+        "stage": "spaces",
+        "before": "\t\t400790143",
+        "after": "400790143"
+      },
+      {
+        "stage": "spaces",
+        "before": "\t\trt ax1800u",
+        "after": "rt ax1800u"
+      },
+      {
+        "stage": "spaces",
+        "before": "\t\tнаушники ",
+        "after": "наушники"
+      },
+      {
+        "stage": "spaces",
+        "before": "\t\nlg f2j6hs3w",
+        "after": "lg f2j6hs3w"
+      },
+      {
+        "stage": "lemma",
+        "before": "встраиваемая варочная панель газовая simfer h60q40",
+        "after": "встраиваемый варочный панель газовый simfer h60q40"
+      },
+      {
+        "stage": "lemma",
+        "before": "стиральная машина hisense wf5s1043bw",
+        "after": "стиральный машина hisense wf5s1043bw"
+      },
+      {
+        "stage": "lemma",
+        "before": "наушники",
+        "after": "наушник"
+      },
+      {
+        "stage": "lemma",
+        "before": "lr02 122 набор посуды lara серия mercury 6 пр., (кастрюля 2.9л 4.9л ) сотейник 2.1л. lr03 47 (мп)наб. lara lr02 122",
+        "after": "lr02 122 набор посуда lara серия mercury 6 пр., (кастрюля 2.9л 4.9л ) сотейник 2.1л. lr03 47 (мп)наб. lara lr02 122"
+      },
+      {
+        "stage": "lemma",
+        "before": "беспроводные наушники marshall major iv brown",
+        "after": "беспроводный наушник marshall major iv brown"
+      },
+      {
+        "stage": "lemma",
+        "before": "варочная панель zigmund & shtain m 26.4 w",
+        "after": "варочный панель zigmund & shtain m 26.4 w"
+      },
+      {
+        "stage": "lemma",
+        "before": "внешние корпуса для hdd/ssd",
+        "after": "внешний корпус для hdd/ssd"
+      }
+    ]
+  },
+  "artifacts": {
+    "audit_parquet": "C:\\Users\\kozgu\\NER-M.Video\\text_preprocessing\\output\\preprocessed_queries_audit.parquet",
+    "final_parquet": "C:\\Users\\kozgu\\NER-M.Video\\text_preprocessing\\output\\preprocessed_queries.parquet",
+    "samples_csv": "C:\\Users\\kozgu\\NER-M.Video\\text_preprocessing\\output\\preprocessing_samples.csv"
+  },
+  "measurement_parser": {
+    "version": "measurement_trie_v1",
+    "unit_definitions": 108,
+    "usable_alias_patterns": 490,
+    "unit_pattern_collisions": {},
+    "brand_colliding_alias_patterns": [
+      "hp"
+    ],
+    "regular_expressions": false,
+    "bio_policy": "positive-only high-confidence spans; O tokens are unsupervised",
+    "candidate_mentions": 216596,
+    "bio_entities": 51667,
+    "rejected_mentions": 447565,
+    "queries_with_candidates": 180293,
+    "queries_with_bio": 43395,
+    "bio_entity_type_counts": {
+      "screen_diagonal": 24599,
+      "power": 9600,
+      "memory_rom": 5699,
+      "memory_ram": 4972,
+      "refresh_rate": 4436,
+      "battery_capacity": 2361
+    },
+    "span_text": "query_model"
+  },
+  "color_normalizer": {
+    "version": "catalog_palette_30_v1",
+    "palette_size": 30,
+    "alias_rows_loaded": 4648,
+    "brand_patterns_loaded": 2049,
+    "regular_expressions": false,
+    "span_text": "query_model",
+    "canonical_text_offsets": false,
+    "supervision_policy": "positive_only_partial_bio",
+    "candidate_mentions": 109515,
+    "bio_entities": 109515,
+    "rejected_mentions": 4271,
+    "queries_with_candidates": 104508,
+    "queries_with_bio": 104508,
+    "queries_canonicalized": 57069,
+    "canonical_counts": {
+      "черный": 32291,
+      "белый": 22442,
+      "серый": 10044,
+      "серебристый": 7556,
+      "синий": 4747,
+      "красный": 3826,
+      "розовый": 3076,
+      "зеленый": 2966,
+      "золотистый": 2804,
+      "бежевый": 2667,
+      "голубой": 2507,
+      "разноцветный": 2491,
+      "фиолетовый": 2434,
+      "нержавеющая сталь": 2048,
+      "коричневый": 1187,
+      "оранжевый": 1142,
+      "графитовый": 949,
+      "прозрачный": 870,
+      "кремовый": 549,
+      "бордовый": 547,
+      "желтый": 506,
+      "бирюзовый": 264,
+      "хром": 260,
+      "мятный": 260,
+      "медный": 241,
+      "бронзовый": 232,
+      "сиреневый": 220,
+      "песочный": 172,
+      "янтарный": 114,
+      "шоколадный": 103
+    }
+  }
+}

@@ -1,0 +1,60 @@
+﻿stage,before,after
+nfkc,	 Hi Телевизор HS-43U01FB 43″ 4K UHD,	 Hi Телевизор HS-43U01FB 43′′ 4K UHD
+nfkc,	 Телевизор Carrera №504 ,	 Телевизор Carrera No504 
+nfkc,	 Умный телевизор Sber SDX-32F2137 с GigaChat на ОС Салют ТВ...  -10%,	 Умный телевизор Sber SDX-32F2137 с GigaChat на ОС Салют ТВ...  -10%
+nfkc,	 Фен Carrera №522,	 Фен Carrera No522
+nfkc,"	Монитор Carrera №241 (23,8""/1920x1080/100Гц/черный)","	Монитор Carrera No241 (23,8""/1920x1080/100Гц/черный)"
+nfkc,"
+
+JBL Live Beam 3 ➩","
+
+JBL Live Beam 3 ➩"
+nfkc,"
+
+OnePlus Nord Buds 3 ➩","
+
+OnePlus Nord Buds 3 ➩"
+yo,"	 HAUSKRAFTER плёнка для вакууматора, рулон 30х500 см, набор 5 шт","	 HAUSKRAFTER пленка для вакууматора, рулон 30х500 см, набор 5 шт"
+yo,"	Встраиваемый духовой шкаф HAIER HOX-FT5AMTB, электрический, чёрный	","	Встраиваемый духовой шкаф HAIER HOX-FT5AMTB, электрический, черный	"
+yo,	Щётка вертикального отпаривателя Philips GC552,	Щетка вертикального отпаривателя Philips GC552
+yo,"
+
+
+Bosch  духовой шкаф Духовой шкаф HBA 534EB3, Serie 4, объём XXL 71 литр","
+
+
+Bosch  духовой шкаф Духовой шкаф HBA 534EB3, Serie 4, объем XXL 71 литр"
+yo,  настолл7яяж6жа́чч электробритва дешёвые,  настолл7яяж6жа́чч электробритва дешевые
+yo,  прицеп для колёс,  прицеп для колес
+yo,  универсальная щётка для пылесоса Samsung. рояль,  универсальная щетка для пылесоса Samsung. рояль
+lower,		 Встраиваемая варочная панель газовая Simfer H60Q40,		 встраиваемая варочная панель газовая simfer h60q40
+lower,		 Стиральная машина Hisense WF5S1043BW,		 стиральная машина hisense wf5s1043bw
+lower,		RT-AX1800U,		rt-ax1800u
+lower,"	
+LG F2J6HS3W","	
+lg f2j6hs3w"
+lower,"	 	Apple iPad 11"" (2025) 128GB Wifi синий","	 	apple ipad 11"" (2025) 128gb wifi синий"
+lower,"	 (МП)PDA POCO X8 Pro Max 12/512GB, Черный","	 (мп)pda poco x8 pro max 12/512gb, черный"
+lower,	 (МП)Кастрюля Rondell RDS-1310 2л. d 18см,	 (мп)кастрюля rondell rds-1310 2л. d 18см
+separators,		rt-ax1800u,		rt ax1800u
+separators,"	 	apple ipad 11"" (2025) 128gb wifi синий",	 	apple ipad 11  (2025) 128gb wifi синий
+separators,	 (мп)кастрюля rondell rds-1310 2л. d 18см,	 (мп)кастрюля rondell rds 1310 2л. d 18см
+separators,	 400458282 кронштейн для тв наклонный stork tvm-3t,	 400458282 кронштейн для тв наклонный stork tvm 3t
+separators,	 a2243sp-9pb,	 a2243sp 9pb
+separators,	 al-0121,	 al 0121
+separators,	 cf6220f0 фен-щетка rowenta express air brush cf6220,	 cf6220f0 фен щетка rowenta express air brush cf6220
+spaces,		 400286565,400286565
+spaces,		 встраиваемая варочная панель газовая simfer h60q40,встраиваемая варочная панель газовая simfer h60q40
+spaces,		 стиральная машина hisense wf5s1043bw,стиральная машина hisense wf5s1043bw
+spaces,		400790143,400790143
+spaces,		rt ax1800u,rt ax1800u
+spaces,		наушники ,наушники
+spaces,"	
+lg f2j6hs3w",lg f2j6hs3w
+lemma,встраиваемая варочная панель газовая simfer h60q40,встраиваемый варочный панель газовый simfer h60q40
+lemma,стиральная машина hisense wf5s1043bw,стиральный машина hisense wf5s1043bw
+lemma,наушники,наушник
+lemma,"lr02 122 набор посуды lara серия mercury 6 пр., (кастрюля 2.9л 4.9л ) сотейник 2.1л. lr03 47 (мп)наб. lara lr02 122","lr02 122 набор посуда lara серия mercury 6 пр., (кастрюля 2.9л 4.9л ) сотейник 2.1л. lr03 47 (мп)наб. lara lr02 122"
+lemma,беспроводные наушники marshall major iv brown,беспроводный наушник marshall major iv brown
+lemma,варочная панель zigmund & shtain m 26.4 w,варочный панель zigmund & shtain m 26.4 w
+lemma,внешние корпуса для hdd/ssd,внешний корпус для hdd/ssd
